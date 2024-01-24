@@ -7,9 +7,9 @@
 ## 1. Charger les paquets ----
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-# NOTE : Pas besoin d'exécuter le code ci-dessous si vous avez {pacman} installé.
-# if(!require(pacman)) install.packages("pacman")
+# REMARQUE : Pas besoin d'exécuter le code ci-dessous si vous avez {pacman} installé.
 
+# if(!require(pacman)) install.packages("pacman")
 pacman::p_load(tidyverse, here, janitor, esquisse)
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -18,7 +18,7 @@ pacman::p_load(tidyverse, here, janitor, esquisse)
 # INSTRUCTION : Ici, utilisez `read_csv()` et `here()` pour charger votre jeu de données depuis le dossier "data"
 # Le jeu de données dont vous avez besoin doit avoir le même nom que votre script.
 
-read_csv(here("____/TEACHER_DEMO_sex_attitudes_survey_uk.csv"))
+read_csv(here("data/TEACHER_DEMO_sex_attitudes_survey_uk.csv"))
 
 # Afficher les premières lignes des données
 head(uk)
@@ -30,11 +30,12 @@ head(uk)
 # réaliser un tableau de fréquence de la variable `rnssecgp_6` (statut professionnel).
 # Ensuite, utilisez `write_csv()` et `here()` pour sauvegarder ce tableau dans votre dossier "outputs"
 
-tabyl(uk, _______________)
+tabyl(uk, rnssecgp_6)
 
-tableau_profession <- ______
+tableau_profession <- tabyl(uk, rnssecgp_6)
 
-write_csv(x = ________, file = ____("_______/_____.csv"))
+write_csv(x = tableau_profession, 
+          file = here("outputs/profession_uk.csv"))
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 ## 4. Créer des graphiques pour montrer les POINTS A & B ci-dessous, puis les exporter ----
@@ -47,7 +48,7 @@ write_csv(x = ________, file = ____("_______/_____.csv"))
 # POINT A : Une pluralité de répondants sont dans le groupe d'âge de 25-34 ans (variable `agrp`)
 # POINT B : Parmi les répondants âgés de 65 à 74 ans, une grande proportion considère la religion comme "Assez importante" (variable `religimp`)
 
-esquisser(__)
+esquisser(uk)
 
 age_religimp <- 
   uk %>%
@@ -57,8 +58,8 @@ age_religimp <-
   scale_fill_hue(direction = 1) +
   theme_minimal()
 
-ggsave(plot = _________,
-       filename = _________)
+ggsave(plot = age_religimp,
+       filename = here("outputs/bar_age_religimp.png"))
 
 
 ##~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
