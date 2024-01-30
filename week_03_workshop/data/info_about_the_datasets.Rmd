@@ -1,0 +1,20 @@
+---
+title: "Jeux de données pour l'atelier"
+autor: "L'équipe du GRAPH Courses"
+date: '`r format(Sys.Date(), "%B %Y")`'
+output: pdf_document
+---
+
+# Traitements de la Tuberculose en Inde
+
+Le jeu de données India TB Pathways est basé sur une étude menée dans le district de Vellore, Tamil Nadu, Inde. Il examine les coûts pré-diagnostiques et le comportement de recherche de santé de 880 nouveaux patients adultes atteints de tuberculose pulmonaire inscrits dans les Centres de Santé Primaires (CSP). Le jeu de données révèle qu'une majorité de patients ont d'abord visité des établissements de santé privés, entraînant des coûts médicaux importants à la charge des patients (OOP) et des retards avant le diagnostic et l'initiation du traitement.
+
+Les visites des patients ont été classifiées en deux grandes catégories : 1) Public et 2) Privé (PVT). Les établissements de soins de santé publics ont été ensuite catégorisés en : A) Centres de Santé Primaires (CSP), B) Hôpitaux de Référence Publics (HRP)—incluant les centres de référence secondaires et tertiaires, et C) Sanatorium TB (ST), un centre nodal pour la gestion de la TB, situé à Tambaram, Chennai, à environ 120 km de la zone d'étude.
+
+Pour en savoir plus sur le jeu de données, cliquez [**ici**](https://tinyurl.com/india-tb-pathways-and-costs).
+
+# Exemple de l'enseignant : Accidents de Moto en Colombie
+
+Ce jeu de données contient les registres de police des décès résultant de blessures routières liées aux motos dans la ville de Medellin entre 2012 et 2015. Il se concentre exclusivement sur les incidents mortels impliquant des motocyclistes, à la fois conducteurs et passagers. Le jeu de données pertinent sur le site lié s'appelle "Dataset 1.xlsx". Dans la deuxième feuille de ce fichier xlsx, vous trouverez un dictionnaire de données. La publication accompagnante est accessible [**ici**](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0256758).
+
+Accédez aux données associées [**ici**](https://tinyurl.com/motorcycle-accidents-colombia).
