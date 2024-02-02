@@ -1,0 +1,278 @@
+---
+title: "Atelier 4: Extraire and Exporter des sous-ensembles de données"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+    number_sections: true
+author: "Votre nom"
+date: "2024-02-07"
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Introduction
+
+Bienvenue !
+
+Pour l'exercice de cette semaine, vous effectuerez une nouvelle tâche en tant qu'analyste de données : préparer des sous-ensembles de données pour **quelqu'un d'autre**. Il s'agit d'une approche pratique de l'utilisation des verbes `select()` et `filter()`. Ceci s'appuiera sur les leçons suivantes de la préparation au travail :
+
+-   [Sélectionner & renommer](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls01_select_rename.html)
+
+-   [Filtrer](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls02_filter.html)
+
+Les notes de cours (liens ci-dessus) peuvent être très utiles pour accomplir l'exercice ci-dessous, alors n'hésitez pas à les consulter pendant l'atelier !
+
+La date limite pour l'exercice est le vendredi 9 février à 23h59 UTC. L'exercice doit être soumis individuellement, mais vous êtes encouragé à brainstormer avec vos partenaires.
+
+# Configuration
+
+Pour commencer, vous devez télécharger, **dézipper** et parcourir le dossier de l'exercice.
+
+1.  **Ouvrez le projet** **RStudio** en cliquant sur le fichier *.Rproj* pertinent dans le dossier dézippé de l'atelier. Assurez-vous d'avoir ouvert le projet **week_04_workshop** dans RStudio.
+
+2.  Dans RStudio, accédez à l'onglet Fichiers et ouvrez le dossier "rmd". Le fichier appelé **week_04_exercise.Rmd** contient à la fois les instructions et l'exercice de l'atelier dans un seul fichier (ce sont les mêmes instructions que vous voyez ici).
+
+3.  Dans le dossier "data", ouvrez le fichier de métadonnées (dictionnaire de données), "**metadonnees_rage.pdf**". Ce dictionnaire de données a été fourni pour définir les variables dans "**rage_sous_ensemble.csv**". Il est nécessaire car les données d'aujourd'hui sont codées numériquement ; c'est-à-dire que toutes les variables sont stockées sous forme de nombres qui correspondent à des catégories. Sans le dictionnaire de variables, vous ne sauriez pas à quoi correspondent les codes numériques !
+
+# Charger et nettoyer les données
+
+Maintenant que vous comprenez la structure du dépôt, vous pouvez charger et nettoyer votre jeu de données.
+
+Dans la section de code ci-dessous, **chargez les packages nécessaires** (conseil : chargez {tidyverse} et {here}).
+
+*Conseil professionnel : Utilisez `p_load()` pour charger vos packages, car il charge à la fois et installe les packages si nécessaire.*
+
+```{r message=FALSE}
+# Charger les packages
+if(!require(pacman)) install.packages("pacman")
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Maintenant, **lisez le jeu de données dans R**. Le data frame que vous importez doit avoir 1466 lignes et 23 colonnes. 
+
+*Conseil professionnel : N'oubliez pas d'utiliser la fonction `here()` pour permettre à votre Rmd d'utiliser des chemins relatifs au projet.*
+
+*Rappel : Utiliser le fonction {dplyr} pour importez votre CSV, pas la fonction de base R*
+
+```{r}
+# Importer les données
+rage_brut <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Ce jeu de données provient d'une étude visant à évaluer le niveau de connaissance et de compréhension de la maladie de la rage dans les communautés rurales et urbaines du Pakistan.
+
+Explorez le data frame avec des fonctions telles que `glimpse()`, `summary()`, `names()` ou `view()`.
+
+Ensuite, effectuez les deux tâches de nettoyage suivantes sur le jeu de données importé, puis stockez le jeu de données nettoyé dans un nouvel objet.
+
+-   **Placer l'ID du répondant en tête**. L'ID du répondant est la 23e colonne de votre jeu de données. Il devrait être plus visible pour que quelqu'un qui ouvre le CSV sache immédiatement que chaque ligne correspond à un répondant. Déplacez-le en première position dans le data frame. (*Conseil : n'oubliez pas la fonction `everything()` que nous vous avons enseignée. Vous pouvez également utiliser `relocate()`*)
+
+-   **Supprimer la variable `Education`, qui n'a pas été correctement encodée.** (Si vous souhaitez voir les problèmes d'encodage, vous pouvez consulter à la fois le data frame et le fichier de métadonnées). Nous considérons cette variable inutilisable pour le moment et nous la supprimons donc.
+
+```{r}
+# Nettoyer les données
+rage <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+# Créer et exporter des sous-ensembles de données
+
+Dans chaque section "Sous-ensemble de données" ci-dessous, vous devrez :
+
+1.  Déterminer si vous devez utiliser la fonction `filter()` ou `select()`, puis appliquer cette fonction pour créer l'extrait requis du jeu de données.
+
+2.  Exporter chaque sous-ensemble de données dans un fichier CSV portant un nom approprié dans le dossier de sortie.
+
+## **Sous-ensemble de données 1 :** Extraire les informations démographiques et les indicateurs de vaccination
+
+Créez et exportez un sous-ensemble de données contenant les variables liées aux sujets suivants : 
+
+1.  Informations démographiques des répondants --- leur âge, leur sexe et leur origine géographique.
+
+2.  Variables liées à la vaccination (*Conseil : utilisez `contains()` ou `ends_with()` pour sélectionner les 7 variables liées à la vaccination*).
+
+*N'oubliez pas d'utiliser le sous-ensemble `rage`* *!*
+
+```{r}
+# Sous-ensemble de données
+demog <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Exportez les données
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+N'oubliez pas d'utiliser la fonction `here()` pour permettre à votre Rmd d'utiliser des chemins relatifs au projet.
+
+## **Sous-ensemble de données 2 :** Extraire les variables des questions d'évaluation des connaissances
+
+En parcourant le fichier de métadonnées, vous verrez que certaines variables correspondent à des questions d'évaluation des connaissances sur la rage. Créez et exportez un sous-ensemble qui ne comprend que ces variables.
+
+*N'oubliez pas d'utiliser le sous-ensemble `rage`* *!*
+
+```{r}
+# Sous-ensemble de données
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Exportez les données
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+## **Sous-ensemble de données 3 :** Extraire tous les adultes masculins
+
+Créez et exportez un sous-ensemble de données contenant uniquement les enregistrements des hommes de plus de 18 ans.
+
+*N'oubliez pas d'utiliser le sous-ensemble `rage`* *!*
+
+```{r}
+# Sous-ensemble de données
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Exportez les données
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+*Conseil : il s'agit d'une question de filtrage des lignes, donc il n'est pas nécessaire de sélectionner ou de supprimer des colonnes.*
+
+## **Sous-ensemble de données 4 :** Extraire les individus à risque
+
+Créez et exportez un sous-ensemble avec les individus "à risque". Nous définissons les personnes "à risque" comme celles qui répondent à l'un des critères suivants :
+
+1.  Avoir un animal domestique à la maison,
+
+2.  Ne pas avoir de structure de santé dans leur région, OU
+
+3.  Considérer que le vaccin antirabique n'est pas abordable pour eux.
+
+*N'oubliez pas d'utiliser le sous-ensemble `rage`* *!*
+
+```{r}
+# Sous-ensemble de données
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Exportez les données
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+## **Sous-ensemble de données 5 :** Extraire les répondants ayant des connaissances, attitudes et pratiques (CAP) "idéales" envers la rage
+
+Nous définirons les personnes ayant des CAP "idéales" comme celles qui ont répondu qu'elles satisfont à tous les critères suivants :
+
+1.  Savent que les morsures de chien transmettent la rage ;
+
+2.  Connaissent les signes cliniques de la rage et ;
+
+3.  Consulteraient un médecin après avoir été mordues par un animal.
+
+Créez et exportez un sous-ensemble de données qui ne comprend que ces individus.
+
+*N'oubliez pas d'utiliser le sous-ensemble `rage`* *!*
+
+```{r}
+# Sous-ensemble de données
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Exportez les données
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+# Soumission : Téléchargez votre fichier Rmd sur le portail GRAPH Courses
+
+Une fois que vous avez terminé les tâches ci-dessus, vous devez télécharger **uniquement** le fichier *Rmd* sur la page de l'exercice dans le portail GRAPH Courses. Vous n'avez pas besoin de télécharger les exports de données ; le fichier Rmd suffit. Nous pourrons vérifier si vos exports étaient corrects en regardant uniquement votre fichier Rmd.
+
+Il est recommandé de supprimer le code et le texte qui ne sont pas pertinents pour votre exercice du fichier Rmd avant de le soumettre. Par exemple, si vous n'avez pas terminé la tâche optionnelle de l'exercice de défi décrite ci-dessous, vous pouvez la supprimer.
+
+# Exercice défi
+
+Si vous terminez votre tâche principale à temps, vous pouvez attaquer cette section de défi optionnelle.
+
+Votre tâche pour ce défi consiste à exporter les mêmes sous-ensembles de données créés ci-dessus dans un **classeur Excel**, avec chaque sous-ensemble dans une feuille de travail séparée.
+
+Pourquoi est-ce utile ? Excel est un outil largement utilisé et familier pour de nombreux professionnels, y compris les responsables de la santé publique. En tant qu'analyste de données, vous devez souvent présenter vos résultats sous une forme accessible et compréhensible pour ces personnes. Excel est un tel outil.
+
+De plus, les classeurs Excel vous permettent d'organiser plusieurs tables liées dans des feuilles séparées au sein d'un seul fichier, ce qui améliore la clarté et la navigabilité de votre sortie.
+
+Nous ne vous avons pas encore enseigné formellement comment exporter vers des fichiers Excel, nous avons donc fourni un tutoriel en bas de ce document, ainsi qu'un lien vers la documentation du package que vous utiliserez.
+
+## Fichiers CSV vs Excel
+
+Vous n'êtes pas sûr de la différence entre un fichier CSV (.csv) et un fichier Excel (.xls ou .xlsx) ? Voici un bref résumé :
+
+**Fichiers CSV** (.csv) :
+
+-   CSV signifie "Comma-Separated Values" (valeurs séparées par des virgules). Ce sont des fichiers texte simples où chaque donnée est séparée par une virgule.
+-   Voici certaines de leurs principales caractéristiques :
+    -   **Simplicité** : les fichiers CSV peuvent être ouverts avec n'importe quel éditeur de texte, ce qui les rend faciles à visualiser et à manipuler.
+    -   **Compatibilité** : ils sont largement pris en charge sur différentes plates-formes et langages de programmation. Vous pouvez importer et exporter des fichiers CSV dans la plupart des logiciels de traitement de données, y compris Microsoft Excel, Google Sheets et tout système de gestion de base de données.
+    -   **Pas de mise en forme** : les fichiers CSV ne prennent pas en charge la mise en forme ou les styles de texte. Cela signifie qu'ils ne peuvent pas stocker d'informations telles que les styles de police, les couleurs ou les tailles.
+    -   **Pas de feuilles multiples** : contrairement aux fichiers Excel, les fichiers CSV ne peuvent pas contenir plusieurs feuilles. Chaque fichier CSV contient une seule table de données.
+
+**Fichiers Excel** (.xls ou .xlsx) :
+
+-   Les fichiers Excel sont le format binaire propriétaire de Microsoft pour stocker des données dans des classeurs, qui peuvent contenir une ou plusieurs feuilles de calcul.
+-   Certaines caractéristiques clés des fichiers Excel incluent :
+    -   **Feuilles multiples** : les classeurs Excel peuvent contenir plusieurs feuilles, vous permettant d'organiser des ensembles de données liés dans un seul fichier.
+    -   **Mise en forme riche** : vous pouvez formater le texte dans Excel de différentes manières, en modifiant la police, la couleur et la taille, ainsi qu'en utilisant des options de mise en forme avancées telles que la mise en forme conditionnelle. Ces formats peuvent être définis depuis R lui-même, comme vous le verrez ci-dessous.
+
+Voici une courte vidéo qui explique certaines de ces notions *(vidéo en anglais)* : <https://youtu.be/hlbRgI45_90>
+
+## Instructions pour le défi
+
+Maintenant, voici les instructions étape par étape pour l'exercice de défi :
+
+1.  Vous commencerez par créer un data frame personnalisé qui décrira le contenu de chaque feuille du classeur Excel. Vous pouvez le faire en utilisant la fonction `data.frame()`. Ceci servira de table des matières pour votre fichier Excel et sera placé dans la première feuille.
+
+2.  À l'aide du package `openxlsx`, exportez ensuite chaque sous-ensemble de données dans sa propre feuille d'un classeur Excel unique. Assurez-vous que la première feuille du classeur contient la table descriptive que vous avez créée à l'étape précédente.
+
+3.  Chaque en-tête de colonne doit être en gras. Cela peut être réalisé en définissant un style personnalisé à l'aide de la fonction `createStyle()` et en l'appliquant lors de l'exportation.
+
+Pour un tutoriel détaillé sur la façon d'écrire dans Excel en utilisant le package `openxlsx`, consultez la documentation officielle du package `openxlsx` [ici](https://ycphs.github.io/openxlsx/index.html).
+
+## Exemple de défi
+
+Pour vous guider, voici un exemple reproductible en utilisant l'ensemble de données intégré `iris`. L'exemple crée des sous-ensembles de données pour chaque espèce d'iris et les exporte dans des feuilles de calcul distinctes d'un classeur Excel. Il crée également une table décrivant chaque sous-ensemble :
+
+```{r}
+# Charger les packages nécessaires
+if(!require(pacman)) install.packages("pacman")
+pacman::p_load(tidyverse, here, openxlsx)
+
+# Créer des sous-ensembles de données de l'ensemble de données iris pour chaque espèce
+iris_setosa <- iris %>% filter(Species == "setosa")
+iris_virginica <- iris %>% filter(Species == "virginica")
+iris_versicolor <- iris %>% filter(Species == "versicolor")
+
+# Créer un data frame qui décrit ce que chaque feuille Excel contiendra
+# Ce data frame de description sera stocké dans la première feuille du fichier Excel
+description_df <- data.frame(
+  Nom_de_la_Feuille = c("Iris Setosa", "Iris Virginica", "Iris Versicolor"),
+  Description = c("Cette feuille contient un sous-ensemble de données pour Iris Setosa", 
+                  "Cette feuille contient un sous-ensemble de données pour Iris Virginica", 
+                  "Cette feuille contient un sous-ensemble de données pour Iris Versicolor")
+)
+
+# Afficher description_df dans la console pour vérification
+description_df
+
+# Créer un style personnalisé pour les en-têtes de colonnes en utilisant 'createStyle()' du package 'openxlsx'
+# Le style est : texte en gras, couleur de police blanche et remplissage bleu
+mon_style_en_tête <- createStyle(
+  textDecoration = "BOLD", fontColour = "#FFFFFF", fgFill = "#4F80BD"
+)
+
+# Créer une liste 'iris_subsets' contenant la table que nous stockerons dans Excel
+# Ce sont le data frame de description et les trois sous-ensembles de données iris
+# Chaque élément de la liste reçoit un nom : "Description", "Iris Setosa", "Iris Virginica" et "Iris Versicolor"
+iris_subsets <- list("Description" = description_df, 
+                     "Iris Setosa" = iris_setosa, 
+                     "Iris Virginica" = iris_virginica, 
+                     "Iris Versicolor" = iris_versicolor)
+
+# Écrire la liste 'iris_subsets' dans un classeur Excel en utilisant la fonction 'write.xlsx' du package 'openxlsx'
+# Spécifiez le chemin du fichier en utilisant la fonction 'here' pour la portabilité
+# 'headerStyle = mon_style_en_tête' applique le style personnalisé précédemment défini aux en-têtes
+write.xlsx(
+  x = iris_subsets,
+  file = here("outputs/iris_subsets_challenge_assignment_example.xlsx"),
+  headerStyle = mon_style_en_tête
+)
+```
