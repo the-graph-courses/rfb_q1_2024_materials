@@ -1,0 +1,20 @@
+# Informations générales
+
+Le jeu de données obesity.csv est issu d'un article intitulé : Problèmes générationnels dans la liaison entre la production agricole familiale, l'alimentation traditionnelle dans le régime alimentaire, l'activité physique et l'obésité dans les pays et territoires des îles du Pacifique : le cas de la population mélanésienne de l'île de Lifou.
+
+L'objectif de cette étude interdisciplinaire était de comprendre les liens entre l'agriculture familiale (aliments produits, échangés, vendus et consommés), le régime alimentaire (axé sur les aliments produits, chassés et pêchés), l'activité physique (sédentaire, légère et modérée à vigoureuse) et l'obésité chez les familles mélanésiennes de l'île de Lifou (parents et enfants). Quarante familles, comprenant 142 adultes et enfants, ont rempli des questionnaires de fréquence alimentaire individuels, porté des accéléromètres tri-axiaux pendant sept jours consécutifs et ont eu leur poids et taille mesurés avec un appareil à bio-impédance.
+
+Vous pouvez en savoir plus sur le jeu de données à ce lien :
+
+https://zenodo.org/record/5516813
+
+# Définitions des variables
+
+- `id_personnel` et `id_menage` : numéros d'identification
+- `sexe` : masculin ou féminin
+- `statut` : adulte (Adult) ou enfant (Child)
+- `imc` : indice de masse corporelle
+- `ap_sedentaire_s_jour` : comportement sédentaire (secondes/jour)
+- `ap_legere_s_jour` : activité physique légère (secondes/jour)
+- `apmv_s_jour` : activité physique modérée à vigoureuse (secondes/jour)
+- `who_recommendation` : respect ou non des recommandations de l'OMS pour l'activité physique (WHO est l'abréviation de World Health Organization, qui est le nom anglais de OMS)

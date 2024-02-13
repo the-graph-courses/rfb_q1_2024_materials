@@ -1,0 +1,228 @@
+---
+title: "Atelier 5 : Création et transformation de variables"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+    number_sections: false
+author: "Nom de l'auteur ici"
+date: "14-02-2024"
+editor_options: 
+  chunk_output_type: inline
+  markdown: 
+    wrap: none
+---
+
+# Introduction
+
+Bienvenue !
+
+Pour cet atelier, nous allons nettoyer un jeu de données. C'est une approche pratique de l'utilisation des fonctions {dplyr} telles que `select()`, `rename()`, `mutate()`, et `case_when()`. Celles-ci ont été abordées dans le matériel de préparation du module "Manipulation de données" :
+
+-   [Sélectionner & renommer](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls01_select_rename.html)
+
+-   [Transformation](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls03_mutate.html)
+
+-   [Transformation conditionnelle](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls04_conditional_mutate.html)
+
+Les notes de cours (liées ci-dessus) peuvent être très utiles pour compléter l'exercice ci-dessous, alors référez-vous à elles pendant l'atelier !
+
+# Configuration de l'exercice
+
+1.  **Téléchargez d'abord l'exercice sur votre ordinateur local.** Pour commencer, vous devez télécharger, dézipper et parcourir le dossier d'atelier.
+
+2.  **Ouvrez le projet RStudio** en cliquant sur le fichier *.Rproj* pertinent dans le dossier de l'atelier décompressé. Assurez-vous d'avoir ouvert week_05_workshop.Rproj dans RStudio en regardant le nom de votre fenêtre RStudio, ou dans le coin supérieur droit de votre écran.
+
+3.  **Ouvrez le Rmd de l'atelier.** Naviguez vers l'onglet Fichiers dans RStudio et ouvrez le dossier "rmd". Vous travaillerez dans le fichier appelé "week_05_exercise.Rmd". Ce Rmd contient à la fois les instructions et l'atelier de devoir dans un seul fichier.
+
+4.  **Complétez le devoir.** Suivez les étapes dans "week_05_exercise.Rmd". Remplacez chaque instance de `"ÉCRIVEZ_VOTRE_CODE_ICI"` par vos réponses. L'exercice doit être soumis individuellement, mais vous êtes encouragé à réfléchir avec des partenaires. Bien que vous soyez autorisé à travailler avec des membres du groupe, *il est important que tout le code que vous soumettez ait été tapé par vous-même*.
+
+# Charger les packages et les données
+
+Maintenant que vous avez configuré votre projet RStudio, vous pouvez charger et nettoyer votre jeu de données.
+
+Pour commencer, **chargez les packages nécessaires** : {tidyverse}, {here}, {janitor}, et {esquisse}.
+
+```{r}
+# Charger les packages
+if(!require(pacman)) install.packages("pacman")
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Maintenant, **lisez le jeu de données dans votre environnement RStudio**. Le dataframe que vous importez devrait avoir 142 lignes et 9 colonnes. N'oubliez pas d'utiliser la fonction `here()` pour utiliser des chemins relatifs au projet.
+
+```{r}
+# Importer CSV
+ap_brut <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Ensuite, **supprimez les deux premières variables du dataframe `ap_brut`**, car elles ne sont pas pertinentes pour notre analyse aujourd'hui. Sauvegardez le sous-ensemble comme un nouveau dataframe appelé `ap_mini`.
+
+```{r}
+# Sous-ensemble de dataframe
+ap_mini <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Maintenant, **visualisez les premières lignes du nouveau jeu de données** et comparez-le aux définitions des variables ci-dessous.
+
+```{r}
+head(ap_mini)
+```
+
+Votre jeu de données devrait maintenant avoir 7 variables :
+-   `sexe` : masculin ou féminin
+-   `statut` : adulte (Adult) ou enfant (Child)
+-   `imc` : indice de masse corporelle
+-   `ap_sedentaire_s_jour` : comportement sédentaire (secondes/jour)
+-   `ap_legere_s_jour` : activité physique légère (secondes/jour)
+-   `apmv_s_jour` : activité physique modérée à vigoureuse (secondes/jour)
+-   `who_recommendation` : si les recommandations de l'OMS pour l'activité physique sont respectées ou non (WHO est l'abréviation de World Health Organization, qui est le nom anglais de l'OMS)
+
+# Nettoyer les données avec {dplyr}
+
+## **Étape 1** : Examiner et nettoyer le jeu de données
+
+Avant de plonger dans la manipulation ou la visualisation, réfléchissons aux types de variables dans notre jeu de données. Prenez note de quelles variables devraient être numériques et lesquelles devraient être des facteurs.
+
+Vérifions maintenant si R a correctement classifié ces variables. Vous pouvez vérifier les classes de données assignées à chaque variable avec `summary()` ou `glimpse()`.
+
+```{r}
+summary(ap_mini)
+```
+
+Remarquez que 4 de vos variables sont de classe **caractère**, mais elles devraient être **numériques** (par exemple, `imc`). Cela est dû au fait que ces variables contiennent des mots en plus des nombres. Pouvez-vous repérer ces mots lorsque vous visualisez le jeu de données ?
+
+```{r}
+# Voir votre jeu de données !
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+De plus, 3 variables de classe "caractère" devraient être converties en facteurs. Nous devons changer les 7 variables au type correct, car cela sera essentiel pour d'autres manipulations et pour la visualisation !
+
+Réfléchissez à quelle fonction `{dplyr}` vous devriez utiliser pour **convertir vos variables dans le bon type**. Complétez le code en remplissant les blancs ci-dessous ! Sauvegardez le jeu de données mis à jour comme un nouveau dataframe appelé `ap_propre`.
+
+```{r}
+# Changer le type des variables
+ap_propre <- ap_mini %>%
+  ______(sexe = ________(sexe),
+         ______ = as.factor(statut),
+         ___ = as.numeric(imc),
+         ap_sedentaire_s_jour = __________(ap_sedentaire_s_jour),
+         ap_legere_s_jour = as.numeric(__________),
+         __________ = as.numeric(apmv_s_jour),
+         who_recommendation = ________(who_recommendation)
+  )
+# Note : Vous pouvez recevoir un message d'avertissement concernant vos colonnes numériques. Cela vous indique que des NA ont été introduits dans les données. C'est ce que nous voulons faire dans ce cas, donc vous pouvez ignorer le message.
+```
+
+Maintenant que vous les avez converties, utilisez `summary()` ou `glimpse()` à nouveau pour vérifier que les classes de données sont correctes. **Remarquez que dans vos nouvelles colonnes numériques, les mots qui étaient là ont été remplacés par `NA`** (c'est ce dont parlait le message d'avertissement).
+
+```{r}
+# Vérifiez à nouveau que les classes de données sont correctes avec summary() ou glimpse().
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Ensuite, remarquez que la variable `statut` utilise actuellement les termes français "Adulte" et "Enfant". **Transformez la variable `statut` en remplaçant les valeurs de cette colonne pour dire "Adulte" et "Enfant" au lieu de "Adult" et "Child".** Sauvegardez le jeu de données mis à jour comme un nouveau dataframe appelé `ap_propre2`.
+
+```{r}
+ap_propre2 <- ap_propre %>%
+  "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+**Enfin, renommez `who_recommendation` en `oms_recommandation`** (WHO est le nom anglais pour OMS). Sauvegardez le jeu de données mis à jour comme un nouveau dataframe appelé `ap_propre3`.
+
+```{r}
+ap_propre3 <- ap_propre2 %>% 
+  "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+## **Étape 2** : Convertir les variables d'activité physique
+
+Actuellement, les variables d'activité physique sont en secondes par jour. Il y a 3 types de variables d'activité physique : comportement sédentaire (`ap_sedentaire_s_jour`), activité physique légère (`ap_legere_s_jour`), et activité physique modérée à vigoureuse (`apmv_s_jour`). Ces variables sont mesurées en secondes par jour.
+
+Cependant, les [recommandations de l'OMS](https://apps.who.int/iris/bitstream/handle/10665/337001/9789240014886-eng.pdf) pour l'activité physique sont en minutes par semaine, donc nous voulons nous aligner sur ces mesures. Pour ce faire, complétez les manipulations suivantes :
+
+1.  **Convertissez ces variables numériques de secondes/jour en minutes/semaine**. (Astuce : utilisez `mutate()` pour créer de nouvelles variables qui sont en minutes par semaine. Pour rappel, 60 secondes = 1 minute et 7 jours = 1 semaine.)
+
+2.  **Supprimez les variables précédentes en secondes par jour**. (Astuce : vous pouvez utiliser `ends_with()` dans la fonction `select()`.)
+
+Sauvegardez le jeu de données mis à jour comme un nouveau dataframe appelé `ap_propre4`.
+
+```{r}
+ap_propre4 <- ap_propre3 %>%
+  "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Vous utiliserez ce `ap_propre4` pour toutes les étapes suivantes.
+
+## **Étape 3** : Combiner les variables d'activité physique
+
+**Créez une nouvelle colonne qui ajoute l'activité physique légère et l'activité physique modérée à vigoureuse**, et appelez-la `ap_totale_m_sm`. Cela devrait nous donner le montant total d'activité en minutes par semaine. Sauvegardez le jeu de données mis à jour comme un nouveau dataframe appelé `ap_propre5`.
+
+```{r}
+ap_propre5 <- ap_propre4 %>% 
+  "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+## **Étape 4** : Créer une variable booléenne
+
+La variable `oms_recommandation` utilise "Oui" et "Non" pour indiquer si les recommandations de l'OMS pour l'activité physique sont respectées ou non.
+
+**Créez une variable booléenne appelée `remplie_recommendation`** qui est définie sur `TRUE` si l'individu a respecté les recommandations de l'OMS.
+
+Sauvegardez le jeu de données mis à jour comme un nouveau dataframe appelé `ap_propre_final`.
+
+```{r}
+ap_propre_final <- ap_propre5 %>% 
+  "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Enfin, faites un tableau pour afficher le nombre d'adultes et d'enfants qui ont respecté ou non les recommandations de l'OMS. Combien d'adultes et d'enfants n'ont pas respecté la norme recommandée ? Et combien l'ont respectée ?"
+
+```{r}
+ap_tabyl <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+# Visualiser les données avec {esquisse}
+
+Dans cette section, vous utiliserez `ap_propre_final` pour générer quelques graphiques !
+
+## **Graphique 1** : Histogramme
+
+Les histogrammes sont utilisés pour visualiser la distribution d'une seule variable numérique (continue). Choisissez une variable du jeu de données que vous pouvez tracer dans un histogramme.
+
+Avec esquisse, créez votre propre histogramme. (ASTUCE : Si vous êtes bloqué, consultez l'exemple d'histogramme situé dans votre dossier `rmd` intitulé, `graphique_1_exemple.jpg` pour vous inspirer !)
+
+```{r}
+"ESQUISSE_CODE_ICI"
+```
+
+Note : Parfois, le code généré par esquisse peut avoir des filtrages indésirables. Cela est dû à un bug dans le package. Vérifiez bien votre code et retirez toute opération de `filter()` supplémentaire.
+
+## **Graphique 2** : Diagramme en boîte
+
+Les diagrammes en boîte sont utilisés pour visualiser la distribution d'une variable numérique (de préférence la même que celle utilisée pour le Graphique 1), divisée par les valeurs d'une variable discrète/catégorielle.
+
+1.  Utilisez esquisse pour créer un diagramme en boîte pour montrer la distribution d'une variable numérique. Utilisez la même variable utilisée pour votre histogramme sur votre axe des x, et tracez-la contre une variable catégorielle sur votre axe des y.
+
+2.  Définissez la couleur de remplissage pour correspondre aux valeurs de votre variable catégorielle.
+
+ASTUCE : Il y a aussi un exemple de diagramme en boîte situé dans votre dossier `rmd` intitulé, `graphique_2_exemple.jpg`. Étudiez l'image attentivement et essayez de créer quelque chose de similaire.
+
+```{r}
+"COLLEZ_LE_CODE_ESQUISSE_ICI"
+```
+
+# Conclusion
+
+C'est tout pour ce devoir ! Nous choisirons 2-3 personnes pour présenter votre travail pendant l'atelier. Si vous souhaitez partager vos résultats avec la classe, veuillez en informer un instructeur.
+
+Le représentant du groupe devrait se préparer à partager son écran et donner une courte présentation (3-4 phrases).
+
+Choisissez et mettez en évidence un aspect de votre code ou de votre graphique qui serait utile et intéressant pour la classe. Par exemple, vous pouvez choisir une question que votre groupe a trouvée particulièrement difficile, et expliquer comment vous avez trouvé la solution. Ou vous pouvez afficher l'un de vos graphiques, et partager quelques astuces pour une personnalisation supplémentaire.
+
+# Soumission
+
+Une fois que vous avez terminé les tâches ci-dessus, vous devriez sauvegarder vos réponses et télécharger votre Rmd de devoir sur la page web de l'atelier. Vous devriez télécharger juste un fichier Rmd avec vos réponses (ne téléchargez pas le HTML tricoté ou un dossier zippé). Assurez-vous d'inclure votre nom dans l'en-tête YAML en haut du script.
+
+La date limite pour le devoir est le vendredi 16 février à 23h59 UTC.
