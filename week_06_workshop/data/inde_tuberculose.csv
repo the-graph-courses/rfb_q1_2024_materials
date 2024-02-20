@@ -1,0 +1,881 @@
+id,Sexe,Age,Education,Emploi,Alcool,Fumer,PdenKgs,HtinCms,imc,Diabete,Form de TB,Radio Pulm,Premiere visite emplacement,Premiere visite cout,Deuxieme visite emplacement,Deuxieme visite cout,Troisieme visite emplacement,Troisieme visite cout,Retard sys santé (en jours),Delai initiation traitement (en jours)
+100202,Homme,57,Intermédiaire,Travaille,Oui,Oui,58,165,21.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,15,10
+100396,Femme,66,Pas d'éducation,Ne travaille pas,Non,Non,32,163,12,0,Ini smear -,Positive,Pvt. docto,1500,Pvt. clini,1000,Pvt. hospi,2500,60,4
+100590,Femme,45,Manquant,Ne travaille pas,Non,Non,46,150,20.4,0,Ini smear -,Positive,Pvt. docto,2000,Pvt. docto,3000,PHC,0,43,21
+100687,Homme,27,Intermédiaire,Ne travaille pas,Non,Non,51,165,18.7,0,Ini smear +,NA,Pvt. hospi,20000,Pvt. hospi,1500,PHC,0,35,5
+100784,Homme,54,Intermédiaire,Ne travaille pas,Non,Non,39,160,15.2,0,Ini smear +,Positive,Pvt. docto,1000,GH,0,NA,0,14,6
+100978,Homme,60,Pas d'éducation,Travaille,Non,Non,43,155,17.9,0,Ini smear +,Positive,Pvt. docto,2000,GH,0,NA,0,14,10
+101075,Homme,28,Primaire,Travaille,Non,Non,47,165,17.3,0,Ini smear +,NA,Pvt. docto,1000,Pvt. docto,1000,PHC,0,7,2
+101172,Femme,21,Diplômé,Ne travaille pas,Non,Non,31,160,12.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,3
+101269,Homme,34,Intermédiaire,Travaille,Non,Non,44,165,16.2,0,Ini smear +,Negative,T.Govt,0,NA,0,NA,0,6,4
+101366,Homme,48,Intermédiaire,Travaille,Non,Non,40,160,15.6,0,Ini smear +,NA,GH,0,NA,0,NA,0,10,6
+101560,Homme,40,Pas d'éducation,Travaille,Non,Non,58,166,21,0,Ini smear +,NA,Pvt. docto,750,GH,0,NA,0,14,3
+101657,Homme,46,Intermédiaire,Travaille,Oui,Oui,42,165,15.4,0,Ini smear +,NA,Pvt. docto,5000,GH,0,NA,0,21,3
+101948,Femme,30,Secondaire,Travaille,Non,Non,38,152,16.4,0,Ini smear +,NA,Pvt. docto,1000,GH,0,NA,0,14,6
+102045,Homme,38,Primaire,Travaille,Non,Non,38,160,14.8,0,Ini smear +,NA,Pvt. docto,800,PHC,0,NA,0,21,3
+102142,Homme,27,Secondaire,Travaille,Non,Non,40,152,17.3,1,Ini smear +,NA,GH,0,NA,0,NA,0,14,6
+102433,Homme,35,Pas d'éducation,Travaille,Non,Non,45,150,20,0,Ini smear +,NA,PHC,0,GH,0,NA,0,10,7
+102627,Homme,52,Primaire,Ne travaille pas,Non,Non,36,150,16,0,Ini smear +,NA,Pvt. docto,300,GH,0,NA,0,21,1
+102724,Homme,52,Intermédiaire,Travaille,Non,Non,60,169,21,1,Ini smear +,Negative,Pvt. docto,1000,Pvt. clini,250,GH,0,14,3
+102821,Homme,38,Intermédiaire,Travaille,Oui,Non,40,162,15.2,0,Ini smear +,NA,Pvt. docto,800,Pvt. clini,200,GH,0,21,3
+102918,Homme,30,Primaire,Travaille,Non,Non,35,145,16.6,0,Ini smear +,NA,Pvt. docto,200,Pvt. clini,500,GH,0,14,1
+103015,Femme,36,Intermédiaire,Travaille,Non,Non,48,145,22.8,0,Ini smear +,Negative,GH,0,NA,0,NA,0,3,4
+103209,Homme,65,Pas d'éducation,Ne travaille pas,Non,Non,48,162,18.3,0,Ini smear +,NA,Pvt. clini,300,GH,0,NA,0,60,0
+103306,Femme,25,Intermédiaire,Travaille,Non,Non,45,150,20,0,Ini smear -,Positive,Pvt. docto,2000,Pvt. docto,700,GH,0,60,1
+103403,Femme,51,Pas d'éducation,Ne travaille pas,Non,Non,40,165,14.7,0,Ini smear +,Positive,Pvt. docto,200,GH,0,NA,0,14,7
+103500,Homme,65,Pas d'éducation,Ne travaille pas,Non,Non,35,162,13.3,0,Ini smear +,NA,Pvt. docto,200,GH,0,NA,0,21,8
+103694,Homme,55,Intermédiaire,Travaille,Non,Non,46,155,19.1,0,Ini smear +,Negative,Pvt. docto,500,GH,0,NA,0,14,1
+103791,Femme,22,Secondaire supérieur,Ne travaille pas,Non,Non,32,145,15.2,0,Ini smear +,Negative,Pvt. docto,250,GH,0,NA,0,21,9
+103888,Homme,35,Primaire,Travaille,Non,Non,46,160,18,0,Ini smear +,NA,Pvt. docto,250,GH,0,NA,0,30,2
+103985,Homme,32,Primaire,Travaille,Non,Non,46,162,17.5,0,Ini smear +,NA,Pvt. docto,500,Pvt. hospi,1000,GH,0,19,0
+104082,Homme,55,Secondaire,Travaille,Non,Non,52,163,19.6,0,Ini smear +,NA,Pvt. docto,200,GH,0,NA,0,21,5
+104179,Homme,55,Intermédiaire,Travaille,Non,Non,40,165,14.7,0,Ini smear +,Negative,Pvt. docto,200,GH,0,NA,0,14,5
+104276,Homme,38,Primaire,Travaille,Non,Non,49,165,18,0,Ini smear +,Positive,Pvt. docto,300,GH,0,NA,0,21,4
+104373,Homme,55,Pas d'éducation,Ne travaille pas,Non,Non,49,165,18,0,Ini smear +,NA,Pvt. docto,250,GH,0,NA,0,14,2
+108835,Homme,55,Pas d'éducation,Travaille,Non,Non,47,160,18.4,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,18
+200209,Homme,25,Secondaire supérieur,Travaille,Oui,Non,43,150,19.1,0,Ini smear +,NA,Pvt. docto,3000,Pvt. hospi,1500,GH,0,9,21
+200306,Homme,42,Pas d'éducation,Travaille,Oui,Non,45,175,14.7,0,Ini smear +,NA,Pvt. docto,500,Pvt. docto,2000,GH,0,30,NA
+200403,Femme,50,Pas d'éducation,Ne travaille pas,Non,Non,35,145,16.6,0,Ini smear -,Positive,GH,0,Pvt. docto,500,NA,0,15,NA
+200500,Homme,54,Pas d'éducation,Travaille,Oui,Oui,34,150,15.1,0,Ini smear +,NA,Pvt. docto,500,Pvt. clini,100,GH,0,15,31
+200694,Homme,48,Pas d'éducation,Travaille,Oui,Oui,35,161,13.5,0,Ini smear +,NA,Pvt. clini,500,Pvt. clini,300,Pvt. docto,4000,20,5
+200791,Femme,55,Pas d'éducation,Ne travaille pas,Non,Non,38,150,16.9,0,Ini smear +,NA,Pvt. docto,850,GH,0,NA,0,30,4
+200888,Homme,27,Primaire,Travaille,Oui,Non,48,150,21.3,0,Ini smear +,NA,Pvt. docto,600,T.Pvt,2500,Pvt. hospi,2500,17,9
+201082,Homme,57,Intermédiaire,Travaille,Oui,Oui,38,145,18.1,0,Ini smear +,NA,Pvt. docto,600,GH,0,NA,0,30,7
+201179,Femme,20,Secondaire supérieur,Ne travaille pas,Non,Non,36,140,18.4,0,Ini smear +,Positive,GH,0,NA,0,NA,0,14,1
+201276,Femme,30,Pas d'éducation,Travaille,Non,Non,34,140,17.3,0,Ini smear +,NA,Pvt. docto,2500,T.Govt,0,NA,0,30,8
+201373,Homme,52,Primaire,Travaille,Oui,Oui,45,165,16.5,0,Ini smear +,NA,Pvt. docto,200,GH,0,NA,0,90,4
+201470,Homme,40,Intermédiaire,Travaille,Oui,Non,62,170,21.5,0,Ini smear +,NA,Pvt. docto,200,PHC,0,NA,0,30,1
+201761,Homme,38,Secondaire,Travaille,Oui,Non,57,165,20.9,0,Ini smear +,NA,Pvt. clini,1000,GH,0,NA,0,30,36
+201858,Homme,70,Pas d'éducation,Travaille,Oui,Non,34,150,15.1,0,Ini smear -,Positive,GH,500,NA,0,NA,0,14,1
+202246,Homme,27,Pas d'éducation,Travaille,Non,Non,46,155,19.1,0,Ini smear -,NA,Pvt. hospi,1000,GH,0,NA,0,15,5
+202343,Femme,35,Primaire,Travaille,Non,Non,35,150,15.6,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,5
+202440,Homme,24,Secondaire,Travaille,Oui,Non,42,150,18.7,0,Missing,Positive,Pvt. docto,750,Pvt. docto,250,GH,0,7,3
+202537,Femme,45,Pas d'éducation,Travaille,Non,Non,44,160,17.2,0,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,7,4
+202634,Homme,73,Primaire,Travaille,Oui,Oui,46,150,20.4,0,Ini smear -,NA,Pvt. docto,500,Pvt. hospi,2000,GH,0,15,3
+202731,Homme,60,Pas d'éducation,Travaille,Oui,Oui,52,150,23.1,0,Ini smear -,NA,Pvt. docto,200,Pvt. docto,1200,GH,0,30,4
+202828,Femme,30,Pas d'éducation,Travaille,Non,Non,35,150,15.6,0,Ini smear +,NA,Pvt. hospi,5000,GH,0,NA,0,13,43
+202925,Homme,42,Primaire,Travaille,Oui,Non,50,150,22.2,0,Ini smear +,NA,GH,500,NA,0,NA,0,30,7
+203022,Femme,24,Secondaire,Travaille,Non,Non,33,140,16.8,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,3
+203119,Homme,24,Secondaire supérieur,Travaille,Oui,Oui,46,165,16.9,0,Ini smear +,NA,Pvt. hospi,900,Pvt. hospi,1500,GH,0,90,2
+203216,Femme,28,Secondaire,Travaille,Non,Non,46,150,20.4,0,Ini smear +,Positive,Pvt. docto,3000,Pvt. docto,2000,Pvt. hospi,4000,7,23
+203313,Femme,40,Pas d'éducation,Travaille,Non,Non,40.5,145,19.3,0,Ini smear +,Positive,Pvt. clini,100,Pvt. hospi,3000,GH,0,15,31
+203410,Homme,20,Secondaire,Travaille,Non,Non,44,160,17.2,0,Ini smear +,Positive,Pvt. clini,500,Pvt. hospi,15000,GH,0,15,6
+203507,Homme,38,Intermédiaire,Travaille,Oui,Non,33,150,14.7,0,Ini smear +,NA,Pvt. hospi,1500,T.Govt,0,GH,0,32,32
+203604,Femme,22,Intermédiaire,Ne travaille pas,Non,Non,40,155,16.6,0,Ini smear +,NA,Pvt. hospi,1500,GH,0,NA,0,7,3
+204089,Femme,45,Pas d'éducation,Travaille,Non,Non,49,150,21.8,0,Ini smear +,Negative,Pvt. clini,500,Pvt. docto,200,Pvt. hospi,300,30,21
+204186,Homme,26,Primaire,Travaille,Oui,Non,45,150,20,0,Ini smear -,Positive,Pvt. hospi,500,Pvt. docto,2000,GH,0,15,8
+204380,Femme,21,Intermédiaire,Travaille,Non,Non,38,145,18.1,0,Ini smear +,NA,Pvt. clini,500,Pvt. docto,600,GH,0,15,7
+204477,Homme,39,Pas d'éducation,Travaille,Oui,Non,54,150,24,1,Ini smear -,Positive,Pvt. docto,1000,GH,0,NA,0,20,17
+204574,Homme,55,Pas d'éducation,Travaille,Oui,Oui,59,150,26.2,0,Ini smear +,NA,Pvt. clini,500,Pvt. clini,1500,GH,0,25,0
+204671,Homme,34,Primaire,Travaille,Oui,Non,47,160,18.4,0,Ini smear +,NA,Pvt. docto,250,GH,0,NA,0,10,10
+204768,Femme,24,Intermédiaire,Travaille,Non,Non,37,140,18.9,0,Ini smear -,Positive,GH,0,Tambram Sanatorium,0,NA,0,27,25
+205059,Homme,38,Primaire,Travaille,Oui,Oui,48,175,15.7,0,Ini smear +,NA,Pvt. docto,1500,GH,0,NA,0,90,5
+205156,Homme,45,Primaire,Travaille,Non,Non,75,170,26,1,Ini smear -,Positive,Pvt. docto,500,GH,0,NA,0,15,10
+205253,Homme,55,Pas d'éducation,Travaille,Non,Non,32,170,11.1,0,Ini smear +,NA,Pvt. docto,1200,GH,0,NA,0,16,4
+205350,Homme,35,Primaire,Travaille,Oui,Oui,50.3,150,22.4,0,Ini smear +,Positive,Pvt. docto,1000,GH,0,NA,0,30,5
+205544,Femme,19,Secondaire,Travaille,Non,Non,43,150,19.1,0,Ini smear +,Negative,Pvt. hospi,1300,Pvt. clini,200,GH,0,30,7
+205641,Homme,60,Primaire,Travaille,Oui,Oui,48,165,17.6,0,Ini smear +,NA,Pvt. docto,650,Pvt. hospi,500,GH,0,30,7
+205738,Homme,18,Secondaire,Travaille,Non,Non,45,148,20.5,0,Ini smear +,NA,Pvt. clini,600,Pvt. hospi,400,GH,0,24,0
+206126,Femme,45,Pas d'éducation,Ne travaille pas,Non,Non,33,150,14.7,0,Ini smear +,NA,PHC,0,GH,0,NA,0,17,15
+206223,Homme,19,Diplômé,Ne travaille pas,Non,Non,34,150,15.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,5
+206320,Homme,39,Secondaire,Travaille,Oui,Oui,37,160,14.5,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,24
+206417,Homme,36,Primaire,Travaille,Non,Oui,39,160,15.2,0,Ini smear -,Positive,Tambram sanatorium,0,NA,0,NA,0,30,55
+206611,Homme,37,Primaire,Travaille,Non,Non,48,170,16.6,0,Ini smear +,NA,Pvt. hospi,500,PHC,0,GH,0,23,7
+206708,Homme,25,Intermédiaire,Travaille,Oui,Non,40,150,17.8,0,Ini smear -,Positive,Tambram sanatorium,0,Pvt. docto,1000,GH,0,18,12
+206805,Homme,36,Pas d'éducation,Travaille,Oui,Non,54,150,24,0,Ini smear +,Negative,Pvt. hospi,1450,Pvt. hospi,4500,NA,0,14,50
+300119,Femme,50,Pas d'éducation,Travaille,Non,Non,43,130,25.4,0,Ini smear +,NA,Pvt. clini,600,Pvt. hospi,1400,GH,0,15,0
+300313,Homme,62,Primaire,Travaille,Non,Oui,36,150,16,0,Ini smear +,Positive,PHC,0,Pvt. docto,220,GH,0,20,1
+300507,Femme,40,Pas d'éducation,Travaille,Non,Oui,30,140,15.3,0,Ini smear +,NA,Pvt. clini,500,GH,0,NA,0,13,23
+300604,Femme,50,Primaire,Travaille,Non,Non,42,151,18.4,0,Ini smear -,Positive,PHC,0,GH,0,NA,0,7,2
+300992,Homme,52,Intermédiaire,Travaille,Oui,Oui,45,160,17.6,0,Ini smear +,NA,Pvt. docto,150,Pvt. hospi,400,GH,0,10,6
+301380,Homme,57,Secondaire supérieur,Ne travaille pas,Non,Non,45,161,17.4,0,Ini smear +,Positive,Pvt. clini,400,Pvt. docto,200,GH,0,15,4
+301477,Homme,67,Secondaire supérieur,Travaille,Non,Non,55,161,21.2,0,Ini smear +,NA,Pvt. hospi,900,GH,0,NA,0,60,3
+301574,Homme,65,Pas d'éducation,Travaille,Non,Non,47,159,18.6,0,Ini smear +,NA,Pvt. docto,5000,GH,0,NA,0,25,5
+301671,Homme,75,Primaire,Travaille,Non,Oui,41,152,17.7,0,Ini smear +,Negative,Pvt. hospi,3000,PHC,0,GH,0,7,2
+301865,Homme,60,Primaire,Ne travaille pas,Non,Non,50,165,18.4,0,Ini smear +,Positive,PHC,0,Pvt. docto,2000,GH,0,25,5
+301962,Femme,65,Pas d'éducation,Ne travaille pas,Non,Non,38,156,15.6,0,Ini smear +,Positive,Pvt. hospi,400,PHC,0,GH,0,21,3
+302059,Femme,40,Pas d'éducation,Ne travaille pas,Non,Non,42,154,17.7,0,Ini smear -,Positive,Tambram sanatorium,0,NA,0,NA,0,10,23
+302253,Homme,30,Pas d'éducation,Travaille,Non,Non,50,150,22.2,0,Ini smear +,NA,Pvt. clini,1000,GH,0,NA,0,7,3
+302350,Femme,26,Pas d'éducation,Ne travaille pas,Non,Non,34,156,14,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,2
+302447,Homme,65,Pas d'éducation,Travaille,Non,Non,53,170,18.3,0,Ini smear +,NA,T.Pvt,2000,Pvt. hospi,15000,GH,0,NA,2
+302544,Femme,45,Pas d'éducation,Ne travaille pas,Non,Non,37,157,15,0,Ini smear +,NA,PHC,0,GH,0,NA,0,7,2
+302641,Homme,24,Secondaire,Travaille,Non,Non,45,167,16.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,6,4
+302738,Homme,38,Primaire,Travaille,Non,Non,50,160,19.5,0,Ini smear -,Positive,GH,0,NA,0,NA,0,20,9
+302835,Femme,31,Intermédiaire,Travaille,Non,Non,35,152,15.1,0,Ini smear +,NA,Pvt. hospi,2500,GH,0,NA,0,15,2
+302932,Homme,57,Pas d'éducation,Ne travaille pas,Non,Non,38,158,15.2,0,Ini smear +,Positive,Pvt. hospi,0,NA,0,NA,0,10,5
+303320,Homme,67,Pas d'éducation,Travaille,Non,Non,47,150,20.9,0,Ini smear -,Positive,PHC,0,Pvt. docto,10000,GH,0,60,7
+303417,Homme,42,Secondaire,Travaille,Oui,Non,59,149,26.6,0,Ini smear +,Positive,Pvt. docto,700,GH,0,NA,0,40,6
+303514,Homme,64,Primaire,Ne travaille pas,Non,Non,39,152,16.9,0,Ini smear +,NA,Pvt. docto,20000,PHC,0,GH,0,210,4
+303611,Homme,42,Pas d'éducation,Travaille,Non,Non,52,152,22.5,0,Ini smear +,Positive,PHC,0,Pvt. docto,500,Pvt. hospi,3000,11,8
+303708,Homme,36,Secondaire,Travaille,Non,Non,45,160,17.6,0,Ini smear +,NA,PHC,0,PHC,0,Tambram Sanatorium,0,30,1
+303805,Femme,40,Primaire,Travaille,Non,Non,38,152,16.4,0,Ini smear +,Positive,PHC,0,GH,0,NA,0,20,5
+303902,Homme,48,Pas d'éducation,Travaille,Non,Non,48,151,21.1,0,Ini smear +,Positive,Pvt. clini,4000,PHC,0,GH,0,10,1
+304096,Homme,44,Secondaire,Travaille,Non,Non,47.4,164,17.6,1,Ini smear +,Positive,Pvt. docto,6000,GH,0,NA,0,10,13
+304193,Homme,37,Pas d'éducation,Travaille,Non,Non,42,130,24.9,0,Ini smear +,Positive,Pvt. docto,1000,GH,0,NA,0,10,7
+304290,Homme,45,Pas d'éducation,Travaille,Non,Non,42,165,15.4,0,Ini smear +,NA,Pvt. clini,400,GH,0,NA,0,30,21
+304484,Homme,55,Primaire,Ne travaille pas,Non,Non,39.1,162,14.9,0,Ini smear +,Positive,PHC,0,GH,0,NA,0,15,5
+304678,Homme,42,Primaire,Travaille,Non,Oui,39,165,14.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,1
+304775,Homme,19,Intermédiaire,Ne travaille pas,Non,Non,45,178,14.2,0,Ini smear +,Positive,Pvt. clini,100,GH,0,NA,0,10,0
+304969,Homme,45,Pas d'éducation,Travaille,Non,Non,42,156,17.3,0,Ini smear +,Positive,PHC,0,Pvt. hospi,1000,T.Govt,0,15,14
+305066,Homme,60,Primaire,Ne travaille pas,Non,Oui,56,155,23.3,0,Ini smear -,Positive,Pvt. docto,500,PHC,0,GH,0,15,0
+305163,Homme,45,Pas d'éducation,Ne travaille pas,Non,Non,61,162,23.2,0,Ini smear -,NA,PHC,0,GH,0,NA,0,10,7
+305357,Homme,30,Pas d'éducation,Travaille,Oui,Non,43,175,14,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,22
+305454,Homme,40,Intermédiaire,Travaille,Non,Non,61,166,22.1,1,Ini smear +,Negative,Pvt. hospi,2500,GH,0,NA,0,14,1
+305551,Homme,58,Secondaire,Travaille,Non,Non,48,157,19.5,0,Ini smear -,Positive,Pvt. docto,500,GH,0,NA,0,14,4
+305648,Homme,60,Primaire,Ne travaille pas,Non,Non,41.4,158,16.6,0,Ini smear -,Positive,Pvt. docto,1000,Pvt. hospi,2000,PHC,0,15,5
+400126,Homme,20,Intermédiaire,Travaille,Non,Non,35,161,13.5,0,Ini smear +,NA,GH,0,Pvt. clini,200,Pvt. docto,300,28,6
+400223,Homme,35,Pas d'éducation,Travaille,Oui,Oui,40,165,14.7,0,Ini smear +,Negative,Pvt. clini,1000,Pvt. clini,400,GH,0,30,13
+400320,Homme,50,Primaire,Travaille,Non,Non,40,160,15.6,0,Ini smear +,NA,GH,600,NA,0,NA,0,6,1
+400417,Femme,25,Primaire,Travaille,Non,Non,43,159,17,0,Ini smear +,NA,Pvt. docto,250,GH,0,NA,0,4,3
+400611,Homme,55,Primaire,Travaille,Non,Non,45,157,18.3,1,Ini smear +,NA,Pvt. docto,1700,Pvt. docto,6000,GH,0,45,1
+400708,Femme,42,Pas d'éducation,Travaille,Non,Non,40,150,17.8,1,Ini smear +,NA,Pvt. docto,3750,Pvt. clini,850,GH,0,4,1
+400805,Homme,50,Pas d'éducation,Travaille,Oui,Oui,42,161,16.2,0,Ini smear +,NA,Other,2500,Other,2000,GH,0,365,5
+401484,Homme,30,Secondaire,Travaille,Oui,Non,43,171,14.7,1,Ini smear +,NA,Pvt. hospi,15000,GH,0,NA,0,60,2
+401581,Homme,42,Intermédiaire,Travaille,Oui,Non,37,166,13.4,0,Ini smear +,NA,Pvt. clini,800,GH,0,NA,0,14,0
+401678,Homme,55,Pas d'éducation,Travaille,Oui,Oui,47,168,16.7,0,Ini smear +,NA,Pvt. clini,2000,Pvt. clini,3000,GH,0,365,4
+401775,Homme,47,Pas d'éducation,Travaille,Non,Non,52,171,17.8,0,Ini smear -,Positive,Pvt. clini,3000,GH,0,NA,0,30,3
+401872,Homme,35,Primaire,Travaille,Oui,Non,50,172,16.9,0,Ini smear +,Negative,GH,0,NA,0,NA,0,15,5
+401969,Femme,44,Pas d'éducation,Travaille,Non,Non,45,147,20.8,1,Ini smear +,Negative,Pvt. hospi,5000,NA,0,NA,0,180,1
+402163,Femme,47,Pas d'éducation,Ne travaille pas,Non,Non,34,149,15.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,4
+402357,Homme,70,Pas d'éducation,Ne travaille pas,Oui,Non,45,164,16.7,0,Ini smear +,NA,GH,0,NA,0,NA,0,3,3
+402454,Femme,30,Primaire,Travaille,Non,Non,36,158,14.4,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,7
+402648,Homme,67,Pas d'éducation,Travaille,Oui,Non,60,153,25.6,1,Ini smear +,NA,GH,0,NA,0,NA,0,7,4
+402842,Femme,22,Secondaire supérieur,Ne travaille pas,Non,Non,42,170,14.5,0,Ini smear +,NA,Pvt. clini,4000,GH,0,NA,0,31,7
+402939,Homme,48,Primaire,Ne travaille pas,Oui,Non,37,155,15.4,0,Ini smear +,Positive,Pvt. clini,6000,GH,0,NA,0,18,4
+403036,Homme,29,Secondaire,Travaille,Non,Non,45,159,17.8,0,Ini smear -,Positive,Pvt. hospi,1200,GH,0,NA,0,7,3
+403133,Homme,63,Pas d'éducation,Ne travaille pas,Non,Non,47,168,16.7,0,Ini smear -,Positive,Pvt. clini,1500,GH,0,NA,0,3,12
+403327,Homme,52,Pas d'éducation,Travaille,Oui,Oui,44,166,16,0,Ini smear +,NA,Pvt. clini,2300,GH,0,NA,0,94,1
+403521,Homme,38,Secondaire supérieur,Travaille,Non,Non,38,163,14.3,0,Ini smear -,Positive,PHC,0,NA,0,NA,0,7,22
+403618,Homme,40,Pas d'éducation,Travaille,Non,Oui,51,166,18.5,0,Ini smear +,NA,Pvt. hospi,200,Pvt. hospi,3300,Pvt. hospi,350,15,0
+403812,Homme,44,Secondaire,Travaille,Oui,Non,39,153,16.7,0,Ini smear +,NA,GH,200,NA,0,NA,0,8,37
+403909,Homme,51,Pas d'éducation,Travaille,Non,Non,40,167,14.3,1,Ini smear +,NA,Pvt. clini,1900,Tambram Sanatorium,0,GH,0,90,4
+404006,Femme,19,Intermédiaire,Ne travaille pas,Non,Non,35,150,15.6,0,Ini smear +,NA,Pvt. hospi,1500,GH,0,NA,0,14,9
+404103,Homme,28,Primaire,Travaille,Oui,Oui,40,153,17.1,0,Ini smear +,NA,Pvt. hospi,300,GH,0,NA,0,90,6
+404200,Homme,42,Primaire,Travaille,Oui,Oui,42,152,18.2,1,Ini smear +,Positive,Pvt. hospi,9500,Pvt. hospi,1700,GH,0,180,5
+404394,Femme,22,Secondaire supérieur,Ne travaille pas,Non,Non,36,163,13.5,0,Ini smear +,NA,Pvt. hospi,150,Pvt. hospi,3200,GH,0,14,14
+404491,Homme,23,Secondaire supérieur,Travaille,Non,Non,50,175,16.3,0,Ini smear +,NA,Pvt. docto,170,PHC,0,GH,0,5,0
+404588,Homme,23,Secondaire,Travaille,Non,Non,41,164,15.2,0,Ini smear +,NA,Pvt. clini,650,GH,0,NA,0,15,5
+404685,Homme,62,Secondaire,Ne travaille pas,Non,Non,47,167,16.9,1,Ini smear +,NA,Pvt. clini,500,GH,0,NA,0,14,10
+404879,Homme,47,Primaire,Travaille,Non,Non,50,172,16.9,0,Ini smear +,NA,PHC,0,Pvt. clini,1500,Pvt. hospi,7000,20,26
+404976,Homme,39,Secondaire,Travaille,Oui,Non,56,169,19.6,0,Ini smear +,Negative,Pvt. hospi,5000,Pvt. hospi,1000,GH,0,180,9
+405073,Homme,55,Primaire,Travaille,Non,Non,52,166,18.9,0,Ini smear -,Positive,Pvt. docto,1500,PHC,0,NA,0,21,0
+405170,Homme,62,Primaire,Travaille,Oui,Non,49,167,17.6,0,Ini smear +,Negative,Pvt. docto,350,Pvt. clini,1200,GH,0,15,0
+405267,Homme,34,Secondaire,Travaille,Non,Non,48,161,18.5,0,Ini smear -,Positive,Pvt. hospi,4000,GH,800,NA,0,7,14
+405364,Homme,45,Primaire,Travaille,Oui,Oui,40,150,17.8,0,Ini smear +,Negative,Pvt. docto,900,GH,0,NA,0,7,1
+405558,Femme,45,Pas d'éducation,Travaille,Non,Non,45,155,18.7,0,Ini smear +,NA,Pvt. docto,2000,GH,0,NA,0,150,0
+405946,Femme,30,Pas d'éducation,Travaille,Non,Non,40.5,143,19.8,0,Ini smear -,Positive,Pvt. docto,10000,GH,0,NA,0,40,35
+406140,Homme,30,Primaire,Travaille,Oui,Oui,50.2,171,17.2,0,Ini smear +,NA,Tambram sanatorium,0,NA,0,NA,0,6,12
+406237,Homme,53,Pas d'éducation,Travaille,Oui,Oui,40.5,153,17.3,0,Ini smear -,Positive,Pvt. docto,500,PHC,0,NA,0,14,2
+406528,Homme,58,Intermédiaire,Ne travaille pas,Non,Non,58,169,20.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,3,3
+406625,Homme,30,Intermédiaire,Travaille,Non,Non,41,165,15.1,0,Ini smear +,NA,PHC,0,NA,0,NA,0,7,0
+406722,Homme,68,Primaire,Travaille,Non,Oui,38,152,16.4,0,Ini smear +,Negative,Pvt. docto,3000,GH,0,NA,0,7,2
+406819,Homme,60,Primaire,Ne travaille pas,Oui,Oui,32,167,11.5,0,Ini smear +,NA,PHC,0,GH,0,NA,0,14,3
+406916,Homme,21,Secondaire,Travaille,Non,Non,51,162,19.4,0,Ini smear +,NA,PHC,0,NA,0,NA,0,7,3
+407013,Homme,54,Primaire,Ne travaille pas,Non,Non,43,165,15.8,0,Ini smear +,NA,PHC,0,GH,0,NA,0,7,3
+407110,Homme,60,Pas d'éducation,Ne travaille pas,Non,Non,43,166,15.6,0,Ini smear +,NA,Pvt. hospi,1500,PHC,0,NA,0,7,0
+407207,Femme,55,Pas d'éducation,Ne travaille pas,Non,Non,42,150,18.7,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,9
+407304,Homme,50,Primaire,Ne travaille pas,Non,Oui,69,173,23.1,1,Ini smear +,NA,Pvt. docto,1000,Pvt. clini,5000,GH,0,30,10
+407401,Femme,38,Primaire,Ne travaille pas,Non,Non,45,162,17.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,0
+407595,Femme,45,Pas d'éducation,Travaille,Oui,Oui,50,162,19.1,0,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,7,7
+407789,Homme,55,Pas d'éducation,Travaille,Non,Oui,45,158,18,0,Ini smear -,Positive,GH,0,NA,0,NA,0,7,7
+407886,Femme,60,Pas d'éducation,Travaille,Non,Non,33,156,13.6,0,Ini smear +,NA,Pvt. hospi,4000,GH,0,NA,0,14,5
+407983,Homme,60,Primaire,Travaille,Oui,Oui,41,162,15.6,0,Ini smear +,NA,Pvt. hospi,2000,Pvt. hospi,1000,GH,0,14,6
+408080,Homme,50,Pas d'éducation,Travaille,Oui,Non,37,168,13.1,0,Ini smear +,NA,Pvt. docto,1000,GH,0,NA,0,7,2
+408177,Homme,38,Intermédiaire,Travaille,Non,Non,52,166,18.9,0,Ini smear -,Positive,Pvt. docto,15000,GH,0,NA,0,14,1
+408274,Homme,49,Secondaire,Travaille,Oui,Non,47,162,17.9,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,7
+500133,Homme,19,Secondaire supérieur,Ne travaille pas,Non,Non,36,148,16.4,0,Ini smear +,NA,Pvt. hospi,10000,GH,0,NA,0,30,4
+500327,Femme,35,Secondaire supérieur,Travaille,Non,Non,45,165,16.5,0,Ini smear +,NA,GH,0,GH,0,NA,0,7,9
+500424,Femme,60,Pas d'éducation,Travaille,Non,Non,50,165,18.4,0,Missing,Positive,Pvt. hospi,500,NA,0,NA,0,90,1
+500715,Homme,65,Primaire,Travaille,Oui,Non,49,165,18,0,Ini smear +,NA,Pvt. docto,1000,GH,0,NA,0,30,3
+500812,Homme,55,Intermédiaire,Travaille,Oui,Oui,40,170,13.8,0,Ini smear +,NA,PHC,0,GH,0,NA,0,30,4
+500909,Homme,60,Intermédiaire,Travaille,Oui,Oui,43,160,16.8,0,Ini smear +,NA,GH,0,Pvt. clini,800,GH,0,11,4
+501006,Femme,23,Intermédiaire,Travaille,Non,Non,68,168,24.1,0,Ini smear -,Positive,Pvt. docto,15000,Pvt. hospi,5000,GH,0,120,0
+501200,Femme,19,Secondaire,Travaille,Non,Non,34,160,13.3,1,Ini smear +,Positive,Pvt. docto,5000,Pvt. hospi,1500,NA,0,90,7
+501394,Homme,40,Primaire,Travaille,Oui,Non,38,158,15.2,1,Ini smear -,Positive,Pvt. docto,5000,GH,0,NA,0,30,6
+501588,Homme,55,Intermédiaire,Travaille,Oui,Oui,42,165,15.4,0,Ini smear +,Positive,Pvt. hospi,30000,GH,0,NA,0,11,4
+501685,Homme,38,Pas d'éducation,Travaille,Oui,Non,40,155,16.6,0,Ini smear +,Positive,Pvt. docto,1000,PHC,0,NA,0,30,4
+501782,Homme,60,Primaire,Travaille,Non,Oui,35,160,13.7,0,Ini smear -,Positive,Pvt. docto,1000,Pvt. hospi,3000,NA,0,90,0
+501976,Femme,55,Pas d'éducation,Travaille,Oui,Non,35,150,15.6,0,Ini smear +,NA,Pvt. hospi,600,PHC,0,NA,0,60,2
+502170,Homme,45,Pas d'éducation,Travaille,Oui,Oui,46,155,19.1,0,Ini smear +,Positive,GH,0,NA,0,NA,0,20,19
+502267,Homme,45,Pas d'éducation,Travaille,Oui,Oui,46,170,15.9,0,Ini smear +,NA,Pvt. hospi,2000,GH,0,NA,0,90,6
+502364,Homme,48,Primaire,Travaille,Non,Non,60,162,22.9,1,Ini smear +,NA,Pvt. docto,360,GH,0,NA,0,53,2
+502461,Femme,28,Secondaire,Ne travaille pas,Non,Non,35,153,15,0,Ini smear +,Negative,Pvt. hospi,10000,T.Govt,0,NA,0,60,6
+502558,Homme,60,Pas d'éducation,Travaille,Oui,Oui,51,162,19.4,0,Ini smear +,Negative,Pvt. hospi,500,GH,0,NA,0,3,2
+502655,Homme,25,Secondaire supérieur,Travaille,Oui,Non,40,162,15.2,0,Ini smear +,NA,Pvt. docto,2000,PHC,0,GH,0,15,2
+502752,Homme,56,Pas d'éducation,Travaille,Non,Oui,50,159,19.8,0,Ini smear -,Positive,Pvt. docto,800,GH,0,NA,0,60,9
+502849,Homme,35,Intermédiaire,Travaille,Non,Non,46,161,17.7,0,Ini smear -,NA,GH,1000,NA,0,NA,0,7,8
+502946,Femme,33,Intermédiaire,Ne travaille pas,Non,Non,42,150,18.7,0,Ini smear +,NA,Pvt. docto,10000,Pvt. docto,3000,GH,0,90,10
+503043,Homme,33,Intermédiaire,Travaille,Oui,Non,62,160,24.2,0,Ini smear -,NA,Pvt. clini,2000,Pvt. docto,3000,GH,0,30,1
+503237,Homme,33,Pas d'éducation,Travaille,Oui,Non,45,157,18.3,0,Ini smear +,NA,Pvt. docto,300,Pvt. hospi,3000,GH,0,30,12
+503431,Homme,42,Primaire,Travaille,Non,Oui,47,156,19.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,7
+503722,Femme,47,Primaire,Travaille,Non,Non,69,150,30.7,0,Ini smear -,Positive,GH,0,NA,0,NA,0,30,16
+503819,Femme,47,Pas d'éducation,Ne travaille pas,Non,Non,40,140,20.4,0,Ini smear +,Positive,Pvt. docto,2500,GH,0,NA,0,30,4
+504110,Homme,41,Primaire,Travaille,Oui,Oui,35,150,15.6,0,Ini smear +,NA,Pvt. docto,2500,GH,0,NA,0,30,3
+504207,Femme,50,Pas d'éducation,Travaille,Non,Non,35,154,14.8,1,Ini smear -,NA,Pvt. docto,1500,GH,1000,NA,0,20,8
+504595,Femme,21,Secondaire,Ne travaille pas,Non,Non,40,160,15.6,0,Ini smear -,NA,Pvt. docto,5000,GH,0,NA,0,60,31
+504789,Femme,19,Secondaire,Travaille,Non,Non,39,155,16.2,0,Ini smear +,NA,Pvt. docto,3000,GH,0,NA,0,9,12
+504886,Homme,30,Secondaire supérieur,Travaille,Oui,Non,55,165,20.2,0,Ini smear -,Positive,Tambram sanatorium,0,GH,0,NA,0,NA,6
+504983,Femme,40,Pas d'éducation,Travaille,Non,Non,45,145,21.4,0,Ini smear +,NA,Pvt. docto,5000,GH,0,NA,0,93,7
+505080,Homme,65,Pas d'éducation,Travaille,Oui,Oui,67,170,23.2,0,Ini smear -,Positive,Pvt. docto,850,GH,0,NA,0,60,16
+505274,Femme,60,Pas d'éducation,Travaille,Non,Non,47,155,19.6,0,Ini smear +,NA,GH,0,NA,0,NA,0,5,3
+505371,Homme,62,Pas d'éducation,Ne travaille pas,Oui,Oui,46,155,19.1,0,Ini smear +,NA,PHC,0,NA,0,NA,0,60,15
+505468,Homme,56,Pas d'éducation,Travaille,Oui,Oui,55,166,20,0,Ini smear +,NA,Pvt. docto,1700,GH,0,NA,0,19,35
+505565,Homme,60,Pas d'éducation,Travaille,Oui,Oui,56,170,19.4,0,Ini smear +,NA,PHC,0,GH,0,NA,0,NA,5
+505759,Homme,43,Pas d'éducation,Travaille,Oui,Oui,60,160,23.4,0,Ini smear -,Positive,GH,0,NA,0,NA,0,10,3
+505856,Femme,57,Pas d'éducation,Travaille,Non,Non,45,155,18.7,0,Ini smear -,Positive,Tambram sanatorium,0,GH,0,NA,0,120,11
+506050,Homme,65,Intermédiaire,Travaille,Non,Non,40,170,13.8,0,Ini smear +,NA,Pvt. hospi,500,Pvt. hospi,0,GH,0,60,6
+506341,Femme,26,Diplômé et plus,Ne travaille pas,Non,Non,43,163,16.2,0,Ini smear +,NA,GH,0,Pvt. docto,4000,Pvt. clini,1500,7,2
+506438,Homme,35,Pas d'éducation,Travaille,Oui,Oui,59,166,21.4,0,Ini smear +,NA,Pvt. docto,850,PHC,0,NA,0,21,4
+506535,Homme,39,Intermédiaire,Travaille,Oui,Oui,42,162,16,1,Ini smear +,NA,Pvt. docto,2800,Pvt. docto,1000,GH,0,7,0
+506632,Femme,38,Pas d'éducation,Travaille,Non,Non,41,150,18.2,0,Ini smear +,NA,GH,0,NA,0,NA,0,49,6
+506729,Homme,63,Primaire,Travaille,Oui,Oui,37,160,14.5,0,Ini smear +,NA,Pvt. docto,10000,Pvt. hospi,15000,Pvt. hospi,10000,210,11
+506826,Femme,35,Primaire,Travaille,Non,Non,42,160,16.4,0,Ini smear +,Negative,Pvt. docto,3000,GH,0,NA,0,240,3
+506923,Homme,40,Intermédiaire,Travaille,Oui,Non,43,164,16,0,Ini smear -,Positive,Pvt. docto,800,GH,0,NA,0,60,14
+507020,Homme,48,Primaire,Travaille,Oui,Non,38,168,13.5,0,Ini smear +,NA,Pvt. docto,2000,GH,0,NA,0,90,25
+507117,Homme,45,Pas d'éducation,Travaille,Oui,Non,39,165,14.3,0,Ini smear +,NA,PHC,0,PHC,0,GH,0,120,2
+507214,Homme,25,Primaire,Travaille,Oui,Oui,41,165,15.1,0,Ini smear +,NA,Pvt. docto,300,Pvt. docto,450,Pvt. docto,500,14,2
+507311,Homme,65,Pas d'éducation,Travaille,Non,Non,40,160,15.6,0,Ini smear -,Positive,Tambram sanatorium,500,NA,0,NA,0,120,38
+507408,Femme,50,Pas d'éducation,Travaille,Non,Non,32,144,15.4,0,Ini smear -,Positive,GH,0,Pvt. hospi,5000,NA,0,35,20
+507505,Homme,31,Intermédiaire,Travaille,Oui,Oui,45,167,16.1,0,Ini smear +,NA,Pvt. hospi,8000,GH,0,NA,0,30,0
+507602,Femme,40,Primaire,Travaille,Non,Non,41,152,17.7,0,Ini smear -,Positive,Pvt. docto,200,GH,0,NA,0,14,3
+600140,Homme,50,Primaire,Travaille,Oui,Oui,34.5,165,12.7,0,Ini smear +,Positive,Pvt. clini,300,T.Govt,0,NA,0,19,3
+600237,Homme,54,Primaire,Travaille,Non,Non,54.5,170,18.9,0,Ini smear +,NA,T.Govt,0,GH,0,NA,0,90,8
+600334,Homme,40,Pas d'éducation,Travaille,Non,Non,41.5,165,15.2,0,Ini smear +,NA,Pvt. hospi,100,Tambram Sanatorium,0,NA,0,14,15
+600431,Homme,65,Pas d'éducation,Travaille,Oui,Non,42,165,15.4,0,Ini smear +,NA,Pvt. docto,50,GH,0,NA,0,7,2
+600528,Homme,38,Primaire,Travaille,Oui,Non,47,168,16.7,0,Ini smear +,Positive,GH,0,NA,0,NA,0,7,13
+600625,Homme,65,Pas d'éducation,Travaille,Non,Non,57,165,20.9,0,Ini smear +,Positive,Pvt. docto,600,PHC,0,NA,0,91,7
+600722,Homme,30,Primaire,Travaille,Non,Non,40,165,14.7,0,Ini smear +,NA,Tambram sanatorium,0,GH,0,NA,0,60,2
+600819,Femme,47,Pas d'éducation,Ne travaille pas,Non,Non,55,155,22.9,1,Ini smear +,Positive,Pvt. docto,600,GH,0,NA,0,30,5
+600916,Homme,30,Secondaire,Travaille,Non,Non,47,165,17.3,1,Ini smear +,NA,Pvt. clini,700,GH,0,NA,0,30,4
+601013,Homme,35,Primaire,Travaille,Non,Non,57,167,20.4,0,Ini smear -,Positive,Pvt. hospi,1000,Tambram Sanatorium,0,NA,0,NA,1
+601110,Homme,54,Secondaire,Travaille,Oui,Oui,36,150,16,0,Ini smear +,NA,GH,0,GH,0,NA,0,20,0
+601304,Homme,55,Intermédiaire,Travaille,Oui,Non,60,165,22,0,Ini smear +,NA,GH,0,NA,0,NA,0,15,1
+601401,Femme,24,Diplômé,Travaille,Non,Non,35,155,14.6,0,Ini smear +,NA,Pvt. docto,750,Tambram Sanatorium,0,NA,0,30,5
+601595,Femme,35,Pas d'éducation,Travaille,Non,Non,31,150,13.8,0,Ini smear +,NA,Pvt. hospi,350,GH,0,NA,0,30,5
+601692,Homme,45,Primaire,Travaille,Oui,Oui,48,160,18.7,0,Ini smear -,Positive,Pvt. docto,300,T.Govt,0,NA,0,30,9
+601789,Homme,48,Intermédiaire,Travaille,Oui,Oui,38.1,160,14.9,0,Missing,Positive,Pvt. clini,300,Pvt. hospi,700,PHC,0,30,0
+601983,Homme,50,Intermédiaire,Travaille,Non,Non,59,170,20.4,1,Ini smear +,NA,Pvt. clini,150,Pvt. hospi,600,PHC,0,4,9
+602080,Homme,63,Secondaire,Travaille,Oui,Oui,50,155,20.8,1,Ini smear +,Positive,Pvt. hospi,350,Tambram Sanatorium,0,GH,0,30,19
+602177,Homme,37,Primaire,Travaille,Non,Oui,46.3,170,16,0,Ini smear +,NA,Pvt. docto,200,PHC,0,NA,0,30,4
+602274,Femme,32,Secondaire,Ne travaille pas,Non,Non,67.3,155,28,0,Ini smear +,NA,Pvt. clini,200,GH,0,NA,0,30,2
+602371,Homme,45,Pas d'éducation,Travaille,Oui,Non,46.8,165,17.2,0,Ini smear +,NA,PHC,0,NA,0,NA,0,30,13
+602468,Homme,60,Primaire,Travaille,Non,Non,56.8,160,22.2,0,Ini smear -,Positive,Pvt. docto,300,Tambram Sanatorium,0,NA,0,30,6
+602565,Homme,40,Intermédiaire,Travaille,Oui,Non,51,160,19.9,1,Ini smear +,Positive,T.Govt,0,GH,0,NA,0,30,4
+602662,Homme,43,Primaire,Travaille,Oui,Oui,33,155,13.7,0,Ini smear +,NA,Pvt. docto,200,GH,0,NA,0,7,5
+602759,Homme,41,Intermédiaire,Travaille,Oui,Oui,50,155,20.8,1,Ini smear +,Positive,Pvt. hospi,2300,PHC,0,NA,0,21,3
+602856,Homme,40,Pas d'éducation,Travaille,Oui,Oui,40,155,16.6,0,Ini smear +,Positive,Pvt. hospi,1200,Tambram Sanatorium,0,NA,0,21,7
+602953,Femme,55,Intermédiaire,Travaille,Non,Non,40,156,16.4,1,Ini smear +,NA,Pvt. docto,300,Pvt. hospi,1500,PHC,0,30,20
+603050,Homme,65,Primaire,Ne travaille pas,Oui,Oui,45,170,15.6,0,Ini smear +,NA,Pvt. hospi,250,GH,0,NA,0,14,14
+603147,Femme,60,Intermédiaire,Ne travaille pas,Non,Non,31,155,12.9,0,Ini smear -,Positive,Pvt. hospi,600,GH,0,NA,0,14,3
+603244,Homme,54,Intermédiaire,Travaille,Oui,Non,80,160,31.2,0,Ini smear -,Positive,Pvt. hospi,750,GH,0,NA,0,36,110
+603341,Femme,20,Secondaire,Ne travaille pas,Non,Non,35,155,14.6,0,Ini smear -,Positive,Pvt. hospi,700,Tambram Sanatorium,0,NA,0,14,2
+603438,Homme,55,Primaire,Travaille,Oui,Oui,37,165,13.6,0,Ini smear +,NA,Pvt. clini,450,GH,0,NA,0,30,9
+603632,Femme,47,Primaire,Ne travaille pas,Non,Non,43.3,150,19.2,0,Ini smear -,Positive,Pvt. docto,500,Tambram Sanatorium,0,NA,0,21,13
+603729,Homme,45,Pas d'éducation,Travaille,Oui,Oui,45,170,15.6,0,Ini smear +,Positive,Pvt. docto,300,GH,0,NA,0,30,59
+603826,Homme,25,Secondaire supérieur,Travaille,Oui,Non,45,165,16.5,0,Ini smear +,NA,Pvt. hospi,600,GH,0,NA,0,14,1
+603923,Femme,55,Pas d'éducation,Travaille,Non,Non,30.4,149,13.7,0,Ini smear +,NA,Pvt. docto,400,T.Govt,0,NA,0,30,8
+604020,Homme,69,Pas d'éducation,Travaille,Oui,Oui,46.2,163,17.4,0,Ini smear +,NA,Pvt. hospi,400,GH,0,NA,0,14,5
+604117,Homme,30,Primaire,Travaille,Oui,Non,47.4,167,17,0,Ini smear +,Positive,GH,1000,Tambram Sanatorium,0,NA,0,150,40
+604214,Homme,19,Secondaire supérieur,Travaille,Oui,Oui,47,170,16.3,0,Ini smear -,Positive,Pvt. hospi,8000,Pvt. docto,300,T.Govt,500,30,7
+604408,Homme,45,Secondaire,Travaille,Oui,Oui,52.1,150,23.2,1,Ini smear -,Positive,Pvt. clini,1000,GH,0,T.Govt,0,30,10
+604505,Homme,45,Secondaire,Travaille,Oui,Non,35.2,150,15.6,1,Ini smear +,NA,Pvt. hospi,600,Pvt. docto,850,Tambram Sanatorium,0,30,9
+604602,Homme,41,Primaire,Travaille,Oui,Non,45,173,15,1,Ini smear +,Positive,Pvt. docto,900,GH,0,NA,0,30,1
+604796,Homme,62,Pas d'éducation,Travaille,Oui,Oui,39.3,159,15.5,0,Ini smear +,Negative,Pvt. clini,750,Pvt. hospi,0,NA,0,30,3
+604990,Femme,50,Pas d'éducation,Ne travaille pas,Non,Non,34,150,15.1,0,Ini smear +,NA,Pvt. docto,100,GH,0,NA,0,30,38
+605087,Femme,56,Primaire,Travaille,Non,Non,32,155,13.3,0,Ini smear +,NA,Pvt. clini,800,GH,0,NA,0,14,2
+605184,Homme,26,Intermédiaire,Travaille,Oui,Oui,44,155,18.3,0,Ini smear +,NA,Pvt. docto,1500,GH,0,NA,0,14,2
+605281,Homme,55,Primaire,Travaille,Oui,Oui,40,165,14.7,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,5
+700147,Homme,40,Intermédiaire,Travaille,Oui,Oui,43,160,16.8,0,Ini smear +,Positive,GH,0,GH,0,NA,0,3,2
+700244,Homme,31,Secondaire supérieur,Travaille,Oui,Oui,43,172,14.5,0,Missing,Positive,GH,0,Pvt. hospi,500,NA,0,20,39
+700341,Homme,40,Intermédiaire,Ne travaille pas,Oui,Oui,55,162,21,1,Ini smear +,NA,GH,0,NA,0,NA,0,2,2
+700438,Homme,21,Secondaire,Ne travaille pas,Non,Non,37,152,16,0,Ini smear +,NA,Pvt. docto,500,Pvt. clini,260,Pvt. hospi,2000,3,5
+700535,Homme,70,Secondaire,Travaille,Oui,Non,37,170,12.8,0,Ini smear +,NA,Pvt. clini,200,GH,0,NA,0,18,9
+700632,Femme,30,Intermédiaire,Ne travaille pas,Non,Non,30,140,15.3,0,Ini smear +,Negative,Tambram sanatorium,0,NA,0,NA,0,30,27
+700729,Femme,45,Primaire,Ne travaille pas,Non,Non,40,150,17.8,1,Ini smear -,Positive,Pvt. clini,200,T.Govt,0,NA,0,15,3
+700826,Homme,65,Primaire,Travaille,Oui,Oui,50,160,19.5,0,Ini smear +,NA,Pvt. hospi,0,GH,0,NA,0,4,7
+700923,Homme,48,Intermédiaire,Travaille,Oui,Non,50,160,19.5,1,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,NA,1
+701020,Homme,63,Primaire,Travaille,Non,Oui,74,145,35.2,1,Ini smear +,NA,GH,0,T.Govt,0,NA,0,26,6
+701311,Homme,65,Pas d'éducation,Travaille,Oui,Non,51,166,18.5,0,Ini smear +,NA,GH,0,T.Govt,0,NA,0,3,5
+701408,Homme,43,Pas d'éducation,Travaille,Oui,Non,52,165,19.1,1,Ini smear +,NA,GH,0,NA,0,NA,0,5,6
+701796,Homme,70,Primaire,Travaille,Oui,Oui,40,157,16.2,0,Ini smear +,NA,GH,0,NA,0,NA,0,6,5
+701893,Homme,55,Secondaire,Travaille,Non,Oui,50,165,18.4,0,Ini smear +,NA,Pvt. hospi,1700,T.Govt,0,NA,0,14,4
+701990,Homme,55,Pas d'éducation,Travaille,Oui,Non,52,165,19.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,5
+702087,Homme,38,Intermédiaire,Travaille,Non,Non,34,145,16.2,0,Ini smear +,NA,Pvt. docto,400,GH,0,NA,0,7,10
+702184,Homme,59,Manquant,Travaille,Oui,Oui,50,165,18.4,0,Ini smear +,NA,GH,0,NA,0,NA,0,NA,1
+702378,Femme,30,Primaire,Ne travaille pas,Non,Oui,32,145,15.2,0,Ini smear +,NA,Pvt. docto,300,PHC,0,GH,0,21,7
+702572,Homme,38,Secondaire supérieur,Travaille,Oui,Non,63,160,24.6,1,Ini smear +,NA,PHC,0,GH,0,NA,0,10,9
+702669,Homme,48,Secondaire,Travaille,Non,Non,49,160,19.1,1,Ini smear +,NA,Pvt. hospi,1200,PHC,0,NA,0,30,2
+702960,Homme,38,Pas d'éducation,Travaille,Non,Oui,47,165,17.3,0,Ini smear +,NA,Pvt. docto,250,T.Govt,0,NA,0,NA,4
+703057,Femme,26,Intermédiaire,Travaille,Non,Non,33,155,13.7,0,Ini smear +,NA,Pvt. docto,300,T.Govt,0,NA,0,22,6
+703348,Homme,20,Diplômé et plus,Travaille,Non,Non,48,168,17,0,Ini smear +,NA,Pvt. docto,0,Pvt. hospi,1000,PHC,0,7,3
+703542,Homme,52,Intermédiaire,Travaille,Non,Oui,69,160,27,1,Ini smear -,Positive,Pvt. docto,0,T.Govt,0,NA,0,11,7
+703639,Femme,48,Pas d'éducation,Travaille,Non,Non,50,148,22.8,1,Ini smear +,NA,Pvt. docto,800,GH,0,NA,0,7,1
+703736,Homme,60,Primaire,Travaille,Oui,Oui,44,165,16.2,0,Ini smear +,NA,Pvt. docto,250,T.Govt,0,NA,0,14,4
+703833,Homme,34,Intermédiaire,Travaille,Oui,Non,59,165,21.7,1,Ini smear +,NA,Pvt. docto,500,Pvt. hospi,400,T.Govt,0,30,2
+703930,Femme,36,Pas d'éducation,Travaille,Non,Non,37,148,16.9,0,Ini smear +,NA,Pvt. clini,200,PHC,0,T.Govt,0,90,6
+704027,Femme,30,Pas d'éducation,Ne travaille pas,Non,Non,39,160,15.2,0,Ini smear +,NA,Pvt. docto,0,GH,0,NA,0,30,8
+704124,Homme,64,Pas d'éducation,Travaille,Non,Oui,43,165,15.8,0,Ini smear +,NA,GH,0,GH,0,NA,0,45,3
+704221,Femme,65,Pas d'éducation,Travaille,Non,Non,40,159,15.8,0,Ini smear +,NA,T.Govt,0,GH,0,NA,0,10,8
+704415,Homme,65,Pas d'éducation,Travaille,Non,Non,55,166,20,1,Ini smear +,NA,Pvt. hospi,500,PHC,0,NA,0,7,1
+704512,Homme,62,Primaire,Travaille,Oui,Non,49,168,17.4,1,Ini smear +,NA,Pvt. docto,0,GH,0,NA,0,30,3
+704706,Femme,45,Secondaire,Travaille,Non,Non,40,147,18.5,1,Ini smear -,Positive,Pvt. docto,360,Pvt. hospi,2500,PHC,0,9,9
+704900,Femme,35,Pas d'éducation,Travaille,Non,Non,36,145,17.1,0,Ini smear +,NA,Pvt. hospi,600,T.Govt,0,NA,0,8,1
+705094,Femme,20,Secondaire,Travaille,Non,Non,35,160,13.7,0,Ini smear +,NA,Pvt. docto,0,T.Govt,0,NA,0,6,3
+705191,Homme,52,Secondaire,Travaille,Non,Oui,37,162,14.1,0,Ini smear +,NA,Pvt. docto,100,Pvt. hospi,800,PHC,0,30,4
+705288,Homme,50,Pas d'éducation,Travaille,Oui,Oui,41.3,162,15.7,0,Ini smear +,Negative,Pvt. docto,100,GH,0,NA,0,30,1
+705385,Homme,57,Intermédiaire,Travaille,Oui,Oui,43,165,15.8,0,Ini smear +,NA,Pvt. docto,750,PHC,0,NA,0,30,8
+705482,Homme,47,Pas d'éducation,Travaille,Oui,Oui,45,168,15.9,0,Ini smear +,NA,Pvt. docto,100,Pvt. clini,650,PHC,0,30,5
+705579,Femme,30,Primaire,Travaille,Non,Non,43,161,16.6,0,Ini smear +,Positive,Pvt. docto,500,Pvt. hospi,650,GH,0,21,4
+705676,Homme,63,Pas d'éducation,Ne travaille pas,Oui,Non,54.8,165,20.1,0,Ini smear -,Positive,Pvt. hospi,600,T.Govt,0,NA,0,30,6
+705773,Homme,57,Intermédiaire,Travaille,Non,Oui,52.8,159,20.9,1,Ini smear +,Negative,Pvt. clini,260,GH,0,NA,0,30,3
+705870,Homme,45,Primaire,Travaille,Non,Oui,47.3,154,19.9,0,Ini smear -,Positive,Pvt. hospi,250,GH,0,NA,0,60,7
+705967,Homme,51,Intermédiaire,Travaille,Non,Non,57.2,157,23.2,1,Ini smear +,Negative,Pvt. docto,520,GH,0,NA,0,30,2
+706064,Femme,57,Pas d'éducation,Ne travaille pas,Non,Non,38.4,162,14.6,0,Ini smear +,NA,Pvt. docto,350,Tambram Sanatorium,0,NA,0,45,11
+706161,Femme,55,Pas d'éducation,Ne travaille pas,Non,Non,33.3,144,16.1,0,Ini smear -,Positive,Pvt. docto,450,Tambram Sanatorium,0,NA,0,60,9
+706258,Femme,28,Secondaire,Ne travaille pas,Non,Non,49,155,20.4,1,Ini smear +,Positive,Pvt. hospi,400,T.Pvt,250,NA,0,30,3
+706355,Homme,48,Primaire,Travaille,Non,Oui,37,165,13.6,0,Ini smear -,Positive,Pvt. docto,180,GH,0,NA,0,45,2
+706452,Homme,67,Intermédiaire,Ne travaille pas,Non,Non,46.6,169,16.3,0,Ini smear -,Positive,PHC,0,GH,0,NA,0,35,18
+706549,Femme,35,Pas d'éducation,Travaille,Non,Non,40.6,154,17.1,0,Ini smear -,Positive,Pvt. docto,320,GH,0,NA,0,60,3
+706646,Femme,25,Pas d'éducation,Ne travaille pas,Non,Non,34.6,155,14.4,0,Ini smear -,Positive,Pvt. docto,250,T.Govt,0,NA,0,60,10
+706743,Femme,50,Pas d'éducation,Travaille,Non,Non,46.3,163,17.4,0,Ini smear +,NA,Pvt. clini,150,GH,0,NA,0,30,1
+706937,Femme,23,Intermédiaire,Ne travaille pas,Non,Non,42.2,153,18,0,Ini smear +,NA,Pvt. clini,150,Pvt. docto,320,Pvt. hospi,1800,60,4
+707034,Homme,65,Primaire,Ne travaille pas,Oui,Oui,38.5,156,15.8,0,Ini smear +,NA,Pvt. clini,200,Pvt. hospi,450,T.Pvt,240,30,12
+707131,Femme,20,Secondaire,Travaille,Non,Non,39.2,152,17,0,Ini smear +,NA,Pvt. docto,450,Pvt. hospi,200,GH,0,30,6
+707228,Homme,18,Secondaire supérieur,Ne travaille pas,Non,Non,45.7,165,16.8,0,Ini smear +,Negative,Pvt. clini,200,Pvt. docto,500,GH,0,60,5
+707325,Homme,69,Primaire,Ne travaille pas,Non,Oui,55.4,161,21.4,1,Missing,Positive,Pvt. docto,150,Pvt. clini,320,GH,0,30,13
+707422,Homme,65,Pas d'éducation,Ne travaille pas,Non,Oui,45.4,163,17.1,0,Ini smear -,Positive,Pvt. clini,280,Pvt. docto,150,GH,0,30,1
+707519,Homme,44,Intermédiaire,Travaille,Oui,Non,34.2,157,13.9,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,10
+707616,Femme,35,Intermédiaire,Travaille,Non,Non,34.8,151,15.3,1,Ini smear +,NA,Pvt. docto,960,GH,0,NA,0,30,5
+707810,Femme,55,Primaire,Ne travaille pas,Non,Non,40.9,158,16.4,0,Ini smear -,Positive,Pvt. docto,850,GH,0,NA,0,30,3
+707907,Homme,45,Secondaire,Travaille,Oui,Oui,39.1,158,15.7,0,Ini smear +,NA,Pvt. docto,850,T.Govt,0,NA,0,30,1
+708004,Homme,32,Primaire,Travaille,Oui,Oui,35.8,160,14,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,1
+708101,Femme,62,Pas d'éducation,Ne travaille pas,Non,Non,33.2,145,15.8,1,Ini smear -,Positive,Pvt. hospi,750,T.Govt,0,NA,0,30,4
+708295,Homme,60,Primaire,Travaille,Oui,Oui,45,167,16.1,1,Ini smear +,NA,Pvt. docto,150,GH,0,NA,0,30,2
+708489,Homme,60,Primaire,Travaille,Non,Non,51,160,19.9,1,Ini smear +,NA,Pvt. clini,100,Pvt. hospi,9000,NA,0,30,3
+708586,Femme,25,Secondaire,Travaille,Non,Non,40,155,16.6,0,Ini smear +,NA,Pvt. clini,170,Pvt. hospi,3500,NA,0,30,3
+800154,Homme,63,Pas d'éducation,Ne travaille pas,Non,Non,65,163,24.5,1,Ini smear +,NA,T.Pvt,500,PHC,0,NA,0,11,22
+800348,Homme,72,Pas d'éducation,Ne travaille pas,Non,Non,52,168,18.4,0,Ini smear +,Positive,Pvt. hospi,2500,PHC,0,NA,0,6,15
+800445,Femme,34,Secondaire supérieur,Ne travaille pas,Non,Non,50,165,18.4,0,Ini smear +,NA,Pvt. clini,750,Tambram Sanatorium,0,NA,0,12,20
+800542,Homme,65,Primaire,Travaille,Non,Non,35,160,13.7,0,Ini smear +,Positive,Pvt. clini,400,GH,0,NA,0,120,4
+800639,Homme,65,Primaire,Travaille,Oui,Oui,50,165,18.4,0,Ini smear +,Positive,Pvt. hospi,300,Tambram Sanatorium,0,GH,0,26,13
+800736,Homme,67,Primaire,Ne travaille pas,Non,Non,55,165,20.2,0,Ini smear -,Positive,Pvt. hospi,250,T.Govt,0,NA,0,8,30
+800833,Homme,44,Intermédiaire,Travaille,Oui,Oui,54,172,18.3,0,Ini smear +,Negative,T.Govt,0,NA,0,NA,0,5,10
+800930,Homme,71,Primaire,Ne travaille pas,Non,Non,50,165,18.4,0,Ini smear +,NA,T.Govt,0,NA,0,NA,0,7,11
+801221,Homme,46,Pas d'éducation,Travaille,Non,Non,52,165,19.1,0,Ini smear +,Positive,GH,0,NA,0,NA,0,7,20
+801415,Homme,55,Intermédiaire,Ne travaille pas,Oui,Non,40,165,14.7,0,Ini smear +,Positive,Pvt. docto,750,PHC,0,NA,0,7,10
+801512,Femme,40,Pas d'éducation,Travaille,Non,Non,46,168,16.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,3
+801609,Femme,49,Pas d'éducation,Travaille,Non,Non,34,165,12.5,0,Ini smear +,Positive,Pvt. docto,350,GH,0,GH,0,21,8
+801706,Homme,44,Primaire,Ne travaille pas,Non,Oui,44,168,15.6,0,Ini smear -,Positive,T.Govt,0,NA,0,NA,0,6,16
+801803,Femme,45,Pas d'éducation,Travaille,Non,Non,43,160,16.8,0,Ini smear -,Positive,T.Govt,0,NA,0,NA,0,7,8
+802094,Homme,52,Primaire,Travaille,Oui,Oui,47,165,17.3,0,Ini smear +,NA,T.Govt,0,NA,0,NA,0,6,5
+802191,Homme,43,Secondaire,Travaille,Oui,Oui,42,165,15.4,1,Ini smear +,NA,Pvt. hospi,300,PHC,0,NA,0,7,5
+802288,Homme,25,Intermédiaire,Ne travaille pas,Non,Non,45,167,16.1,0,Ini smear +,Positive,Pvt. docto,450,T.Govt,0,NA,0,5,9
+802676,Homme,42,Intermédiaire,Travaille,Oui,Oui,55,168,19.5,0,Ini smear +,Positive,Tambram sanatorium,0,NA,0,NA,0,6,15
+802773,Homme,53,Primaire,Travaille,Oui,Oui,38,165,14,0,Ini smear +,NA,Pvt. hospi,750,Tambram Sanatorium,0,NA,0,7,10
+802870,Homme,60,Primaire,Ne travaille pas,Oui,Oui,39,165,14.3,0,Ini smear +,Positive,Pvt. docto,800,T.Govt,0,NA,0,6,8
+802967,Homme,42,Intermédiaire,Travaille,Oui,Oui,49,165,18,0,Ini smear +,NA,GH,0,NA,0,NA,0,42,4
+803161,Homme,60,Secondaire supérieur,Travaille,Oui,Oui,60,170,20.8,0,Ini smear +,NA,GH,0,NA,0,NA,0,3,12
+803355,Homme,55,Intermédiaire,Ne travaille pas,Oui,Oui,49,163,18.4,1,Ini smear +,Positive,Pvt. docto,250,T.Pvt,750,T.Govt,0,4,4
+803452,Homme,35,Pas d'éducation,Travaille,Non,Non,48,165,17.6,1,Ini smear -,Positive,Pvt. hospi,450,Tambram Sanatorium,0,NA,0,7,7
+803549,Homme,55,Primaire,Ne travaille pas,Oui,Oui,45,168,15.9,0,Ini smear +,NA,Pvt. clini,0,PHC,0,NA,0,7,2
+803646,Homme,48,Pas d'éducation,Travaille,Oui,Oui,63,168,22.3,0,Ini smear +,NA,Pvt. clini,0,Tambram Sanatorium,0,NA,0,20,4
+803743,Homme,50,Pas d'éducation,Travaille,Non,Non,58.2,168,20.6,0,Ini smear -,Positive,Pvt. clini,250,T.Govt,0,NA,0,9,4
+803840,Homme,42,Pas d'éducation,Travaille,Oui,Oui,42,170,14.5,0,Ini smear +,NA,Pvt. docto,80,PHC,0,NA,0,14,2
+803937,Homme,41,Secondaire,Travaille,Non,Oui,50,168,17.7,0,Ini smear +,NA,Pvt. docto,600,T.Pvt,1000,PHC,0,21,4
+804034,Homme,60,Intermédiaire,Travaille,Non,Non,34,166,12.3,0,Ini smear +,NA,Pvt. clini,340,T.Govt,0,NA,0,7,3
+804131,Homme,69,Secondaire,Ne travaille pas,Non,Non,38,162,14.5,0,Ini smear +,Negative,Pvt. clini,350,T.Govt,0,NA,0,14,5
+804228,Femme,60,Pas d'éducation,Travaille,Non,Non,41,160,16,0,Ini smear -,Positive,Pvt. clini,0,Pvt. hospi,450,PHC,0,15,13
+804325,Homme,65,Pas d'éducation,Ne travaille pas,Non,Non,37,163,13.9,0,Ini smear +,NA,PHC,0,GH,0,NA,0,14,2
+804422,Homme,38,Primaire,Travaille,Oui,Oui,40,156,16.4,1,Ini smear +,NA,Pvt. clini,0,PHC,0,NA,0,14,3
+804519,Femme,55,Pas d'éducation,Travaille,Non,Non,51,159,20.2,1,Ini smear +,NA,Pvt. clini,0,PHC,0,NA,0,20,5
+804713,Homme,59,Secondaire,Ne travaille pas,Non,Non,54,168,19.1,1,Ini smear +,NA,Pvt. hospi,360,T.Govt,0,NA,0,9,7
+804810,Homme,49,Primaire,Travaille,Oui,Oui,40,168,14.2,0,Ini smear -,Positive,GH,0,T.Govt,500,NA,0,31,34
+805004,Homme,57,Intermédiaire,Ne travaille pas,Oui,Non,58,167,20.8,1,Ini smear +,NA,Pvt. clini,300,T.Govt,0,NA,0,7,11
+805101,Femme,21,Secondaire,Travaille,Non,Non,31,166,11.2,0,Ini smear +,Positive,Pvt. docto,600,GH,0,NA,0,20,5
+805295,Homme,49,Intermédiaire,Travaille,Non,Non,42,169,14.7,1,Missing,Positive,Pvt. clini,0,Pvt. hospi,850,PHC,0,19,4
+805489,Homme,54,Pas d'éducation,Ne travaille pas,Non,Non,50,163,18.8,0,Ini smear +,NA,Pvt. docto,750,T.Govt,0,NA,0,33,2
+805586,Homme,32,Intermédiaire,Travaille,Non,Non,53,170,18.3,0,Ini smear -,Positive,Pvt. clini,350,T.Govt,0,NA,0,3,4
+805683,Homme,42,Intermédiaire,Travaille,Non,Non,69,169,24.2,1,Ini smear -,Positive,Pvt. clini,300,Pvt. hospi,750,GH,0,9,3
+805780,Homme,57,Secondaire,Travaille,Non,Non,48,165,17.6,0,Ini smear +,NA,Pvt. clini,250,PHC,0,NA,0,4,5
+805877,Homme,49,Primaire,Travaille,Non,Non,50,160,19.5,1,Ini smear +,NA,Pvt. docto,150,Pvt. hospi,400,PHC,0,21,3
+805974,Femme,30,Diplômé,Travaille,Oui,Non,43,168,15.2,0,Ini smear -,Positive,Pvt. clini,150,Tambram Sanatorium,0,NA,0,26,11
+806071,Homme,67,Pas d'éducation,Ne travaille pas,Oui,Non,39,163,14.7,0,Ini smear +,Negative,Pvt. clini,100,GH,500,NA,0,8,6
+806168,Homme,65,Primaire,Ne travaille pas,Oui,Oui,37,163,13.9,0,Ini smear -,Positive,Pvt. clini,150,GH,0,NA,0,30,15
+806265,Femme,19,Diplômé,Travaille,Non,Non,48,166,17.4,0,Ini smear +,NA,Pvt. clini,1200,Pvt. clini,550,PHC,0,14,4
+806362,Femme,37,Intermédiaire,Travaille,Non,Non,42,147,19.4,0,Ini smear -,Positive,T.Govt,0,Pvt. hospi,880,PHC,0,9,2
+806556,Homme,56,Pas d'éducation,Travaille,Oui,Oui,36,168,12.8,0,Ini smear +,Positive,Pvt. hospi,350,Tambram Sanatorium,0,NA,0,17,2
+806653,Homme,57,Intermédiaire,Travaille,Oui,Oui,44,159,17.4,0,Ini smear +,NA,PHC,0,NA,0,NA,0,7,15
+806750,Homme,21,Secondaire,Travaille,Oui,Oui,54,169,18.9,0,Ini smear -,Positive,GH,0,NA,0,NA,0,7,5
+806944,Homme,27,Primaire,Travaille,Oui,Non,40.7,169,14.3,1,Ini smear +,Positive,Pvt. docto,700,Tambram Sanatorium,0,NA,0,15,1
+807041,Homme,30,Secondaire,Travaille,Oui,Oui,60,159,23.7,0,Ini smear +,NA,Pvt. clini,150,GH,0,NA,0,7,2
+807138,Homme,29,Intermédiaire,Travaille,Non,Non,39.8,156,16.4,0,Ini smear +,NA,Pvt. clini,150,Pvt. clini,80,PHC,0,5,7
+807235,Homme,20,Intermédiaire,Travaille,Non,Non,49,168,17.4,0,Ini smear +,NA,GH,0,GH,0,NA,0,18,8
+807332,Homme,60,Pas d'éducation,Travaille,Oui,Oui,45,168,15.9,0,Ini smear -,Positive,Pvt. docto,550,T.Govt,0,NA,0,6,6
+807429,Homme,64,Primaire,Travaille,Oui,Oui,43,163,16.2,1,Ini smear -,Positive,Pvt. docto,350,GH,0,NA,0,7,3
+807526,Homme,67,Primaire,Ne travaille pas,Oui,Oui,49,155,20.4,0,Ini smear +,NA,Pvt. docto,450,PHC,0,NA,0,30,5
+807623,Homme,58,Primaire,Ne travaille pas,Oui,Oui,37,163,13.9,1,Ini smear +,Positive,Pvt. clini,350,GH,500,NA,0,11,1
+807720,Homme,60,Intermédiaire,Travaille,Oui,Oui,64,164,23.8,1,Ini smear -,Positive,GH,500,T.Govt,0,NA,0,17,24
+807817,Homme,55,Pas d'éducation,Travaille,Oui,Oui,31,167,11.1,0,Ini smear +,NA,T.Govt,0,GH,0,NA,0,30,4
+808011,Homme,50,Secondaire,Travaille,Non,Non,62.2,165,22.8,1,Ini smear +,NA,Pvt. clini,450,Pvt. hospi,900,Pvt. hospi,1500,66,3
+808108,Homme,68,Pas d'éducation,Ne travaille pas,Oui,Oui,34.6,148,15.8,0,Ini smear +,NA,PHC,0,GH,0,NA,0,30,18
+808205,Homme,45,Pas d'éducation,Travaille,Oui,Non,41,163,15.4,1,Ini smear +,Negative,Pvt. clini,450,PHC,0,GH,0,30,4
+808302,Femme,30,Pas d'éducation,Travaille,Non,Non,34,163,12.8,0,Ini smear +,NA,Pvt. clini,150,Pvt. hospi,350,T.Govt,0,8,11
+808496,Homme,40,Primaire,Travaille,Non,Non,43,162,16.4,1,Ini smear +,NA,Pvt. clini,350,Pvt. hospi,600,Tambram Sanatorium,0,25,12
+808593,Homme,36,Primaire,Travaille,Oui,Oui,47.1,160,18.4,0,Ini smear +,NA,Pvt. hospi,750,PHC,0,NA,0,6,4
+808690,Homme,35,Secondaire,Travaille,Oui,Non,55,168,19.5,1,Ini smear +,NA,Pvt. clini,240,Tambram Sanatorium,0,NA,0,30,8
+808787,Homme,47,Intermédiaire,Travaille,Oui,Non,46.5,168,16.5,0,Ini smear +,NA,Pvt. clini,500,GH,0,NA,0,30,3
+808884,Homme,41,Intermédiaire,Travaille,Oui,Non,35,168,12.4,0,Ini smear +,Positive,GH,0,T.Govt,0,NA,0,30,0
+808981,Homme,49,Primaire,Travaille,Non,Non,45,169,15.8,0,Ini smear +,Negative,Pvt. docto,320,GH,0,NA,0,30,10
+809078,Homme,48,Intermédiaire,Travaille,Oui,Non,47,159,18.6,1,Ini smear +,NA,T.Govt,500,Pvt. docto,100,GH,0,18,1
+809175,Homme,31,Secondaire supérieur,Travaille,Oui,Non,58.4,165,21.5,1,Ini smear +,NA,Pvt. docto,4000,PHC,0,NA,0,30,3
+809272,Homme,52,Primaire,Travaille,Oui,Oui,48.1,167,17.2,0,Ini smear +,NA,Pvt. hospi,200,T.Govt,0,NA,0,30,5
+809369,Homme,63,Primaire,Travaille,Oui,Oui,32,154,13.5,0,Ini smear +,NA,Pvt. docto,4000,GH,0,NA,0,30,1
+900258,Femme,55,Intermédiaire,Ne travaille pas,Non,Non,38,151,16.7,0,Ini smear +,NA,GH,0,NA,0,NA,0,6,4
+900355,Homme,57,Intermédiaire,Travaille,Non,Non,45,168,15.9,0,Ini smear +,NA,PHC,0,GH,0,NA,0,60,6
+900452,Homme,38,Primaire,Travaille,Non,Non,52,168,18.4,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,0
+900549,Femme,58,Pas d'éducation,Ne travaille pas,Non,Non,39,155,16.2,1,Ini smear +,NA,PHC,0,GH,0,NA,0,4,4
+900646,Homme,51,Secondaire,Travaille,Oui,Non,41,160,16,0,Ini smear +,NA,GH,0,NA,0,NA,0,3,4
+900743,Homme,50,Pas d'éducation,Travaille,Non,Non,43,158,17.2,0,Ini smear +,NA,PHC,0,GH,0,NA,0,30,1
+900840,Homme,61,Primaire,Travaille,Non,Non,53,165,19.5,0,Ini smear +,NA,Pvt. clini,200,GH,0,NA,0,62,1
+900937,Homme,65,Pas d'éducation,Ne travaille pas,Non,Non,44,165,16.2,0,Missing,Positive,Pvt. docto,50,GH,0,NA,0,21,5
+901034,Homme,35,Secondaire,Travaille,Non,Non,58,160,22.7,0,Ini smear +,NA,Pvt. docto,150,GH,0,NA,0,21,10
+901131,Homme,39,Secondaire,Travaille,Non,Non,42,158,16.8,0,Ini smear +,NA,GH,0,NA,0,NA,0,2,13
+901228,Homme,52,Primaire,Ne travaille pas,Non,Non,38,164,14.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,10,4
+901422,Homme,37,Intermédiaire,Travaille,Non,Oui,35,165,12.9,0,Ini smear +,NA,Pvt. clini,1300,T.Govt,0,NA,0,8,6
+901519,Homme,38,Intermédiaire,Travaille,Non,Non,41,165,15.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,2,3
+901713,Femme,55,Primaire,Ne travaille pas,Non,Non,38,154,16,0,Ini smear +,NA,Pvt. docto,120,GH,0,NA,0,90,6
+901810,Homme,60,Primaire,Ne travaille pas,Non,Non,40,170,13.8,0,Ini smear +,NA,Pvt. docto,550,Pvt. hospi,1350,PHC,0,6,0
+901907,Homme,34,Primaire,Travaille,Non,Non,47,168,16.7,0,Ini smear +,NA,GH,0,NA,0,NA,0,5,2
+902004,Femme,38,Primaire,Ne travaille pas,Non,Non,47,137,25,0,Ini smear +,NA,T.Govt,0,NA,0,NA,0,30,4
+902101,Homme,65,Intermédiaire,Travaille,Non,Non,58,156,23.8,0,Ini smear +,NA,PHC,0,GH,0,NA,0,3,12
+902295,Homme,23,Secondaire supérieur,Ne travaille pas,Oui,Oui,47,171,16.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,3,6
+902392,Femme,40,Intermédiaire,Travaille,Non,Non,41,160,16,0,Ini smear +,NA,GH,0,Tambram Sanatorium,150,NA,0,5,7
+902683,Homme,56,Intermédiaire,Ne travaille pas,Non,Non,40,155,16.6,0,Ini smear +,NA,Pvt. docto,0,T.Govt,0,NA,0,21,5
+902780,Homme,21,Secondaire,Travaille,Non,Non,44,155,18.3,0,Ini smear +,Negative,GH,0,NA,0,NA,0,3,6
+902877,Homme,57,Secondaire,Ne travaille pas,Non,Non,33,155,13.7,0,Ini smear +,NA,Pvt. hospi,250,T.Govt,0,NA,0,5,5
+902974,Homme,33,Primaire,Travaille,Non,Non,40,160,15.6,0,Missing,Positive,GH,0,NA,0,NA,0,5,6
+903071,Homme,23,Diplômé,Travaille,Non,Non,45,145,21.4,0,Ini smear +,NA,Pvt. hospi,300,GH,0,NA,0,21,1
+903168,Homme,50,Intermédiaire,Ne travaille pas,Non,Non,41,154,17.3,0,Ini smear +,NA,Pvt. docto,0,T.Govt,0,NA,0,7,3
+903265,Homme,53,Intermédiaire,Travaille,Non,Oui,38,164,14.1,0,Ini smear +,NA,Tambram sanatorium,0,NA,0,NA,0,15,10
+903362,Homme,60,Primaire,Ne travaille pas,Non,Non,48,168,17,0,Ini smear -,Positive,Tambram sanatorium,0,NA,0,NA,0,14,15
+903459,Homme,51,Primaire,Travaille,Non,Oui,42,155,17.5,0,Ini smear +,NA,Pvt. docto,100,GH,0,NA,0,21,2
+903556,Homme,66,Secondaire,Travaille,Non,Non,40,165,14.7,0,Ini smear -,Positive,Pvt. docto,50,Tambram Sanatorium,0,NA,0,4,11
+903653,Femme,45,Intermédiaire,Ne travaille pas,Non,Non,50,158,20,0,Ini smear -,Positive,T.Govt,500,NA,0,NA,0,3,16
+903750,Homme,35,Pas d'éducation,Travaille,Non,Non,47,158,18.8,0,Ini smear +,NA,PHC,0,GH,0,NA,0,10,9
+903847,Homme,49,Intermédiaire,Travaille,Non,Non,48,166,17.4,0,Ini smear +,NA,PHC,0,GH,0,NA,0,11,4
+903944,Homme,23,Primaire,Ne travaille pas,Non,Non,38,148,17.3,0,Ini smear +,NA,Pvt. clini,900,GH,0,NA,0,6,6
+904041,Homme,68,Intermédiaire,Travaille,Non,Non,46,174,15.2,0,Ini smear +,NA,PHC,0,NA,0,NA,0,3,9
+904138,Femme,28,Secondaire,Ne travaille pas,Non,Non,43,157,17.4,0,Ini smear -,Positive,PHC,0,GH,0,NA,0,5,5
+904235,Homme,40,Intermédiaire,Ne travaille pas,Non,Non,46,169,16.1,0,Ini smear +,Positive,Pvt. hospi,150,T.Govt,0,NA,0,7,4
+904332,Homme,36,Primaire,Travaille,Non,Non,46,160,18,0,Ini smear +,NA,GH,0,NA,0,NA,0,15,4
+904429,Homme,55,Pas d'éducation,Travaille,Non,Oui,44.7,147,20.7,0,Ini smear +,NA,GH,0,NA,0,NA,0,15,4
+904526,Homme,38,Intermédiaire,Travaille,Oui,Oui,45,170,15.6,0,Ini smear +,NA,PHC,0,PHC,0,NA,0,4,7
+904623,Homme,21,Secondaire,Travaille,Non,Oui,39,164.5,14.4,0,Ini smear +,NA,PHC,0,Tambram Sanatorium,0,NA,0,5,2
+904720,Homme,18,Secondaire supérieur,Ne travaille pas,Non,Non,43,176,13.9,0,Ini smear +,NA,GH,0,T.Pvt,5000,GH,0,9,2
+904817,Homme,60,Secondaire,Travaille,Non,Oui,36,157,14.6,0,Ini smear +,NA,PHC,0,NA,0,NA,0,10,21
+904914,Homme,52,Intermédiaire,Travaille,Non,Oui,43,166,15.6,0,Ini smear -,Positive,PHC,0,Pvt. hospi,200,NA,0,15,3
+905011,Homme,58,Intermédiaire,Travaille,Non,Non,58,166,21,1,Ini smear +,NA,GH,0,Pvt. hospi,4500,PHC,0,30,14
+905108,Homme,58,Intermédiaire,Ne travaille pas,Oui,Oui,36.2,156,14.9,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,0
+905205,Homme,60,Pas d'éducation,Travaille,Oui,Oui,44,164,16.4,1,Ini smear -,Positive,GH,0,NA,0,NA,0,14,6
+905302,Homme,50,Intermédiaire,Travaille,Oui,Oui,62,170,21.5,0,Ini smear +,NA,Pvt. docto,200,GH,0,NA,0,6,2
+905496,Homme,50,Pas d'éducation,Travaille,Oui,Oui,41,168,14.5,0,Ini smear +,NA,Pvt. clini,800,PHC,0,NA,0,7,20
+905593,Homme,26,Secondaire,Travaille,Oui,Non,46,172,15.5,0,Ini smear +,NA,Pvt. docto,500,Pvt. hospi,1300,GH,0,90,7
+905787,Femme,38,Intermédiaire,Travaille,Non,Non,42,155,17.5,0,Ini smear +,Negative,GH,0,Pvt. hospi,1000,NA,0,30,10
+905884,Homme,25,Intermédiaire,Travaille,Oui,Non,38.2,162,14.6,0,Ini smear +,NA,Pvt. docto,8000,GH,0,NA,0,90,1
+1000265,Homme,59,Intermédiaire,Travaille,Oui,Oui,47,168,16.7,0,Ini smear +,Positive,Pvt. hospi,0,GH,0,T.Govt,0,30,2
+1000362,Femme,40,Primaire,Travaille,Non,Non,32,135,17.6,0,Ini smear -,Positive,Pvt. docto,300,Pvt. docto,0,Tambram Sanatorium,0,90,11
+1000459,Homme,67,Primaire,Travaille,Oui,Oui,56,165,20.6,0,Ini smear -,Positive,GH,0,GH,0,NA,0,60,4
+1000556,Femme,38,Primaire,Travaille,Non,Non,39,160,15.2,0,Ini smear +,NA,Pvt. docto,400,GH,0,NA,0,30,3
+1000653,Homme,41,Primaire,Travaille,Non,Non,50,162,19.1,1,Ini smear +,Negative,Pvt. docto,100,Pvt. hospi,450,GH,0,60,1
+1000944,Homme,50,Primaire,Travaille,Non,Non,48,152,20.8,1,Ini smear +,NA,Pvt. docto,0,GH,0,NA,0,30,7
+1001041,Homme,55,Primaire,Ne travaille pas,Non,Non,39,152,16.9,0,Ini smear +,Negative,GH,0,NA,0,NA,0,4,1
+1001138,Homme,48,Secondaire,Travaille,Non,Non,42,165,15.4,1,Ini smear +,NA,Pvt. docto,150,GH,0,NA,0,14,13
+1001235,Femme,65,Pas d'éducation,Travaille,Non,Non,35,152,15.1,0,Ini smear +,Negative,Pvt. clini,500,PHC,0,GH,0,30,5
+1001332,Homme,57,Intermédiaire,Travaille,Non,Non,42,149,18.9,0,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,4,8
+1001526,Homme,70,Primaire,Ne travaille pas,Non,Non,35,150,15.6,0,Ini smear +,Positive,GH,0,Pvt. docto,50,PHC,0,30,4
+1001623,Homme,37,Secondaire,Travaille,Non,Non,36,158,14.4,1,Ini smear +,Positive,Pvt. hospi,5000,GH,0,NA,0,20,2
+1001720,Homme,51,Primaire,Travaille,Non,Non,35,145,16.6,1,Ini smear +,Negative,GH,0,NA,0,NA,0,30,1
+1001817,Homme,47,Secondaire,Travaille,Oui,Non,55,165,20.2,1,Ini smear +,Negative,Pvt. docto,1000,NA,0,NA,0,15,16
+1001914,Homme,58,Primaire,Travaille,Non,Non,40,155,16.6,0,Ini smear +,Positive,Pvt. docto,100,GH,0,NA,0,30,2
+1002011,Femme,45,Pas d'éducation,Ne travaille pas,Non,Non,48,152,20.8,0,Ini smear +,Negative,Pvt. docto,0,Tambram Sanatorium,0,NA,0,90,16
+1002108,Homme,60,Secondaire,Travaille,Non,Non,58,170,20.1,1,Ini smear +,Negative,Tambram sanatorium,0,NA,0,NA,0,30,15
+1002205,Homme,59,Primaire,Travaille,Non,Non,73,166,26.5,1,Ini smear +,NA,Pvt. docto,900,GH,0,NA,0,30,2
+1002302,Homme,65,Pas d'éducation,Ne travaille pas,Non,Oui,58,172,19.6,0,Ini smear +,NA,Pvt. docto,0,GH,0,NA,0,60,5
+1002496,Homme,59,Secondaire,Travaille,Non,Non,47,163,17.7,0,Ini smear +,NA,Pvt. docto,700,PHC,0,NA,0,60,13
+1002593,Homme,45,Pas d'éducation,Ne travaille pas,Non,Non,47,166,17.1,0,Ini smear +,NA,Pvt. clini,0,GH,0,NA,0,20,2
+1002690,Homme,27,Intermédiaire,Travaille,Non,Non,67,155,27.9,0,Ini smear +,Negative,Pvt. clini,600,GH,0,NA,0,30,3
+1002787,Homme,54,Secondaire,Travaille,Non,Non,51,152,22.1,1,Ini smear +,Negative,Pvt. clini,0,Pvt. hospi,650,PHC,0,30,3
+1002884,Homme,60,Intermédiaire,Travaille,Non,Non,45,167,16.1,0,Ini smear +,Negative,GH,0,Pvt. hospi,300,PHC,0,30,3
+1002981,Homme,45,Primaire,Travaille,Non,Non,59,165,21.7,1,Ini smear +,NA,Pvt. clini,300,PHC,0,NA,0,60,7
+1003078,Homme,33,Secondaire,Travaille,Oui,Non,50,165,18.4,0,Ini smear -,Positive,Pvt. docto,0,T.Govt,0,NA,0,30,9
+1003175,Homme,37,Pas d'éducation,Travaille,Oui,Non,40,170,13.8,0,Ini smear +,Negative,Pvt. docto,120,GH,0,NA,0,30,3
+1003272,Homme,25,Diplômé et plus,Travaille,Non,Non,38,175,12.4,0,Ini smear +,NA,Pvt. clini,300,GH,0,NA,0,15,4
+1003369,Femme,21,Secondaire supérieur,Travaille,Non,Non,32,145,15.2,0,Ini smear -,Positive,Pvt. hospi,3000,GH,0,NA,0,30,14
+1003466,Homme,65,Intermédiaire,Travaille,Non,Oui,36,162,13.7,0,Ini smear +,NA,Pvt. docto,300,GH,0,NA,0,20,1
+1003563,Homme,65,Primaire,Travaille,Oui,Oui,55,170,19,1,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,20,2
+1003757,Homme,44,Intermédiaire,Travaille,Non,Non,70,166,25.4,0,Ini smear -,Positive,Other,2000,GH,0,NA,0,30,14
+1003854,Homme,54,Pas d'éducation,Ne travaille pas,Non,Non,62,170,21.5,1,Ini smear +,NA,Pvt. hospi,100,T.Govt,0,NA,0,4,20
+1003951,Homme,55,Primaire,Travaille,Non,Non,36,162,13.7,0,Ini smear +,Negative,GH,0,Pvt. docto,500,GH,0,30,6
+1004048,Femme,45,Pas d'éducation,Travaille,Oui,Non,45,137,24,0,Ini smear +,Negative,Pvt. hospi,700,GH,0,NA,0,20,7
+1004145,Femme,38,Pas d'éducation,Ne travaille pas,Non,Non,40,155,16.6,0,Ini smear +,NA,Pvt. clini,100,GH,0,NA,0,20,3
+1004242,Homme,35,Secondaire,Travaille,Non,Non,38,165,14,0,Ini smear -,Positive,GH,0,Tambram Sanatorium,0,NA,0,20,5
+1004339,Homme,49,Intermédiaire,Travaille,Non,Non,49,157,19.9,1,Ini smear +,NA,Pvt. clini,500,T.Govt,0,NA,0,30,5
+1004436,Femme,48,Primaire,Ne travaille pas,Non,Non,44.4,139,23,1,Ini smear +,NA,Pvt. docto,300,Pvt. clini,250,GH,0,30,4
+1004533,Femme,20,Primaire,Ne travaille pas,Non,Non,45,159,17.8,0,Ini smear +,NA,GH,0,T.Govt,0,NA,0,30,6
+1004630,Homme,22,Secondaire,Travaille,Non,Oui,39.5,155,16.4,0,Ini smear +,Negative,Pvt. docto,500,T.Govt,0,NA,0,30,2
+1004727,Homme,67,Secondaire,Ne travaille pas,Non,Oui,50.9,167,18.3,1,Ini smear +,Negative,Pvt. clini,500,Tambram Sanatorium,0,NA,0,30,3
+1004824,Homme,40,Pas d'éducation,Travaille,Oui,Non,33,165,12.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,6
+1004921,Homme,30,Secondaire,Travaille,Oui,Oui,36.2,153,15.5,0,Ini smear +,NA,PHC,0,NA,0,NA,0,30,4
+1005018,Femme,21,Secondaire supérieur,Ne travaille pas,Non,Non,41.2,151,18.1,0,Ini smear +,Positive,Pvt. hospi,250,T.Govt,0,NA,0,30,4
+1005115,Homme,30,Intermédiaire,Travaille,Oui,Non,76.5,168,27.1,0,Ini smear +,NA,Pvt. clini,120,PHC,0,NA,0,30,1
+1005212,Homme,38,Primaire,Travaille,Oui,Oui,41,170,14.2,0,Ini smear +,NA,Pvt. clini,250,GH,0,NA,0,30,1
+1005309,Femme,52,Primaire,Ne travaille pas,Non,Non,32,151,14,0,Ini smear +,Negative,Pvt. docto,400,GH,0,NA,0,30,5
+1005406,Homme,53,Secondaire,Travaille,Oui,Non,62.4,163,23.5,1,Ini smear +,NA,Pvt. docto,500,T.Pvt,2500,NA,0,30,7
+1005600,Homme,63,Intermédiaire,Travaille,Oui,Non,57,163,21.5,1,Ini smear +,Positive,Pvt. docto,2000,Pvt. hospi,3000,NA,0,30,7
+1005794,Femme,20,Secondaire supérieur,Ne travaille pas,Non,Non,32,152,13.9,0,Ini smear +,NA,Pvt. docto,1000,Pvt. clini,120,Pvt. hospi,3000,30,17
+1005891,Homme,65,Primaire,Travaille,Oui,Oui,48,155,20,0,Ini smear -,Positive,Pvt. docto,700,Tambram Sanatorium,0,NA,0,30,9
+1005988,Homme,32,Intermédiaire,Travaille,Oui,Oui,34.3,152,14.8,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,5
+1006085,Homme,40,Secondaire,Travaille,Oui,Oui,40,165,14.7,0,Ini smear +,NA,GH,0,NA,0,NA,0,60,3
+1006182,Homme,26,Primaire,Travaille,Oui,Non,32.3,169,11.3,0,Ini smear +,NA,Pvt. hospi,2500,NA,0,NA,0,90,41
+1006279,Homme,56,Secondaire,Travaille,Non,Non,55.1,170,19.1,0,Missing,Positive,Pvt. docto,50,GH,0,NA,0,30,5
+1006570,Femme,45,Pas d'éducation,Ne travaille pas,Non,Non,45,150,20,0,Ini smear +,Positive,Pvt. docto,350,GH,0,NA,0,30,13
+1006667,Homme,66,Secondaire,Ne travaille pas,Oui,Non,50,166,18.1,1,Ini smear +,NA,Pvt. clini,250,GH,0,NA,0,5,3
+1006764,Homme,60,Primaire,Travaille,Oui,Non,43,159,17,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,3
+1006958,Homme,69,Intermédiaire,Travaille,Non,Oui,40,158,16,0,Ini smear +,NA,Pvt. hospi,650,GH,0,NA,0,30,2
+1100175,Homme,43,Intermédiaire,Travaille,Oui,Oui,49.7,162,18.9,0,Ini smear +,NA,Pvt. hospi,7000,PHC,0,GH,0,7,98
+1100272,Femme,40,Pas d'éducation,Travaille,Non,Non,53.7,156,22.1,0,Ini smear +,NA,Pvt. docto,3000,GH,0,NA,0,21,4
+1100466,Homme,62,Primaire,Travaille,Oui,Oui,42.1,157,17.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,5,1
+1100563,Homme,68,Pas d'éducation,Travaille,Oui,Oui,45.1,159,17.8,1,Ini smear +,NA,GH,0,NA,0,NA,0,9,8
+1100660,Femme,60,Pas d'éducation,Travaille,Non,Non,49,158,19.6,0,Ini smear +,NA,Pvt. docto,1000,GH,0,NA,0,14,6
+1100757,Homme,55,Primaire,Travaille,Oui,Oui,48,168,17,0,Ini smear +,NA,GH,0,NA,0,NA,0,1,2
+1100854,Homme,56,Intermédiaire,Travaille,Oui,Oui,45.6,165,16.7,0,Ini smear -,Positive,GH,0,NA,0,NA,0,8,6
+1100951,Homme,45,Intermédiaire,Travaille,Oui,Oui,37.6,162,14.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,1,3
+1101048,Femme,65,Pas d'éducation,Travaille,Non,Non,33.2,158,13.3,0,Ini smear +,NA,Tambram sanatorium,0,GH,0,NA,0,14,8
+1101145,Homme,52,Pas d'éducation,Travaille,Oui,Oui,45.6,165,16.7,0,Ini smear +,NA,GH,0,NA,0,NA,0,42,3
+1101242,Femme,38,Primaire,Travaille,Non,Non,42,163,15.8,0,Ini smear +,NA,Tambram sanatorium,0,NA,0,NA,0,90,9
+1101339,Homme,69,Pas d'éducation,Travaille,Oui,Oui,40.9,167,14.7,0,Ini smear +,NA,Pvt. clini,200,GH,0,NA,0,15,2
+1101533,Homme,65,Pas d'éducation,Travaille,Oui,Oui,45,167,16.1,0,Ini smear -,NA,Pvt. hospi,800,Tambram Sanatorium,0,NA,0,40,36
+1101630,Homme,51,Intermédiaire,Travaille,Oui,Non,66,169,23.1,1,Ini smear +,NA,Pvt. hospi,1500,Pvt. hospi,1700,GH,0,64,5
+1101824,Homme,45,Pas d'éducation,Travaille,Oui,Non,45,168,15.9,0,Ini smear +,NA,GH,0,Other,0,Tambram Sanatorium,0,60,11
+1102018,Homme,38,Pas d'éducation,Travaille,Oui,Oui,45,165,16.5,0,Ini smear +,NA,Pvt. clini,700,GH,0,NA,0,30,4
+1102115,Homme,48,Pas d'éducation,Travaille,Oui,Oui,48,177,15.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,9
+1102309,Homme,55,Pas d'éducation,Travaille,Oui,Oui,35,158,14,0,Ini smear +,NA,GH,0,NA,0,NA,0,60,8
+1102406,Femme,25,Primaire,Ne travaille pas,Non,Non,32,156,13.1,0,Ini smear -,NA,Pvt. hospi,850,Pvt. hospi,500,PHC,0,120,18
+1102503,Homme,50,Pas d'éducation,Travaille,Oui,Oui,34,154,14.3,0,Ini smear +,Positive,Pvt. clini,800,Pvt. docto,300,Tambram Sanatorium,0,90,15
+1102600,Homme,60,Pas d'éducation,Travaille,Oui,Non,40,157,16.2,0,Ini smear -,Positive,GH,0,Tambram Sanatorium,0,NA,0,90,26
+1102988,Homme,60,Primaire,Travaille,Oui,Oui,48,165,17.6,0,Ini smear +,NA,Pvt. docto,500,Tambram Sanatorium,0,NA,0,30,8
+1103085,Homme,57,Primaire,Travaille,Oui,Non,48,165,17.6,1,Ini smear +,NA,Pvt. hospi,400,GH,0,NA,0,120,14
+1103182,Homme,57,Primaire,Travaille,Oui,Oui,59,163,22.2,1,Ini smear +,NA,Pvt. docto,600,GH,0,NA,0,45,3
+1103279,Femme,43,Primaire,Ne travaille pas,Non,Non,47,162,17.9,1,Ini smear +,NA,Pvt. hospi,500,GH,0,NA,0,60,5
+1103376,Homme,24,Intermédiaire,Travaille,Oui,Non,47,163,17.7,0,Ini smear +,NA,Pvt. docto,750,GH,0,NA,0,30,6
+1103473,Homme,52,Secondaire,Travaille,Non,Non,35,164,13,0,Ini smear -,NA,Pvt. clini,500,Tambram Sanatorium,0,NA,0,90,55
+1103570,Femme,48,Primaire,Travaille,Non,Non,36,163,13.5,0,Ini smear -,NA,PHC,0,Tambram Sanatorium,0,GH,0,60,25
+1103667,Femme,20,Secondaire supérieur,Travaille,Non,Non,34,157,13.8,0,Ini smear -,Positive,Pvt. clini,1000,Pvt. docto,2000,Pvt. hospi,1000,120,5
+1103958,Homme,47,Pas d'éducation,Travaille,Oui,Oui,50,165,18.4,0,Ini smear -,NA,GH,0,Pvt. docto,4000,Pvt. hospi,2500,90,10
+1104055,Homme,28,Secondaire,Travaille,Non,Non,48,165,17.6,1,Ini smear +,NA,Pvt. clini,1000,GH,0,NA,0,51,2
+1104249,Homme,60,Primaire,Travaille,Oui,Oui,58,168,20.5,0,Ini smear -,Positive,Tambram sanatorium,0,NA,0,NA,0,30,17
+1104346,Homme,28,Intermédiaire,Travaille,Non,Non,55,162,21,0,Ini smear -,Positive,GH,0,GH,0,NA,0,150,21
+1104443,Homme,48,Intermédiaire,Travaille,Non,Non,60,174,19.8,1,Ini smear +,NA,GH,0,Tambram Sanatorium,0,NA,0,12,6
+1104540,Homme,60,Pas d'éducation,Travaille,Non,Non,40,161,15.4,0,Ini smear +,NA,Pvt. hospi,300,Pvt. hospi,200,Tambram Sanatorium,0,7,65
+1104637,Homme,50,Pas d'éducation,Travaille,Non,Non,44,168,15.6,1,Ini smear -,Positive,Pvt. clini,2000,Tambram Sanatorium,0,NA,0,11,10
+1104734,Homme,38,Intermédiaire,Travaille,Non,Non,44,166,16,0,Missing,Positive,Tambram sanatorium,0,NA,0,NA,0,5,5
+1104928,Femme,55,Pas d'éducation,Ne travaille pas,Non,Non,47,172,15.9,0,Ini smear +,NA,Pvt. clini,1500,GH,0,NA,0,10,7
+1105025,Homme,53,Intermédiaire,Travaille,Oui,Non,44,170,15.2,0,Ini smear +,NA,Pvt. clini,200,Tambram Sanatorium,0,NA,0,11,11
+1105122,Homme,58,Pas d'éducation,Travaille,Non,Non,47.3,165,17.4,0,Ini smear +,NA,PHC,0,Tambram Sanatorium,0,NA,0,28,11
+1105219,Homme,52,Intermédiaire,Travaille,Non,Non,46,164,17.1,0,Ini smear -,Positive,Pvt. docto,1000,GH,0,NA,0,17,24
+1105316,Homme,60,Primaire,Travaille,Non,Non,53,160,20.7,0,Ini smear +,NA,Pvt. docto,800,GH,0,NA,0,13,20
+1105413,Homme,34,Primaire,Travaille,Oui,Non,43,164,16,0,Ini smear +,NA,Pvt. hospi,250,Pvt. clini,800,Tambram Sanatorium,0,30,11
+1105510,Femme,19,Secondaire supérieur,Ne travaille pas,Non,Non,35.8,159,14.2,0,Ini smear +,NA,Pvt. clini,1000,Pvt. clini,800,GH,0,8,7
+1105607,Homme,60,Primaire,Travaille,Oui,Oui,39.6,161,15.3,0,Ini smear +,NA,Pvt. docto,1000,GH,0,NA,0,9,40
+1105704,Homme,55,Pas d'éducation,Travaille,Non,Oui,40.6,164,15.1,0,Ini smear +,NA,Pvt. clini,500,Tambram Sanatorium,0,NA,0,30,5
+1105801,Homme,39,Secondaire,Travaille,Non,Oui,42.9,166,15.6,0,Ini smear +,NA,PHC,0,GH,0,NA,0,31,6
+1105995,Homme,55,Pas d'éducation,Travaille,Non,Oui,43.9,163,16.5,1,Ini smear -,Positive,Pvt. clini,800,Tambram Sanatorium,0,NA,0,15,15
+1106189,Homme,25,Secondaire,Travaille,Non,Oui,40.3,162,15.4,0,Ini smear +,NA,Pvt. docto,1000,PHC,0,NA,0,3,9
+1106383,Homme,65,Intermédiaire,Travaille,Non,Non,51,180,15.7,0,Ini smear +,NA,Pvt. clini,4000,Pvt. hospi,200,PHC,0,30,8
+1106480,Homme,65,Pas d'éducation,Travaille,Non,Non,45,165,16.5,0,Ini smear +,NA,Pvt. clini,200,PHC,0,NA,0,14,9
+1106577,Homme,25,Secondaire supérieur,Travaille,Non,Non,42.6,169,14.9,0,Ini smear -,Positive,Pvt. hospi,6000,Tambram Sanatorium,0,NA,0,14,3
+1106868,Femme,40,Primaire,Travaille,Non,Non,48,160.5,18.6,1,Ini smear +,NA,Pvt. clini,1000,Pvt. hospi,1200,GH,0,365,6
+1106965,Homme,60,Intermédiaire,Travaille,Oui,Oui,36.7,157.5,14.8,0,Ini smear +,NA,Pvt. hospi,350,Pvt. clini,240,Pvt. hospi,7000,30,1
+1107062,Homme,63,Secondaire,Travaille,Non,Non,45.8,162.5,17.3,0,Ini smear +,NA,Pvt. hospi,400,GH,0,NA,0,7,4
+1107159,Homme,65,Pas d'éducation,Ne travaille pas,Oui,Oui,37.3,163,14,0,Ini smear +,NA,Pvt. clini,800,GH,0,NA,0,180,4
+1107256,Homme,40,Intermédiaire,Travaille,Oui,Oui,34.5,159,13.6,0,Ini smear -,Positive,PHC,0,GH,0,Tambram Sanatorium,0,17,16
+1107353,Homme,50,Secondaire,Travaille,Non,Non,49,159,19.4,1,Ini smear +,NA,GH,0,Tambram Sanatorium,0,NA,0,23,15
+1107450,Homme,45,Pas d'éducation,Travaille,Oui,Oui,40.5,157,16.4,0,Ini smear +,Positive,PHC,0,Tambram Sanatorium,0,NA,0,16,11
+1107644,Homme,65,Secondaire,Travaille,Non,Non,39,168,13.8,0,Ini smear +,NA,PHC,0,Tambram Sanatorium,0,NA,0,28,9
+1107741,Homme,35,Primaire,Travaille,Oui,Non,49,159,19.4,0,Ini smear +,NA,Pvt. clini,650,Tambram Sanatorium,0,NA,0,8,11
+1107838,Homme,62,Primaire,Ne travaille pas,Non,Non,44.5,173,14.9,0,Ini smear -,Positive,Pvt. docto,750,Tambram Sanatorium,0,NA,0,35,58
+1107935,Homme,52,Intermédiaire,Travaille,Oui,Oui,33.1,162,12.6,1,Missing,Positive,GH,0,Pvt. hospi,3000,Tambram Sanatorium,0,45,18
+1108032,Homme,45,Primaire,Travaille,Oui,Oui,45.6,172,15.4,0,Ini smear +,NA,GH,0,NA,0,NA,0,120,7
+1108129,Homme,59,Secondaire supérieur,Travaille,Non,Non,36,167,12.9,1,Ini smear +,NA,GH,0,NA,0,NA,0,30,2
+1200182,Homme,51,Primaire,Travaille,Oui,Non,55,162,21,1,Ini smear +,Negative,PHC,0,Pvt. clini,0,Pvt. hospi,700,17,8
+1200279,Homme,45,Intermédiaire,Travaille,Non,Non,45,176,14.5,1,Ini smear +,Negative,Pvt. clini,500,Pvt. hospi,7000,GH,0,28,5
+1200376,Homme,47,Intermédiaire,Travaille,Non,Non,52,164,19.3,0,Ini smear +,NA,Pvt. hospi,6000,Tambram Sanatorium,0,NA,0,31,35
+1200473,Homme,75,Intermédiaire,Travaille,Oui,Oui,55,152,23.8,0,Ini smear -,Positive,Pvt. clini,120,Tambram Sanatorium,0,NA,0,12,28
+1200570,Homme,66,Primaire,Travaille,Oui,Oui,45,153,19.2,0,Ini smear +,NA,Pvt. clini,3000,Pvt. hospi,5000,NA,0,60,13
+1200764,Homme,47,Intermédiaire,Travaille,Non,Non,49,172,16.6,0,Ini smear +,Negative,GH,0,Pvt. hospi,2000,NA,0,30,3
+1200958,Homme,40,Pas d'éducation,Travaille,Oui,Oui,36,167,12.9,0,Ini smear +,NA,Tambram sanatorium,0,NA,0,NA,0,30,13
+1201055,Homme,38,Intermédiaire,Travaille,Non,Non,42,162,16,0,Ini smear -,Positive,Pvt. hospi,1700,Tambram Sanatorium,0,NA,0,30,9
+1201249,Homme,60,Pas d'éducation,Travaille,Oui,Non,40,168,14.2,0,Ini smear +,NA,Pvt. clini,150,GH,0,NA,0,30,3
+1201346,Homme,54,Secondaire,Travaille,Non,Non,50,158,20,1,Ini smear +,NA,Pvt. hospi,1000,Pvt. clini,2000,GH,0,36,8
+1201443,Homme,56,Intermédiaire,Travaille,Oui,Oui,57,159,22.5,1,Ini smear +,NA,Pvt. clini,1000,Pvt. hospi,5000,GH,0,60,7
+1201540,Homme,49,Primaire,Travaille,Oui,Oui,37,157,15,0,Ini smear +,NA,PHC,0,NA,0,NA,0,21,21
+1201637,Homme,60,Pas d'éducation,Travaille,Non,Non,38,167,13.6,0,Ini smear -,Positive,Pvt. clini,200,Pvt. hospi,500,PHC,0,15,11
+1201734,Homme,65,Pas d'éducation,Travaille,Non,Oui,38,160,14.8,0,Ini smear -,Positive,Pvt. clini,200,Pvt. hospi,600,PHC,0,8,17
+1201831,Homme,47,Primaire,Travaille,Non,Non,46,156,18.9,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,45
+1201928,Homme,55,Primaire,Travaille,Non,Non,43,166,15.6,0,Ini smear -,Positive,GH,0,GH,0,NA,0,30,16
+1202025,Homme,56,Primaire,Travaille,Oui,Oui,40,146,18.8,0,Ini smear +,NA,Pvt. clini,1000,Pvt. hospi,900,PHC,0,30,7
+1202122,Homme,48,Primaire,Travaille,Oui,Oui,36,151,15.8,0,Ini smear +,NA,Pvt. hospi,500,GH,0,NA,0,30,1
+1202316,Homme,60,Intermédiaire,Travaille,Oui,Oui,46,158,18.4,0,Ini smear -,Positive,Pvt. hospi,1000,PHC,0,NA,0,60,14
+1202413,Homme,48,Intermédiaire,Travaille,Non,Oui,48,148,21.9,1,Ini smear -,Positive,Pvt. clini,2000,Tambram Sanatorium,0,NA,0,60,17
+1202510,Femme,49,Primaire,Ne travaille pas,Non,Non,49,148,22.4,0,Ini smear -,Positive,Tambram sanatorium,0,GH,0,NA,0,33,10
+1202607,Homme,62,Secondaire,Travaille,Oui,Oui,40,162,15.2,0,Ini smear +,NA,Pvt. clini,2000,PHC,0,NA,0,60,53
+1202704,Femme,21,Diplômé,Ne travaille pas,Non,Non,39,156,16,0,Ini smear -,Positive,Pvt. hospi,1000,Pvt. clini,2000,Tambram Sanatorium,0,31,17
+1202801,Homme,58,Intermédiaire,Travaille,Oui,Oui,35,157,14.2,0,Ini smear +,NA,Tambram sanatorium,0,NA,0,NA,0,60,11
+1202995,Homme,55,Primaire,Travaille,Oui,Oui,44,165,16.2,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,3
+1203092,Homme,56,Manquant,Travaille,Non,Non,38,154,16,0,Ini smear +,Positive,PHC,0,NA,0,NA,0,7,4
+1203189,Homme,59,Diplômé,Travaille,Non,Non,53,170,18.3,0,Ini smear -,Positive,Pvt. hospi,500,PHC,0,GH,0,31,2
+1203286,Femme,35,Intermédiaire,Travaille,Non,Non,40,171,13.7,0,Ini smear +,Negative,Tambram sanatorium,0,NA,0,NA,0,7,5
+1203383,Femme,45,Pas d'éducation,Travaille,Non,Non,35,147,16.2,1,Ini smear +,Negative,Tambram sanatorium,0,NA,0,NA,0,30,28
+1203577,Homme,68,Pas d'éducation,Travaille,Oui,Oui,42,171,14.4,0,Ini smear +,NA,PHC,0,PHC,0,GH,0,14,5
+1203674,Homme,40,Secondaire,Travaille,Non,Oui,68,167,24.4,0,Ini smear -,Positive,GH,0,NA,0,NA,0,1,6
+1203771,Homme,63,Primaire,Travaille,Oui,Oui,35,161,13.5,0,Ini smear +,Negative,Pvt. docto,4000,PHC,0,GH,0,2,3
+1203868,Femme,40,Pas d'éducation,Travaille,Non,Non,45.2,141,22.7,1,Ini smear +,NA,PHC,0,NA,0,NA,0,10,8
+1203965,Homme,45,Intermédiaire,Travaille,Non,Non,39,164,14.5,1,Ini smear +,NA,PHC,0,GH,0,NA,0,3,3
+1204062,Homme,45,Primaire,Travaille,Non,Non,36,160,14.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,1,12
+1204159,Homme,50,Intermédiaire,Travaille,Non,Non,46,149,20.7,1,Ini smear +,NA,GH,0,Pvt. hospi,1000,NA,0,12,12
+1204256,Homme,20,Secondaire supérieur,Travaille,Non,Non,40,160,15.6,0,Ini smear +,NA,PHC,0,GH,0,NA,0,3,2
+1204450,Homme,60,Pas d'éducation,Travaille,Oui,Non,35.4,157,14.4,0,Ini smear +,NA,GH,0,NA,0,NA,0,10,17
+1204644,Homme,65,Secondaire,Travaille,Non,Non,69,142,34.2,1,Ini smear -,Positive,Pvt. docto,1600,Tambram Sanatorium,0,NA,0,180,19
+1204741,Homme,60,Intermédiaire,Travaille,Oui,Non,60,162,22.9,0,Missing,Positive,Other,50,Pvt. docto,1000,Pvt. hospi,3000,14,14
+1204838,Femme,27,Intermédiaire,Travaille,Non,Non,42,143,20.5,0,Ini smear +,NA,Pvt. docto,30000,Pvt. docto,1500,Pvt. hospi,6500,180,7
+1204935,Femme,65,Pas d'éducation,Travaille,Non,Non,38,143,18.6,0,Ini smear +,NA,PHC,0,NA,0,NA,0,21,0
+1205032,Homme,50,Pas d'éducation,Ne travaille pas,Non,Non,40,148,18.3,0,Ini smear +,NA,Pvt. clini,2000,PHC,0,NA,0,365,14
+1205129,Homme,53,Intermédiaire,Travaille,Oui,Oui,46,155,19.1,1,Ini smear +,NA,Pvt. docto,40,Pvt. clini,800,Tambram Sanatorium,0,30,7
+1205226,Homme,55,Pas d'éducation,Travaille,Oui,Oui,46,170,15.9,0,Ini smear +,NA,Pvt. clini,300,PHC,0,NA,0,7,2
+1205323,Homme,47,Primaire,Travaille,Non,Non,64,161,24.7,0,Ini smear -,Positive,Pvt. docto,700,Pvt. clini,300,GH,0,3,4
+1205420,Homme,57,Secondaire,Travaille,Non,Non,46.9,156,19.3,1,Ini smear +,NA,Pvt. clini,4000,GH,0,NA,0,14,0
+1205517,Homme,40,Intermédiaire,Travaille,Oui,Non,38.5,154,16.2,0,Ini smear -,Positive,PHC,0,NA,0,NA,0,21,35
+1205614,Homme,50,Intermédiaire,Travaille,Oui,Non,40.5,162,15.4,0,Ini smear +,NA,Tambram sanatorium,0,NA,0,NA,0,7,18
+1205711,Homme,67,Primaire,Travaille,Non,Non,56,162,21.3,1,Ini smear -,Positive,Pvt. clini,300,Pvt. clini,1000,Pvt. hospi,17000,30,26
+1205808,Femme,60,Pas d'éducation,Ne travaille pas,Non,Non,40,152,17.3,0,Ini smear -,Positive,Pvt. clini,1000,Pvt. clini,500,Pvt. docto,15000,30,9
+1205905,Homme,66,Secondaire,Travaille,Non,Non,42.3,159,16.7,0,Ini smear +,NA,Pvt. hospi,35000,NA,0,NA,0,7,6
+1206196,Homme,55,Primaire,Travaille,Non,Non,38,163,14.3,0,Ini smear +,NA,Pvt. docto,1500,Pvt. hospi,6000,NA,0,7,5
+1206390,Femme,60,Pas d'éducation,Travaille,Non,Non,55.2,163,20.8,0,Ini smear +,Positive,Pvt. hospi,20000,Tambram Sanatorium,0,NA,0,21,37
+1300286,Homme,75,Pas d'éducation,Travaille,Oui,Oui,45,164,16.7,0,Ini smear +,NA,Pvt. docto,4000,Pvt. docto,5000,PHC,0,NA,1
+1300383,Homme,29,Intermédiaire,Travaille,Oui,Non,52,173,17.4,0,Ini smear +,NA,Pvt. hospi,12000,PHC,0,NA,0,7,18
+1300480,Homme,45,Pas d'éducation,Travaille,Oui,Oui,40,162,15.2,0,Ini smear +,NA,Pvt. docto,2000,GH,0,NA,0,20,11
+1300674,Homme,88,Pas d'éducation,Ne travaille pas,Non,Non,40,151,17.5,0,Ini smear -,Positive,PHC,0,NA,0,NA,0,NA,2
+1300771,Femme,38,Primaire,Ne travaille pas,Non,Non,32,152,13.9,0,Ini smear +,Positive,Pvt. hospi,2500,Pvt. docto,600,PHC,0,7,2
+1300868,Femme,60,Pas d'éducation,Ne travaille pas,Non,Non,32,151,14,0,Ini smear +,Negative,PHC,0,GH,0,NA,0,NA,7
+1300965,Homme,57,Pas d'éducation,Travaille,Oui,Non,48,162,18.3,0,Ini smear +,NA,PHC,0,GH,0,NA,0,NA,6
+1301062,Homme,67,Pas d'éducation,Travaille,Oui,Oui,40,157,16.2,1,Ini smear +,NA,Pvt. docto,300,PHC,0,NA,0,10,9
+1301741,Homme,75,Pas d'éducation,Travaille,Non,Non,50,169,17.5,0,Ini smear -,Positive,Pvt. hospi,2000,Tambram Sanatorium,0,NA,0,30,0
+1301838,Homme,55,Pas d'éducation,Travaille,Oui,Oui,40,162,15.2,0,Ini smear -,Positive,Tambram sanatorium,0,NA,0,NA,0,30,7
+1301935,Homme,60,Pas d'éducation,Travaille,Oui,Oui,36,172,12.2,0,Ini smear +,NA,GH,0,NA,0,NA,0,4,2
+1302032,Homme,50,Intermédiaire,Ne travaille pas,Non,Non,45,152,19.5,0,Ini smear +,Positive,GH,0,NA,0,NA,0,2,0
+1302129,Femme,60,Manquant,Travaille,Oui,Non,45,152,19.5,0,Ini smear +,NA,Pvt. clini,100,GH,0,NA,0,30,0
+1302323,Homme,46,Primaire,Ne travaille pas,Non,Non,45,173,15,0,Ini smear -,Positive,GH,400,GH,0,NA,0,NA,8
+1302420,Homme,80,Pas d'éducation,Travaille,Non,Non,36,148,16.4,0,Ini smear +,Negative,GH,0,NA,0,NA,0,30,5
+1302517,Homme,47,Intermédiaire,Travaille,Non,Non,45,168,15.9,1,Ini smear +,Negative,GH,0,Tambram Sanatorium,0,NA,0,30,16
+1302711,Homme,42,Secondaire supérieur,Travaille,Oui,Oui,46,168,16.3,0,Ini smear +,Negative,Pvt. hospi,5000,NA,0,NA,0,NA,33
+1302905,Homme,18,Secondaire supérieur,Ne travaille pas,Non,Non,38,156,15.6,0,Ini smear +,Positive,GH,0,Pvt. clini,500,Pvt. docto,420,10,0
+1303293,Homme,70,Primaire,Travaille,Oui,Oui,45,177,14.4,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,8
+1303390,Homme,38,Intermédiaire,Travaille,Oui,Non,42,159,16.6,0,Ini smear -,Positive,Pvt. hospi,1500,Tambram Sanatorium,0,GH,0,14,6
+1303584,Homme,48,Intermédiaire,Travaille,Oui,Non,65,163,24.5,0,Ini smear -,Positive,GH,0,NA,0,NA,0,30,18
+1303681,Homme,59,Intermédiaire,Travaille,Oui,Oui,45,158,18,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,4
+1303972,Homme,65,Pas d'éducation,Travaille,Oui,Oui,46.7,168,16.5,0,Ini smear +,NA,GH,0,NA,0,NA,0,60,8
+1304069,Homme,57,Primaire,Travaille,Oui,Non,39.5,169,13.8,0,Ini smear +,NA,Pvt. hospi,300,GH,0,NA,0,8,8
+1304166,Homme,51,Secondaire,Travaille,Oui,Non,50,167,17.9,1,Ini smear +,NA,PHC,0,GH,0,NA,0,30,2
+1304263,Homme,65,Pas d'éducation,Travaille,Oui,Non,42,168,14.9,0,Ini smear +,NA,Pvt. clini,340,GH,0,NA,0,60,7
+1304360,Homme,60,Primaire,Travaille,Non,Non,65,175,21.2,0,Ini smear -,Positive,Pvt. docto,500,GH,0,NA,0,50,3
+1304554,Homme,58,Primaire,Travaille,Oui,Oui,56,169,19.6,0,Ini smear -,Positive,GH,0,NA,0,NA,0,30,0
+1304651,Homme,40,Primaire,Travaille,Oui,Non,45,162,17.1,0,Ini smear +,NA,Pvt. clini,300,GH,0,NA,0,30,1
+1304748,Homme,47,Intermédiaire,Travaille,Oui,Oui,50,171,17.1,0,Ini smear +,Negative,GH,0,NA,0,NA,0,7,4
+1304845,Femme,26,Secondaire supérieur,Travaille,Non,Non,32,140,16.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,10,4
+1304942,Homme,62,Pas d'éducation,Travaille,Oui,Oui,37,163,13.9,0,Ini smear +,NA,PHC,0,PHC,0,NA,0,14,4
+1305039,Homme,40,Intermédiaire,Travaille,Oui,Oui,48,170,16.6,0,Ini smear +,NA,GH,0,NA,0,NA,0,15,2
+1305233,Homme,24,Secondaire supérieur,Travaille,Oui,Non,55,170,19,0,Ini smear +,NA,Pvt. hospi,2000,PHC,0,NA,0,5,4
+1305330,Homme,38,Intermédiaire,Travaille,Oui,Oui,44,154,18.6,0,Ini smear +,NA,Pvt. hospi,1500,PHC,0,NA,0,14,5
+1305427,Femme,33,Intermédiaire,Travaille,Non,Non,37,147,17.1,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,3
+1305524,Homme,66,Pas d'éducation,Travaille,Oui,Oui,35.3,155,14.7,0,Ini smear +,NA,Pvt. hospi,2000,GH,0,NA,0,60,14
+1305621,Homme,36,Secondaire,Travaille,Oui,Oui,44.9,163,16.9,0,Ini smear +,NA,Pvt. hospi,1500,GH,0,NA,0,30,7
+1305718,Homme,57,Pas d'éducation,Travaille,Oui,Non,56,159,22.2,0,Ini smear -,Positive,GH,0,NA,0,NA,0,4,6
+1305912,Homme,65,Intermédiaire,Travaille,Oui,Non,49.7,154,21,1,Ini smear +,NA,Pvt. hospi,10000,PHC,0,NA,0,4,NA
+1306106,Femme,40,Pas d'éducation,Travaille,Non,Non,51.6,147,23.9,0,Ini smear -,Positive,GH,0,NA,0,NA,0,3,5
+1306300,Homme,65,Primaire,Travaille,Non,Non,47.9,159,18.9,0,Ini smear +,Negative,GH,500,NA,0,NA,0,30,16
+1306494,Homme,44,Intermédiaire,Travaille,Non,Non,47,156,19.3,1,Ini smear +,NA,GH,0,NA,0,NA,0,30,0
+1306591,Homme,62,Primaire,Travaille,Non,Oui,59,167,21.2,0,Ini smear +,NA,PHC,0,PHC,0,NA,0,2,29
+1306688,Homme,65,Intermédiaire,Travaille,Non,Oui,43,160,16.8,1,Ini smear +,NA,Pvt. docto,4000,GH,0,NA,0,20,5
+1306979,Homme,50,Primaire,Travaille,Oui,Non,44.1,163,16.6,1,Ini smear -,Positive,Pvt. hospi,700,GH,0,NA,0,30,20
+1307076,Homme,65,Intermédiaire,Travaille,Non,Oui,51.1,159,20.2,0,Ini smear -,Positive,GH,0,GH,0,NA,0,15,12
+1307173,Homme,39,Primaire,Travaille,Oui,Non,42,169,14.7,1,Ini smear +,NA,GH,0,NA,0,NA,0,30,31
+1307270,Femme,20,Secondaire,Ne travaille pas,Non,Non,40,153,17.1,0,Ini smear +,NA,GH,0,GH,0,NA,0,30,6
+1307367,Femme,30,Pas d'éducation,Travaille,Non,Non,42.7,148,19.5,0,Ini smear -,Positive,GH,0,GH,0,NA,0,15,7
+1307464,Femme,45,Pas d'éducation,Travaille,Non,Non,31.5,150,14,0,Ini smear +,Negative,Pvt. docto,800,Pvt. hospi,4000,PHC,0,30,1
+1307561,Homme,37,Pas d'éducation,Travaille,Non,Non,41,159,16.2,0,Ini smear +,NA,Pvt. docto,2000,PHC,0,GH,0,20,15
+1307658,Homme,35,Intermédiaire,Travaille,Non,Non,39.2,162,14.9,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,20
+1307755,Femme,65,Primaire,Ne travaille pas,Non,Non,41.5,135,22.8,1,Ini smear -,Positive,GH,0,NA,0,NA,0,14,8
+1307852,Homme,60,Pas d'éducation,Travaille,Non,Oui,51.6,169,18.1,0,Ini smear -,Positive,Pvt. hospi,1200,PHC,0,NA,0,1,4
+1307949,Femme,23,Secondaire supérieur,Travaille,Non,Non,38,154,16,0,Ini smear -,Positive,Pvt. docto,1000,Pvt. hospi,700,PHC,0,3,32
+1308046,Homme,40,Intermédiaire,Travaille,Non,Non,58,154,24.5,1,Ini smear -,Positive,Pvt. hospi,3000,GH,0,NA,0,15,9
+1308143,Homme,26,Secondaire supérieur,Travaille,Non,Non,44.2,169,15.5,0,Ini smear +,Negative,Pvt. clini,600,GH,0,Pvt. clini,500,14,1
+1308240,Homme,24,Secondaire,Travaille,Non,Non,41.6,165,15.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,8
+1308337,Homme,66,Primaire,Ne travaille pas,Non,Non,36.2,168,12.8,0,Ini smear +,NA,Pvt. docto,300,GH,0,NA,0,21,16
+1308434,Homme,46,Secondaire,Ne travaille pas,Non,Non,64,170,22.1,1,Missing,Positive,Pvt. hospi,30000,NA,0,NA,0,7,35
+1308628,Homme,47,Secondaire,Ne travaille pas,Non,Non,41.7,158,16.7,0,Ini smear -,Positive,Pvt. docto,7000,Pvt. docto,0,PHC,0,14,1
+1308725,Homme,65,Primaire,Travaille,Oui,Non,52.6,167,18.9,0,Missing,Positive,PHC,0,NA,0,NA,0,30,5
+1400196,Homme,65,Pas d'éducation,Ne travaille pas,Oui,Non,NA,NA,NA,0,Ini smear +,Positive,Pvt. docto,350,Pvt. hospi,800,PHC,0,30,4
+1400293,Homme,65,Primaire,Travaille,Non,Oui,NA,NA,NA,0,Ini smear +,NA,Pvt. clini,1500,PHC,0,NA,0,37,3
+1400390,Homme,50,Pas d'éducation,Travaille,Non,Non,NA,NA,NA,1,Ini smear -,Positive,Pvt. clini,1000,Pvt. docto,1000,Pvt. hospi,2000,14,1
+1400487,Homme,32,Primaire,Travaille,Non,Non,NA,NA,NA,0,Ini smear +,NA,Pvt. clini,500,Pvt. docto,150,Pvt. hospi,1000,36,2
+1400584,Homme,45,Secondaire supérieur,Travaille,Non,Non,50,NA,NA,1,Ini smear -,Positive,Pvt. hospi,3000,PHC,0,NA,0,37,0
+1400681,Femme,40,Pas d'éducation,Travaille,Non,Non,35,NA,NA,0,Ini smear +,NA,Pvt. clini,3000,Pvt. clini,900,PHC,0,30,7
+1400778,Homme,70,Pas d'éducation,Travaille,Non,Non,NA,NA,NA,1,Ini smear -,Positive,Pvt. hospi,6000,Tambram Sanatorium,0,GH,0,26,25
+1401069,Homme,56,Secondaire,Travaille,Non,Non,NA,NA,NA,1,Ini smear -,Positive,Pvt. clini,0,Pvt. clini,0,Pvt. clini,1500,60,12
+1401166,Homme,60,Pas d'éducation,Travaille,Non,Non,45,NA,NA,1,Ini smear +,NA,Pvt. hospi,10000,T.Pvt,3000,NA,0,15,7
+1401263,Homme,59,Pas d'éducation,Travaille,Non,Non,45,NA,NA,1,Ini smear +,NA,PHC,0,PHC,0,GH,0,NA,16
+1401360,Femme,47,Pas d'éducation,Travaille,Non,Non,45,NA,NA,0,Ini smear +,NA,Pvt. hospi,2500,Pvt. hospi,2000,NA,0,15,4
+1401457,Homme,45,Manquant,Travaille,Oui,Oui,48,NA,NA,0,Ini smear +,NA,GH,0,NA,0,NA,0,15,18
+1401554,Homme,55,Primaire,Travaille,Non,Non,48,NA,NA,1,Ini smear +,NA,Pvt. clini,1500,Pvt. clini,250,Tambram Sanatorium,0,30,20
+1401651,Homme,58,Pas d'éducation,Travaille,Oui,Oui,45,NA,NA,0,Ini smear +,NA,GH,0,NA,0,NA,0,90,12
+1401748,Homme,55,Manquant,Travaille,Non,Non,32,158,12.8,0,Ini smear +,NA,Pvt. hospi,4500,Pvt. hospi,1000,Tambram Sanatorium,0,60,0
+1401845,Homme,55,Intermédiaire,Travaille,Oui,Non,40,169,14,1,Ini smear +,NA,Pvt. clini,2300,Pvt. hospi,1500,NA,0,19,8
+1401942,Femme,58,Pas d'éducation,Travaille,Non,Non,50,NA,NA,1,Ini smear +,NA,Pvt. hospi,3500,Tambram Sanatorium,0,NA,0,25,3
+1402039,Homme,70,Pas d'éducation,Travaille,Non,Non,30,152,13,0,Ini smear +,NA,Pvt. clini,900,GH,0,NA,0,27,10
+1402233,Homme,35,Intermédiaire,Travaille,Oui,Non,52,155,21.6,0,Ini smear +,Negative,Pvt. hospi,0,Pvt. clini,0,GH,0,15,10
+1402427,Homme,40,Secondaire,Travaille,Oui,Non,37,160,14.5,0,Ini smear +,Negative,Pvt. clini,500,Pvt. clini,500,Pvt. hospi,15000,13,10
+1402621,Homme,58,Secondaire,Travaille,Non,Non,40,160,15.6,0,Ini smear +,NA,Pvt. hospi,1500,PHC,0,NA,0,15,1
+1402718,Homme,46,Secondaire supérieur,Travaille,Oui,Oui,37,159,14.6,0,Ini smear +,NA,Tambram sanatorium,0,NA,0,NA,0,20,6
+1402815,Homme,73,Intermédiaire,Travaille,Non,Oui,55,172,18.6,0,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,9,2
+1402912,Homme,27,Intermédiaire,Travaille,Oui,Non,41,170,14.2,0,Ini smear +,NA,Pvt. docto,200,Pvt. docto,150,PHC,0,10,1
+1403009,Homme,65,Pas d'éducation,Travaille,Non,Non,40,158,16,1,Ini smear -,Positive,Pvt. docto,500,Pvt. docto,300,Pvt. hospi,1000,110,9
+1403106,Homme,23,Primaire,Travaille,Oui,Non,110,172,37.2,0,Ini smear +,NA,Pvt. docto,300,GH,0,NA,0,14,8
+1403203,Femme,24,Secondaire supérieur,Travaille,Non,Non,34,158,13.6,0,Ini smear +,NA,GH,0,Pvt. docto,540,GH,0,14,6
+1403300,Homme,34,Intermédiaire,Travaille,Oui,Non,40,153,17.1,0,Ini smear -,Positive,Pvt. clini,150,Tambram Sanatorium,0,NA,0,4,6
+1403494,Femme,55,Pas d'éducation,Travaille,Non,Non,39,155,16.2,1,Ini smear +,NA,Pvt. docto,400,Tambram Sanatorium,0,NA,0,37,42
+1403591,Femme,22,Secondaire supérieur,Ne travaille pas,Non,Non,34,159,13.4,0,Ini smear -,Positive,Pvt. docto,450,PHC,0,NA,0,5,7
+1403688,Femme,20,Secondaire supérieur,Ne travaille pas,Non,Non,32,158,12.8,0,Ini smear -,Positive,PHC,0,Pvt. hospi,300,PHC,0,30,8
+1403785,Homme,28,Secondaire,Travaille,Oui,Oui,41.9,176,13.5,0,Ini smear +,NA,Pvt. docto,150,PHC,0,GH,0,10,5
+1403882,Homme,64,Primaire,Travaille,Oui,Oui,40,153,17.1,0,Ini smear +,NA,Pvt. docto,150,Pvt. hospi,450,GH,0,90,4
+1403979,Homme,60,Primaire,Travaille,Oui,Non,42,170,14.5,1,Ini smear +,NA,Pvt. hospi,420,GH,0,NA,0,30,3
+1404173,Homme,64,Secondaire,Travaille,Non,Oui,50,165,18.4,0,Ini smear +,NA,Pvt. docto,180,PHC,0,NA,0,5,8
+1404270,Homme,60,Primaire,Travaille,Oui,Non,40,155,16.6,0,Ini smear -,Positive,GH,0,Tambram Sanatorium,0,NA,0,90,15
+1404464,Homme,55,Primaire,Travaille,Oui,Oui,42,151,18.4,1,Ini smear +,NA,Pvt. hospi,200,Pvt. hospi,300,Tambram Sanatorium,0,30,7
+1404561,Homme,49,Primaire,Travaille,Oui,Non,40,158,16,1,Ini smear -,Positive,Pvt. hospi,850,Pvt. hospi,600,GH,0,44,13
+1404755,Homme,53,Secondaire,Travaille,Oui,Non,40,161,15.4,0,Ini smear +,NA,PHC,0,NA,0,NA,0,10,6
+1404852,Homme,60,Pas d'éducation,Travaille,Oui,Oui,49,172,16.6,1,Ini smear +,NA,Pvt. hospi,1500,PHC,0,NA,0,30,12
+1404949,Homme,21,Secondaire,Travaille,Oui,Non,42,165,15.4,0,Ini smear +,NA,GH,0,NA,0,NA,0,30,1
+1405046,Homme,20,Diplômé,Ne travaille pas,Oui,Oui,50,169,17.5,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,1
+1405240,Homme,40,Secondaire,Travaille,Oui,Non,56,165,20.6,1,Ini smear +,NA,GH,0,NA,0,NA,0,7,7
+1405434,Homme,27,Intermédiaire,Travaille,Oui,Non,39,153,16.7,0,Ini smear +,NA,Pvt. clini,200,PHC,0,NA,0,7,0
+1405531,Femme,37,Pas d'éducation,Travaille,Non,Non,36,152,15.6,0,Ini smear +,NA,Pvt. hospi,750,Tambram Sanatorium,0,NA,0,14,12
+1405628,Homme,40,Intermédiaire,Travaille,Oui,Non,67,170,23.2,1,Ini smear +,NA,Pvt. clini,1500,Pvt. hospi,1300,PHC,0,11,6
+1405725,Homme,40,Secondaire,Travaille,Oui,Non,73,170,25.3,1,Ini smear +,NA,Pvt. hospi,2000,Pvt. hospi,1000,GH,0,21,15
+1405919,Femme,45,Secondaire,Ne travaille pas,Non,Non,32.3,156,13.3,0,Ini smear +,NA,PHC,0,Pvt. hospi,1200,Tambram Sanatorium,0,37,30
+1406113,Homme,29,Primaire,Travaille,Oui,Non,38.2,162,14.6,0,Ini smear +,NA,Pvt. clini,650,PHC,0,NA,0,7,14
+1406210,Homme,43,Secondaire,Travaille,Oui,Non,56,160,21.9,1,Ini smear +,NA,Pvt. hospi,400,Pvt. clini,2100,GH,0,7,2
+1406307,Homme,65,Intermédiaire,Travaille,Oui,Oui,30,146,14.1,0,Ini smear +,Negative,Pvt. hospi,4200,Tambram Sanatorium,0,NA,0,60,23
+1500300,Homme,50,Pas d'éducation,Ne travaille pas,Non,Non,37,155,15.4,1,Ini smear -,Positive,Tambram sanatorium,0,NA,0,NA,0,15,7
+1500494,Homme,70,Pas d'éducation,Ne travaille pas,Non,Non,45,155,18.7,0,Ini smear +,NA,GH,1000,Pvt. docto,24000,NA,0,30,40
+1501270,Homme,55,Pas d'éducation,Ne travaille pas,Non,Non,45,155,18.7,0,Ini smear +,NA,Tambram sanatorium,0,NA,0,NA,0,105,7
+1501367,Homme,55,Pas d'éducation,Ne travaille pas,Non,Oui,35,150,15.6,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,3
+1501561,Homme,65,Pas d'éducation,Ne travaille pas,Non,Non,40,155,16.6,0,Ini smear +,Positive,GH,0,NA,0,NA,0,60,6
+1501658,Homme,67,Pas d'éducation,Ne travaille pas,Non,Non,42,150,18.7,0,Ini smear +,NA,GH,0,NA,0,NA,0,21,3
+1501852,Homme,48,Pas d'éducation,Ne travaille pas,Non,Non,40,155,16.6,0,Ini smear +,NA,GH,0,NA,0,NA,0,10,14
+1501949,Homme,55,Pas d'éducation,Ne travaille pas,Non,Non,45,170,15.6,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,4
+1502046,Homme,76,Intermédiaire,Ne travaille pas,Non,Non,35,145,16.6,0,Ini smear +,NA,Tambram sanatorium,0,NA,0,NA,0,30,27
+1502143,Homme,42,Secondaire,Ne travaille pas,Non,Non,50,155,20.8,0,Ini smear +,NA,Pvt. hospi,6000,NA,0,NA,0,9,9
+1502240,Homme,76,Pas d'éducation,Ne travaille pas,Non,Non,40,155,16.6,0,Ini smear -,Positive,GH,0,NA,0,NA,0,7,4
+1502337,Homme,22,Secondaire supérieur,Travaille,Non,Non,52,172,17.6,0,Ini smear -,Positive,GH,0,NA,0,NA,0,7,9
+1502434,Homme,65,Pas d'éducation,Ne travaille pas,Non,Non,50,170,17.3,0,Ini smear +,Positive,Tambram sanatorium,0,NA,0,NA,0,30,12
+1502531,Femme,45,Pas d'éducation,Ne travaille pas,Non,Non,44,165,16.2,0,Ini smear -,Positive,Pvt. hospi,6000,NA,0,NA,0,30,28
+1502628,Homme,24,Diplômé,Travaille,Non,Non,55,175,18,0,Ini smear -,Positive,Pvt. clini,450,PHC,0,NA,0,7,1
+1502822,Homme,35,Secondaire supérieur,Travaille,Non,Non,55,180,17,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,22
+1503016,Homme,53,Intermédiaire,Travaille,Non,Non,63,180,19.4,1,Ini smear +,NA,GH,0,NA,0,NA,0,14,4
+1503210,Homme,46,Pas d'éducation,Travaille,Oui,Oui,38.6,160,15.1,0,Ini smear +,NA,PHC,0,GH,0,NA,0,90,5
+1503307,Homme,45,Pas d'éducation,Travaille,Non,Non,65,175,21.2,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,4
+1503404,Homme,35,Intermédiaire,Travaille,Oui,Non,NA,160,NA,0,Ini smear +,NA,GH,0,NA,0,NA,0,21,11
+1503501,Homme,57,Primaire,Ne travaille pas,Non,Non,45,180,13.9,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,18
+1503695,Femme,19,Secondaire supérieur,Ne travaille pas,Non,Non,36.9,153,15.8,0,Ini smear +,NA,PHC,0,Tambram Sanatorium,0,NA,0,18,19
+1503792,Femme,40,Pas d'éducation,Travaille,Non,Non,42,140,21.4,0,Ini smear +,NA,Pvt. clini,20000,GH,0,Tambram Sanatorium,0,201,3
+1503986,Homme,18,Secondaire supérieur,Ne travaille pas,Non,Non,42,152,18.2,0,Ini smear +,Negative,GH,0,Pvt. clini,500,GH,0,14,7
+1504083,Femme,60,Pas d'éducation,Ne travaille pas,Non,Non,42,150,18.7,1,Ini smear +,Positive,Pvt. docto,700,GH,0,NA,0,2,1
+1504180,Femme,50,Pas d'éducation,Travaille,Non,Non,33,147,15.3,0,Ini smear -,Positive,Pvt. clini,800,Pvt. hospi,1800,Tambram Sanatorium,0,51,20
+1504277,Homme,65,Pas d'éducation,Travaille,Non,Non,42,155,17.5,1,Ini smear +,NA,Pvt. docto,500,Tambram Sanatorium,0,NA,0,150,54
+1504374,Homme,38,Intermédiaire,Travaille,Non,Non,44,160,17.2,0,Ini smear +,Negative,Pvt. clini,1000,Pvt. docto,1000,GH,0,21,5
+1504568,Femme,22,Intermédiaire,Travaille,Non,Non,34,150,15.1,0,Ini smear +,Negative,Pvt. hospi,1500,Tambram Sanatorium,0,NA,0,31,9
+1504762,Homme,62,Intermédiaire,Travaille,Oui,Oui,34,160,13.3,0,Ini smear +,Positive,Pvt. clini,400,Tambram Sanatorium,0,NA,0,7,5
+1504859,Homme,49,Intermédiaire,Travaille,Oui,Non,57,170,19.7,1,Missing,Positive,Pvt. hospi,700,GH,0,NA,0,30,7
+1504956,Homme,50,Primaire,Travaille,Oui,Oui,50,175,16.3,1,Ini smear +,Positive,Tambram sanatorium,0,NA,0,NA,0,21,13
+1505053,Homme,60,Pas d'éducation,Travaille,Non,Non,38,165,14,0,Ini smear +,Positive,Pvt. clini,400,Tambram Sanatorium,0,NA,0,30,12
+1505150,Homme,68,Pas d'éducation,Travaille,Oui,Oui,48,165,17.6,0,Ini smear +,Positive,GH,0,Pvt. hospi,0,PHC,0,90,4
+1505247,Homme,24,Secondaire supérieur,Travaille,Non,Non,48,175,15.7,0,Ini smear -,Positive,Pvt. hospi,10000,PHC,0,NA,0,21,11
+1505441,Homme,48,Pas d'éducation,Travaille,Oui,Non,39,160,15.2,0,Ini smear +,NA,Pvt. docto,700,GH,0,NA,0,14,0
+1505538,Homme,54,Intermédiaire,Travaille,Non,Non,50,150,22.2,1,Ini smear +,Negative,Pvt. clini,750,GH,0,NA,0,7,8
+1505635,Homme,50,Pas d'éducation,Travaille,Oui,Oui,40,171,13.7,0,Ini smear +,NA,PHC,0,GH,0,NA,0,90,7
+1505732,Homme,61,Primaire,Travaille,Oui,Oui,45.3,171,15.5,0,Ini smear +,Positive,Pvt. clini,600,GH,0,NA,0,7,8
+1505926,Homme,39,Intermédiaire,Travaille,Oui,Oui,49,167,17.6,0,Ini smear -,Positive,Other,0,GH,3000,NA,0,13,16
+1506023,Homme,44,Primaire,Travaille,Oui,Oui,60,184,17.7,0,Ini smear +,Positive,Pvt. docto,600,Pvt. hospi,750,PHC,0,30,3
+1506120,Homme,37,Pas d'éducation,Travaille,Non,Non,NA,160,NA,0,Ini smear +,Positive,PHC,0,Pvt. hospi,8000,PHC,0,15,7
+1506217,Homme,61,Secondaire,Travaille,Non,Non,49,160,19.1,0,Ini smear -,Positive,GH,500,Tambram Sanatorium,0,NA,0,30,11
+1506314,Homme,50,Pas d'éducation,Travaille,Oui,Non,34,170,11.8,1,Ini smear -,Positive,GH,0,Tambram Sanatorium,0,NA,0,47,38
+1506411,Homme,61,Primaire,Ne travaille pas,Oui,Oui,56,170,19.4,0,Ini smear +,NA,GH,0,NA,0,NA,0,7,3
+1506508,Homme,53,Intermédiaire,Travaille,Oui,Oui,37.3,168,13.2,0,Ini smear +,Positive,PHC,0,Tambram Sanatorium,0,NA,0,114,14
+1506702,Homme,68,Primaire,Ne travaille pas,Oui,Oui,56,178,17.7,1,Ini smear +,Positive,Pvt. hospi,10000,Pvt. hospi,1000,PHC,0,15,3
+1506896,Homme,25,Intermédiaire,Travaille,Non,Non,46.6,183,13.9,0,Ini smear +,Positive,Pvt. hospi,10000,Tambram Sanatorium,0,NA,0,13,7
+1506993,Homme,32,Secondaire supérieur,Travaille,Non,Non,59,152,25.5,0,Ini smear +,Positive,Pvt. clini,2000,GH,0,NA,0,60,4
+1507090,Femme,55,Pas d'éducation,Travaille,Non,Non,41,156,16.8,0,Ini smear +,Positive,GH,0,Tambram Sanatorium,0,NA,0,60,14
+1507187,Femme,45,Pas d'éducation,Ne travaille pas,Non,Non,63.5,149,28.6,1,Ini smear -,Positive,Pvt. hospi,0,Pvt. hospi,6000,PHC,0,14,13
+1507284,Femme,40,Pas d'éducation,Travaille,Non,Non,39.4,152,17.1,0,Ini smear +,Positive,GH,0,Pvt. clini,2400,PHC,0,11,11
+1507381,Femme,20,Secondaire supérieur,Travaille,Non,Non,40,152,17.3,0,Ini smear +,NA,GH,0,NA,0,NA,0,4,11
+1507478,Homme,55,Intermédiaire,Travaille,Oui,Oui,48,186,13.9,0,Ini smear +,NA,PHC,0,NA,0,NA,0,21,14
+1507575,Femme,20,Secondaire,Travaille,Non,Non,40,152,17.3,0,Ini smear +,Positive,GH,0,GH,0,Pvt. docto,2000,16,2
+1507672,Homme,44,Pas d'éducation,Travaille,Non,Non,57,168,20.2,0,Ini smear +,NA,Pvt. clini,1000,Tambram Sanatorium,0,NA,0,30,20
+1507769,Homme,60,Pas d'éducation,Ne travaille pas,Oui,Non,48,177,15.3,0,Ini smear +,Positive,Pvt. clini,2000,Pvt. docto,1000,GH,0,30,12
+1600113,Homme,55,Primaire,Travaille,Oui,Oui,42.6,142,21.1,1,Ini smear +,NA,GH,0,NA,0,NA,0,14,4
+1600210,Homme,63,Primaire,Travaille,Non,Non,61,172,20.6,1,Ini smear +,NA,T.Pvt,5000,NA,0,NA,0,14,5
+1600307,Femme,35,Primaire,Ne travaille pas,Non,Non,50,130,29.6,1,Ini smear +,NA,Pvt. clini,5000,GH,0,NA,0,30,2
+1600404,Homme,49,Primaire,Travaille,Non,Non,48,160,18.7,1,Ini smear +,NA,Pvt. hospi,15000,GH,0,NA,0,30,2
+1600501,Homme,27,Secondaire,Travaille,Oui,Oui,50,165,18.4,0,Ini smear -,NA,Pvt. clini,200,Pvt. hospi,400,Tambram Sanatorium,0,30,6
+1600695,Femme,24,Secondaire,Travaille,Non,Non,38,125,24.3,0,Ini smear +,Negative,Tambram sanatorium,0,GH,0,NA,0,8,19
+1600889,Homme,45,Intermédiaire,Travaille,Oui,Oui,40.5,135,22.2,0,Ini smear +,NA,Pvt. docto,150,GH,0,NA,0,7,7
+1600986,Homme,32,Diplômé,Travaille,Non,Non,58,155,24.1,0,Ini smear -,Positive,Pvt. hospi,3000,Pvt. clini,700,Pvt. hospi,20000,90,13
+1601083,Homme,60,Primaire,Travaille,Non,Non,48,145,22.8,1,Ini smear +,NA,Pvt. hospi,300,GH,0,NA,0,30,4
+1601180,Homme,44,Intermédiaire,Ne travaille pas,Non,Non,46,160,18,1,Ini smear +,NA,Pvt. hospi,8000,Pvt. hospi,1000,Pvt. hospi,450,45,20
+1601277,Homme,53,Secondaire,Travaille,Oui,Oui,60,152,26,1,Ini smear +,NA,Pvt. clini,2000,GH,0,NA,0,17,5
+1601374,Femme,49,Primaire,Travaille,Non,Non,60,160,23.4,1,Ini smear +,NA,Pvt. hospi,6000,Tambram Sanatorium,0,NA,0,36,15
+1601568,Homme,20,Secondaire supérieur,Ne travaille pas,Non,Non,33,165,12.1,0,Ini smear +,Negative,Pvt. docto,1000,GH,0,NA,0,28,7
+1601665,Homme,62,Pas d'éducation,Travaille,Non,Oui,49,168,17.4,1,Ini smear -,Positive,Pvt. clini,1000,GH,0,NA,0,90,9
+1601762,Homme,60,Pas d'éducation,Travaille,Non,Oui,43.6,165,16,0,Ini smear -,Positive,GH,0,NA,0,NA,0,14,16
+1601859,Femme,45,Pas d'éducation,Travaille,Non,Non,48,150,21.3,0,Ini smear +,Positive,Pvt. docto,4000,GH,0,NA,0,180,19
+1601956,Homme,48,Pas d'éducation,Travaille,Non,Non,45,160,17.6,0,Ini smear -,Positive,Pvt. clini,1000,Pvt. docto,3000,GH,0,28,1
+1602053,Homme,52,Secondaire,Travaille,Oui,Non,52,160,20.3,0,Ini smear +,Negative,Pvt. docto,2500,GH,0,NA,0,12,6
+1602150,Homme,64,Secondaire,Travaille,Non,Non,53,156,21.8,1,Ini smear +,Negative,Pvt. docto,2000,GH,0,NA,0,90,3
+1602247,Femme,38,Pas d'éducation,Travaille,Non,Non,32,144,15.4,0,Ini smear -,Positive,Pvt. docto,200,Pvt. docto,500,GH,0,16,6
+1602344,Homme,53,Intermédiaire,Travaille,Non,Non,54,164,20.1,1,Ini smear +,NA,GH,0,NA,0,NA,0,60,9
+1602441,Femme,60,Pas d'éducation,Ne travaille pas,Non,Non,48.4,162,18.4,0,Ini smear +,Negative,PHC,0,GH,0,NA,0,187,2
+1602538,Homme,58,Pas d'éducation,Travaille,Non,Non,47,159,18.6,1,Ini smear -,Positive,GH,0,GH,500,NA,0,30,14
+1602635,Homme,62,Primaire,Ne travaille pas,Non,Non,60.1,170,20.8,1,Ini smear -,Positive,Pvt. docto,3000,GH,0,NA,0,21,16
+1602732,Homme,55,Pas d'éducation,Travaille,Oui,Non,38.3,164,14.2,0,Ini smear +,NA,GH,0,NA,0,NA,0,3,3
+1602829,Homme,25,Diplômé,Travaille,Non,Non,48.4,167,17.4,0,Ini smear +,Negative,Pvt. clini,650,Pvt. hospi,350,Pvt. hospi,10000,25,8
+1603023,Homme,43,Intermédiaire,Travaille,Oui,Oui,40.2,163,15.1,0,Ini smear +,NA,Pvt. docto,1000,GH,0,NA,0,30,6
+1603120,Homme,35,Pas d'éducation,Travaille,Oui,Oui,46.6,168,16.5,0,Ini smear +,NA,Pvt. docto,3000,GH,0,NA,0,30,2
+1603217,Homme,57,Intermédiaire,Travaille,Non,Non,46.5,162,17.7,0,Ini smear +,Negative,Pvt. docto,200,GH,0,NA,0,30,16
+1603314,Homme,36,Intermédiaire,Travaille,Oui,Oui,43.5,160,17,0,Ini smear +,NA,GH,0,NA,0,NA,0,14,8
+1603411,Homme,23,Secondaire supérieur,Travaille,Non,Non,47.5,169,16.6,0,Ini smear +,NA,Pvt. docto,1000,GH,0,NA,0,14,4
+1603508,Homme,41,Pas d'éducation,Travaille,Non,Non,48,175,15.7,0,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,30,2
+1603605,Homme,52,Primaire,Travaille,Non,Non,46,172,15.5,0,Ini smear +,NA,Pvt. docto,21000,GH,0,NA,0,74,3
+1603702,Homme,39,Primaire,Travaille,Oui,Non,62,162,23.6,1,Ini smear +,NA,Pvt. docto,500,Pvt. docto,300,GH,0,30,20
+1603896,Homme,45,Pas d'éducation,Travaille,Non,Oui,43.2,180,13.3,0,Ini smear +,NA,Pvt. docto,5000,GH,0,NA,0,60,10
+1603993,Homme,36,Primaire,Travaille,Non,Non,41.4,166,15,0,Ini smear +,NA,Pvt. clini,1000,Pvt. docto,500,GH,0,30,10
+1604090,Femme,27,Secondaire,Travaille,Non,Non,33,148,15.1,0,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,30,14
+1604187,Homme,35,Secondaire,Travaille,Oui,Non,50,164,18.6,0,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,30,10
+1604284,Homme,47,Pas d'éducation,Travaille,Oui,Oui,46.7,160,18.2,0,Ini smear +,NA,Pvt. docto,500,GH,0,NA,0,30,15
+1604381,Homme,55,Pas d'éducation,Travaille,Non,Oui,44,166,16,0,Ini smear +,NA,Pvt. clini,500,Pvt. docto,5000,GH,0,90,5
+1604478,Homme,35,Primaire,Travaille,Oui,Non,45,161,17.4,1,Ini smear +,Positive,Pvt. clini,4500,GH,0,NA,0,21,7
+1604575,Homme,63,Primaire,Travaille,Oui,Oui,52.6,176,17,0,Ini smear +,NA,Pvt. hospi,400,GH,0,GH,0,365,13
+1604672,Homme,44,Intermédiaire,Travaille,Oui,Oui,42.7,175,13.9,0,Ini smear +,NA,Pvt. docto,9000,Pvt. docto,800,GH,0,14,11
+1604769,Homme,60,Intermédiaire,Travaille,Non,Non,64.2,175,21,1,Ini smear +,Positive,Pvt. clini,500,Tambram Sanatorium,0,NA,0,14,10
+1604866,Homme,63,Intermédiaire,Travaille,Non,Oui,38.5,160,15,1,Ini smear +,NA,Pvt. docto,1000,Tambram Sanatorium,0,NA,0,180,22
+1604963,Homme,65,Pas d'éducation,Travaille,Non,Non,37,167,13.3,0,Ini smear +,NA,PHC,0,Tambram Sanatorium,0,NA,0,150,20
+1605060,Homme,60,Intermédiaire,Travaille,Non,Non,46.8,155.5,19.4,0,Missing,Positive,Pvt. hospi,300,Pvt. clini,3200,GH,0,90,2

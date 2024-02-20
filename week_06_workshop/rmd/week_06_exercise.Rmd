@@ -1,0 +1,162 @@
+---
+title: "Atelier 6 : Regroupement, Résumé et Visualisation"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+    number_sections: true
+author: "Nom de l'auteur ici"
+date: "21-02-2024"
+editor_options: 
+  chunk_output_type: inline
+---
+
+# Préparation des données
+
+Pour commencer, **chargez les packages nécessaires** : {tidyverse}, {here}, {janitor}, et {esquisse}.
+
+```{r}
+# Charger paquets
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Maintenant, **lisez le jeu de données dans R**. Le dataframe que vous importez devrait avoir 880 lignes et 21 colonnes. N'oubliez pas d'utiliser la fonction `here()` pour permettre à votre Rmd d'utiliser des chemins relatifs au projet.
+
+```{r}
+# Import CSV
+tb_brut <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Vérifiez que les données importées semblent correctes et familiarisez-vous avec les variables
+head(tb_brut)
+```
+
+Les noms de nombreuses colonnes dans ce jeu de données contiennent des espaces et des symboles (par exemple, `Delai initiation traitement (en jours)`), ce qui n'est pas pratique pour R.
+
+Utilisez `janitor::clean_names()` pour donner à vos noms de variables un format propre et cohérent.
+
+```{r}
+# Nettoyer les noms de variables
+tb_renomme <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+**Point de contrôle** : Le dataframe devrait contenir 880 lignes et 21 colonnes. Les noms de colonnes/variables devraient maintenant être convertis en snake case. Vous pouvez exécuter `names(tb_renomme)` pour imprimer et vérifier les noms des variables.
+
+Avant d'aller plus loin, examinons de plus près la variable `education` dans notre jeu de données :
+```{r}
+# count() vous permet de compter rapidement les valeurs uniques des variables
+tb_renomme %>% 
+  count(education)
+```
+
+Ici, nous voyons qu'il y a 8 valeurs uniques dans la variable `education`, nous informant du plus haut niveau d'éducation de chaque patient TB. Vous remarquerez que les niveaux d'éducation sont ordonnés alphabétiquement par défaut ! Cependant, dans ce cas, il serait plus utile de réordonner les niveaux d'éducation afin qu'ils soient disposés dans un ordre chronologique.
+
+La structure de base de l'éducation en Inde peut être conceptualisée comme suit :
+
+- Primaire -> Intermédiaire -> Secondaire -> Secondaire  supérieur -> Diplômé -> Diplômé et plus
+
+Utilisez `mutate()` et d'autres **fonctions d'aide** pour convertir la variable `education` en un facteur et définir les niveaux selon l'ordre ci-dessus.
+
+Complétez le code en remplissant les blancs fournis ci-dessous. Enregistrez le jeu de données mis à jour dans un nouveau dataframe appelé `tb_propre`.
+
+**Astuce** : Voir le dernier exemple dans la section 10 de la [leçon sur la mutation conditionnelle](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls04_conditional_mutate.html#10_Conditions_multiples_sur_une_seule_variable) pour se rafraîchir la mémoire sur comment définir les niveaux d'un facteur.
+
+```{r}
+tb_propre <- tb_renomme %>%
+    ________(education = factor(education,
+                              levels =  ___("Pas d'éducation",
+                                            "Primaire",
+                                            ________,
+                                            ________,
+                                            ________,
+                                            ________,
+                                            ________,
+                                            "Manquant") ) )
+```
+
+Nous utiliserons la variable `education` nouvellement transformée pour le regroupement, le résumé et la visualisation ci-dessous.
+
+# Investigation des coûts de santé
+
+## Étape 1 : Calculer une variable `cout_total`
+
+Chaque enregistrement de patient note l'emplacement et le coût jusqu'à trois emplacements. Additionnez ces coûts (`premiere_visite_cout`, `deuxieme_visite_cout`, et `troisieme_visite_cout`) pour créer une variable `cout_total`.
+
+```{r}
+tb_propre2 <- tb_propre %>% 
+  "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+## Étape 2 : Résumer les coûts par groupe
+
+Comparons le coût du traitement dans différents établissements de santé à l'aide d'un tableau récapitulatif. Utilisez les verbes de `{dplyr}` pour grouper par niveau d'éducation et créer un tableau récapitulatif avec deux variables :
+
+- Le nombre de patients à chaque niveau d'éducation
+- Le coût total moyen pour chaque niveau d'éducation
+
+Stockez le tibble résultant dans un objet appelé `tableau_cout_edu`.
+
+```{r}
+tableau_cout_edu <- tb_propre2 %>% 
+  "ÉCRIVEZ_VOTRE_CODE_ICI"
+
+tableau_cout_edu
+```
+
+Réordonnez les lignes du tableau récapitulatif du plus haut au plus bas coût moyen.
+
+```{r}
+tableau_cout_edu <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Ici, nous pouvons voir que les patients TB dans cette étude avec peu ou pas de scolarisation dépensent généralement moins d'argent pour le traitement que les diplômés. Ces données peuvent être mieux communiquées avec un graphique.
+
+# Visualiser les données avec {esquisse}
+
+En utilisant `esquisser()` et le tableau récapitulatif des coûts que vous avez créé plus tôt, créez un graphique en barres des coûts moyens, par niveau d'éducation.
+
+```{r}
+# esquisser(tableau_cout_edu)
+
+# Insérez votre code esquisse ici
+```
+
+Lorsque vous êtes satisfait de votre graphique, utilisez `ggsave()` pour sauvegarder votre graphique dans un nouveau dossier appelé "outputs". N'oubliez pas de spécifier le type de fichier et les dimensions de l'image que vous souhaitez exporter.
+
+```{r}
+# Sauvegardez votre/vos graphique(s)
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+# Conclusion
+
+C'est tout pour cet atelier ! Nous choisirons 2-3 personnes pour présenter votre travail pendant l'atelier. Si vous souhaitez partager vos résultats avec la classe, veuillez le faire savoir à un instructeur.
+
+# Défi Bonus (Optionnel et non noté)
+
+Si vous terminez tôt et que vous avez du temps supplémentaire, vous pouvez explorer et transformer davantage le jeu de données.
+
+Nous pouvons examiner deux types d'établissements de santé dans le jeu de données : privé et public (gouvernemental).
+
+```{r}
+# Liste de 9 emplacements de soins de santé
+tb_propre2 %>% count(premiere_visite_emplacement)
+```
+
+Note : PHC = centre de santé primaire, GH = hôpital gouvernemental, etc.
+
+## Comparaison des retards dans les établissements de santé publics et privés
+
+Créons une nouvelle variable indiquant si un lieu de soins de santé est privé ou public. Nous pouvons le faire en utilisant la fonction `str_detect()` du package `{stringr}` de tidyverse.
+
+```{r}
+tb_propre3 <- tb_propre2 %>% 
+  mutate(type_premiere_visite = case_when(
+    str_detect(premiere_visite_emplacement, "Pvt") ~ "Privé",
+    TRUE ~ "Public"))
+```
+
+Inspectez la nouvelle variable dans `tb_propre3`.
+
+Votre mission pour ce défi est de résumer les retards dans le traitement et de comparer la durée des retards entre les établissements de santé privés et publics.
+
+Vous pouvez commencer par créer un tableau récapitulatif de `delai_initiation_traitement_en_jours` ou `retard_sys_sante_en_jours`, regroupé par `type_premiere_visite`. Ensuite, visualisez les données et tirez des conclusions à partir de vos découvertes.

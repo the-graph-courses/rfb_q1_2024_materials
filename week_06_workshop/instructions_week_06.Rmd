@@ -1,0 +1,51 @@
+---
+title: "Atelier 6 : Regroupement, Résumé et Visualisation"
+output: 
+  # pdf_document:
+   prettydoc::html_pretty:
+    theme: architect
+    toc: false
+    number_sections: false
+author: "GRAPH Courses"
+date: "2023-02-20"
+editor_options: 
+  chunk_output_type: console
+  markdown: 
+    wrap: 72
+---
+
+```{r include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Introduction
+
+Bienvenue !
+
+Pour cet atelier, nous allons nettoyer un jeu de données. C'est une approche pratique de l'utilisation des fonctions {dplyr} telles que `select()`, `filter()`, `mutate()`, `case_when()`, `group_by()` et `summarize()`. Elles ont été couvertes dans le pré-travail de cette semaine et de la semaine dernière.
+
+L'exercice doit être soumise individuellement, mais il est encouragé de réfléchir en groupe avec des partenaires.
+
+La date limite pour l'exercice est le vendredi 23 février à 23h59 UTC+1. Contactez les instructeurs si vous avez besoin d'une extension.
+
+# Étapes pour compléter cette exercice
+
+Pour commencer, vous devriez télécharger et examiner le dossier de l'exercice.
+
+1.  **Téléchargez d'abord le dépôt sur votre ordinateur local.** Les liens pour télécharger le code de l'atelier se trouvent sur la page de l'exercice de notre cours R : Formation de base [ici](https://thegraphcourses.org/courses/rfb-q1-2024/).
+
+    *Idéalement, vous devriez travailler sur votre ordinateur local, mais si vous préférez travailler sur RStudio Cloud, consultez la page de l'exercice pour obtenir des instructions à ce sujet.*
+
+2.  **Décompressez/Extrayez le dossier téléchargé.**
+
+    *Si vous êtes sur macOS, vous pouvez simplement double-cliquer sur un fichier pour le décompresser.*
+
+    *Si vous êtes sur Windows, vous devez sélectionner "extraire tout" puis travailler.*
+
+3.  **Ouvrez le projet de l'atelier dans RStudio.** Assurez-vous d'ouvrir le fichier projet RStudio ("week_06_workshop.Rproj") de votre dossier décompressé. Vérifiez que vous travaillez bien dans le projet en regardant le nom de votre RStudio.
+
+4.  **Ouvrez le Rmd de l'exercice.** Naviguez vers l'onglet Fichiers dans RStudio et ouvrez le dossier "rmd". Vous travaillerez dans le fichier appelé "week_06_exercise.Rmd". Les instructions pour votre exercice sont également disponibles dans ce dossier (c'est une copie des mêmes instructions que vous lisez ici).
+
+5.  **Complétez l'exercice.** Travaillez à travers les étapes dans "week_06_exercise.Rmd". Remplacez chaque instance de `"ÉCRIVEZ_VOTRE_CODE_ICI"` par vos réponses. Bien que vous soyez autorisé à travailler avec des membres du groupe, *il est important que tout le code que vous soumettez ait été tapé par vous-même*.
+
+6.  **Soumettez votre exercice.** Une fois que vous avez terminé les tâches ci-dessus, vous devriez sauvegarder vos réponses et télécharger votre Rmd d'exercice sur la page web de l'atelier. Vous devriez télécharger un seul fichier Rmd avec vos réponses (ne téléchargez pas le HTML tricoté ou un dossier compressé). Assurez-vous d'inclure votre nom dans l'en-tête YAML en haut du script.
