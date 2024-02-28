@@ -1,0 +1,342 @@
+---
+title: "Atelier 7 : Regroupement et Pivotement"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+    number_sections: true
+author: "Nom de l'auteur ici"
+date: "2024-02-27"
+editor_options: 
+  chunk_output_type: inline
+  markdown: 
+    wrap: none
+---
+
+# Introduction
+
+```{r include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Bienvenue !
+
+Dans cet atelier, nous continuerons à pratiquer le nettoyage des ensembles de données. Il s'agit d'une approche pratique de l'utilisation des fonctions {dplyr} avec lesquelles vous êtes déjà familier : `select()`, `filter()`, `mutate()`, `case_when()`, `group_by()`, `summarize()`, `pivot_wider()`, `pivot_longer()`. Toutes ces fonctions ont été abordées dans les travaux préparatoires "Data Wrangling" au cours des dernières semaines.
+
+Les notes de cours de cette semaine sont liées ci-dessous. Elles peuvent être très utiles pour compléter l'exercice, donc n'hésitez pas à vous y référer pendant l'atelier !
+
+-   [Pivotement de données](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls07_pivoting.html)
+
+-   [Pivotement avancé](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls08_advanced_pivoting.html)
+
+# Préparation pour l'exercice
+
+1.  **Téléchargez d'abord le dépôt sur votre ordinateur local.** Pour commencer, vous devez télécharger, décompresser et parcourir le dossier d'exercice.
+
+2.  **Ouvrez le** **projet RStudio** en cliquant sur le fichier *.Rproj* pertinent dans le dossier d'atelier décompressé. Assurez-vous d'avoir ouvert week_07_workshop.Rproj dans RStudio en regardant le nom de votre fenêtre RStudio, ou dans le coin supérieur droit de votre écran.
+
+3.  **Ouvrez le fichier Rmd de l'exercice.** Accédez à l'onglet Fichiers dans RStudio et ouvrez le dossier "rmd". Vous travaillerez dans le fichier appelé "week_07_exercise.Rmd". Cet Rmd contient à la fois les instructions et l'exercice de l'atelier dans un seul fichier.
+
+4.  **Complétez l'exercice.** Parcourez les étapes dans "week_07_exercise.Rmd". Remplacez chaque instance de `"WRITE_YOUR_CODE_HERE"` par vos réponses. L'exercice doit être soumise individuellement, mais vous êtes encouragé à réfléchir en groupe. Bien que vous soyez autorisé à travailler avec d'autres membres du groupe, *il est important que tout le code que vous soumettez ait été tapé par vous-même*.
+
+# Tutoriel : Pratique des pivots avec des données simples
+
+Ce tutoriel démontre l'utilisation de `pivot_longer()` du package `tidyr`, en mettant l'accent sur les arguments `names_to` et `names_sep`. Nous travaillerons avec un ensemble de données factices, `stats_croissance`, représentant les mesures de croissance des enfants sur deux ans.
+
+## Création d'un ensemble de données factices
+
+Nous commençons par créer l'ensemble de données `stats_croissance` :
+
+```{r}
+stats_croissance <- 
+  tibble::tribble(
+    ~enfant, ~annee1_tete, ~annee2_tete, ~annee1_cou, ~annee2_cou, ~annee1_hanche, ~annee2_hanche,
+       "a",       45,       48,       23,       24,      51,      52,
+       "b",       48,       50,       24,       26,      52,      52,
+       "c",       50,       52,       24,       27,      53,      54
+  )
+
+stats_croissance
+```
+
+## Pivot de large à long
+
+En utilisant `pivot_longer()` pour passer du format large au format long, nous spécifions `names_to` avec un nouveau nom de variable et `.value` pour diviser les noms de colonnes :
+
+```{r}
+stats_croissance %>%
+     pivot_longer(cols = 2:7,
+                   names_to = c("annee", ".value"),
+                   names_sep = "_")
+```
+
+**Analyse des nombres**: Nous pouvons extraire l'année des noms de colonnes et la convertir en une variable numérique.
+
+```{r}
+stats_croissance_long <- 
+stats_croissance %>%
+     pivot_longer(cols = 2:7,
+                   names_to = c("annee", ".value"),
+                   names_sep = "_") %>% 
+  mutate(annee = parse_number(annee))
+```
+
+## Visualisation de la croissance par année
+
+Nous pouvons maintenant visualiser les tendances de croissance par année, en nous concentrant sur une mesure à la fois (par exemple, le tour de tête) :
+
+```{r}
+stats_croissance_long %>% 
+  ggplot(aes(x = annee,
+             y = cou,
+             color = enfant)) +
+  geom_line()
+```
+
+-   **Limitation**: Cette méthode nous limite à visualiser une colonne à la fois : tête, cou ou hanche.
+
+## Format long étendu pour une analyse polyvalente
+
+Pour analyser toutes les mesures ensemble, nous pivotons plus longtemps pour inclure les types de parties du corps dans nos données :
+
+```{r}
+stats_croissance %>%
+     pivot_longer(cols = 2:7,
+                   names_to = c("annee", "partie_du_corps"),
+                   names_sep = "_") %>% 
+  mutate(annee = parse_number(annee))
+```
+
+Dans ce morceau de code, la différence critique par rapport au code de pivotement précédent réside dans l'utilisation de l'argument `names_to` avec la combinaison de `"annee"` et `"partie_du_corps"`. Cela divise les noms de colonnes au format large d'origine en DEUX variables distinctes : une pour l'année de la mesure et une pour la partie du corps mesurée. Au lieu de 3 colonnes distinctes pour chaque partie du corps, elles sont toutes regroupées en une seule :
+
+| enfant | annee | partie_du_corps | valeur |
+|--------|-------|-----------------|--------|
+| a      | 1     | tete            | 45     |
+| a      | 2     | tete            | 48     |
+| a      | 1     | cou             | 23     |
+| a      | 2     | cou             | 24     |
+| a      | 1     | hanche          | 51     |
+| a      | 2     | hanche          | 52     |
+| b      | 1     | tete            | 48     |
+| b      | 2     | tete            | 50     |
+| b      | 1     | cou             | 24     |
+| b      | 2     | cou             | 26     |
+
+Cela donne un ensemble de données au format long où chaque ligne représente une mesure unique pour une partie spécifique du corps au cours d'une année donnée. Cette structure rend les données beaucoup plus polyvalentes pour la visualisation et d'autres tâches de manipulation des données.
+
+Nous pouvons utiliser l'argument `values_to` pour donner un nom plus descriptif à la dernière colonne :
+
+```{r}
+stats_croissance %>%
+     pivot_longer(cols = 2:7,
+                   names_to = c("annee", "partie_du_corps"),
+                   names_sep = "_",
+                  # VALEURS VERS UNE COLONNE NOMMÉE
+                   values_to = "circonference_cm") %>% 
+  mutate(annee = parse_number(annee))
+```
+
+```{r}
+# Enregistrer le dernier cadre de données long
+stats_croissance_longer <- 
+  stats_croissance %>%
+     pivot_longer(cols = 2:7,
+                   names_to = c("annee", "partie_du_corps"),
+                   names_sep = "_",
+                   values_to = "circonference_cm") %>% 
+  mutate(annee = parse_number(annee))
+```
+
+Maintenant, nous pouvons comparer toutes les mesures à travers les années dans un seul graphique.
+
+-   **Exemple de tracé 1 : Type de ligne par partie du corps** : Différencier les mesures en utilisant les types de lignes.
+
+```{r}
+stats_croissance_longer %>% 
+  ggplot(aes(x = annee,
+             y = circonference_cm,
+             color = enfant,
+             linetype = partie_du_corps)) +
+  geom_line()
+```
+
+-   **Exemple de tracé 2 : Facettage par partie du corps ou enfant** : Créer des graphiques séparés pour chaque partie du corps ou enfant pour une analyse détaillée.
+
+```{r}
+stats_croissance_longer %>% 
+  ggplot(aes(x = annee,
+             y = circonference_cm,
+             color = enfant)) +
+  geom_line() +
+  facet_wrap(~partie_du_corps)
+```
+
+```{r}
+stats_croissance_longer %>% 
+  ggplot(aes(x = annee,
+             y = circonference_cm,
+             color = partie_du_corps)) +
+  geom_line() +
+  facet_wrap(~enfant)
+```
+
+-   **Exemple de tracé 3 : Filtrage pour des insights spécifiques** : Filtrer les mesures spécifiques pour une analyse ciblée.
+
+```{r}
+stats_croissance_longer %>% 
+  filter(partie_du_corps != "cou") %>% 
+  ggplot(aes(x = annee,
+             y = circonference_cm,
+             color = enfant)) +
+  geom_line() +
+  facet_wrap(~partie_du_corps)
+```
+
+Dans ce tutoriel, nous avons démontré comment `pivot_longer()` peut transformer et enrichir nos capacités d'analyse de données. Avec une utilisation stratégique de `names_to` et `names_sep`, ainsi qu'une visualisation réfléchie, nous pouvons découvrir les schémas de croissance à travers plusieurs variables.
+
+# Exercice : Diversité alimentaire à Vietnam
+
+Pour commencer, **chargez les paquets nécessaires** : `{tidyverse}`, `{here}`, et `{esquisse}`.
+
+```{r}
+# Charger les packages nécessaires
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Maintenant, **importer le jeu de données dans R**. N'oubliez pas d'utiliser la fonction `here()` pour permettre à votre Rmd d'utiliser des chemins relatifs au projet.
+
+```{r}
+# Importer le jeu de données
+donnees_large <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Aperçu du data frame
+donnees_large
+```
+
+**Checkpoint**: Le data frame que vous importez devrait comporter 61 lignes et 9 colonnes.
+
+Ce sous-ensemble des données originales contient des informations sur 61 ménages. Chaque ménage a été visité deux fois, et les données suivantes ont été enregistrées :
+
+-   Quantité de matière sèche consommée à partir d'ingrédients/aliments (g)
+
+-   Quantité d'eau consommée à partir d'ingrédients/aliments (g)
+
+-   Quantité d'énergie consommée à partir d'ingrédients/aliments (Kcal)
+
+-   Quantité de lipides consommée à partir d'ingrédients/aliments (g)
+
+Pour chacune de ces mesures, il existe 2 colonnes correspondantes dans le jeu de données. Les mesures de la première visite sont indiquées par un suffixe `_1` dans le nom de la colonne, et les mesures de la deuxième visite sont indiquées par un suffixe `_2`.
+
+Gardez à l'esprit que le jeu de données brut est au format LARGE. Nous devons le pivoter au format LONG afin de réaliser des visualisations, comme démontré avec les données fictives ci-dessus.
+
+## Pivoter les données
+
+Bien que des tâches d'analyse de données de base telles que la recherche de la moyenne, etc. soient possibles sur des ensembles de données au format large, le code est souvent plus long et implique plus d'étapes de manipulation fastidieuses.
+
+Les ensembles de données au format long sont optimaux pour la majorité des tâches d'analyse de données.
+
+**VOTRE OBJECTIF** : manipuler le data frame `donnees_large` en un format long, où les premières lignes ressemblent à ceci :
+
+| id_menage | type_aliment | visite | quantite_consommee |
+|-----------|--------------|--------|--------------------|
+| 348       | enerc_kcal   | 1      | 2268.140795        |
+| 348       | enerc_kcal   | 2      | 1385.754679        |
+| 348       | sec          | 1      | 547.531613         |
+| 348       | sec          | 2      | 280.751365         |
+| 348       | eau          | 1      | 4219.325686        |
+| 348       | eau          | 2      | 1996.918553        |
+| 348       | graisse      | 1      | 78.404239          |
+| 348       | graisse      | 2      | 67.725305          |
+
+**Astuce** : Commencez par identifier un séparateur unique dans le data frame large que vous pouvez utiliser pour `names_sep`. Ensuite, utilisez `names_to` et `values_to` pour attribuer les noms de colonnes corrects. Référez-vous à la section de démonstration ci-dessus pour un code exemple !
+
+```{r}
+donnees_longues <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Afficher le data frame
+donnees_longues
+```
+
+**Checkpoint**: `donnees_longues` devrait comporter 488 lignes et 4 colonnes.
+
+Le jeu de données au format long nous permet de réaliser des visualisations qui n'étaient pas facilement possibles avec les données au format large. Par exemple, nous pouvons créer un diagramme en colonnes comme ceci :
+
+```{r}
+# Exemple de tracé
+ggplot(donnees_longues) +
+  aes(x = visite, y = quantite_consommee, fill = type_aliment) +
+  geom_col() +
+  theme_minimal() 
+## Si vous rencontrez des problèmes pour exécuter ce code, assurez-vous que votre data frame et vos colonnes sont nommés comme indiqué dans les instructions.
+```
+
+## Plus de pratique avec les verbes `{dplyr}`!
+
+Chaque ménage dans les données a été visité deux fois : la visite 1 était en 2017 et la visite 2 était en 2018. Utilisez une fonction appropriée de `{dplyr}` pour créer une nouvelle colonne appelée "annee", et attribuez les valeurs 2017 ou 2018, en fonction du numéro de visite.
+
+```{r}
+donnees_longues_propre <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Afficher le data frame
+donnees_longues_propre
+```
+
+Ensuite, utilisez un regroupement imbriqué pour créer un tableau récapitulatif qui calcule la quantité moyenne consommée pour chaque type d'aliment et chaque année.
+
+```{r}
+resume_regime <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+
+# Afficher le tableau récapitulatif
+resume_regime
+```
+
+**Checkpoint**: Le tableau récapitulatif devrait comporter 8 lignes et 3 colonnes. N'oubliez pas de dégrouper vos données après avoir résumé pour éviter les erreurs futures !
+
+## Visualiser les données avec {esquisse}
+
+En utilisant `esquisse`, tracez un graphique linéaire comparant comment la consommation moyenne de chaque type d'aliment varie entre 2017 et 2018.
+
+**Astuce** : Un graphique linéaire nécessite deux variables numériques pour les axes x et y. Vous pouvez séparer les quatre types d'aliments par couleur. Votre graphique final peut ressembler à ceci :
+
+![](consommation_alimentaire.jpg)
+
+```{r}
+# esquisser(resume_regime)
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+## Sauvegardez les sorties
+
+Enfin, enregistrez votre data frame final et le graphique dans les formats de fichier corrects dans un dossier "outputs".
+
+```{r}
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+# Conclusion
+
+C'est tout pour cet exercice ! Nous choisirons 2-3 personnes pour présenter votre travail lors de l'atelier. Si vous souhaitez partager vos résultats avec la classe, veuillez en informer un instructeur.
+
+Le représentant du groupe doit se préparer à partager son écran et à faire une brève présentation (3-4 phrases).
+
+Choisissez et mettez en avant un aspect de l'atelier qui serait utile et intéressant pour la classe. Par exemple, vous pouvez choisir une question que votre groupe a trouvé particulièrement difficile et expliquer comment vous avez trouvé la solution. Ou vous pouvez afficher l'un de vos graphiques et partager quelques conseils pour une personnalisation supplémentaire.
+
+# Soumission : Téléchargez le fichier Rmd
+
+Une fois les tâches ci-dessus terminées, vous devez enregistrer vos réponses et télécharger votre fichier Rmd d'exercice sur la page web de l'atelier. Vous devez télécharger un seul fichier Rmd avec vos réponses (ne téléchargez pas le HTML tricoté ou un dossier compressé). Assurez-vous d'inclure votre nom dans l'en-tête YAML en haut du script.
+
+La date limite pour l'exercice est le **vendredi 1 mars à 23h59 UTC**.
+
+# Défi (optionnel)
+
+Vous avez terminé tôt ? Essayez cet exercice facultatif.
+
+1.  Identifiez les 12 ménages qui ont eu une différence de plus de 1000 kilocalories entre leurs mesures de consommation d'énergie (`enerc_kcal`) lors de leur visite 1 et de leur visite 2.
+
+    Vous pouvez identifier ces ménages en utilisant soit le jeu de données longues soit le jeu de données larges. Si vous choisissez d'utiliser le jeu de données au format long, vous devrez peut-être utiliser la fonction `diff()` de `{dplyr}`.
+
+2.  Faites un graphique comparant la consommation d'énergie de ces 12 ménages pour la visite 1 par rapport à la visite 2 en utilisant `esquisse`. Par exemple, vous pourriez créer un graphique à barres groupées comme ceci :
+
+    ![](defi_q2.jpg)
+
+    Pour un tel graphique, il sera plus facile d'utiliser le jeu de données au format long.
