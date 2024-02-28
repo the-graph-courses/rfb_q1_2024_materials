@@ -1,0 +1,40 @@
+---
+title: "Instructions atelier 7 : Regroupement et Pivotement"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+    number_sections: true
+author: "Nom de l'auteur ici"
+date: "2024-02-27"
+editor_options: 
+  chunk_output_type: inline
+  markdown: 
+    wrap: none
+---
+
+# Introduction
+
+```{r include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Bienvenue !
+
+Dans cet atelier, nous continuerons à pratiquer le nettoyage des ensembles de données. Il s'agit d'une approche pratique de l'utilisation des fonctions {dplyr} avec lesquelles vous êtes déjà familier : `select()`, `filter()`, `mutate()`, `case_when()`, `group_by()`, `summarize()`, `pivot_wider()`, `pivot_longer()`. Toutes ces fonctions ont été abordées dans les travaux préparatoires "Data Wrangling" au cours des dernières semaines.
+
+Les notes de cours de cette semaine sont liées ci-dessous. Elles peuvent être très utiles pour compléter l'exercice, donc n'hésitez pas à vous y référer pendant l'atelier !
+
+-   [Pivotement de données](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls07_pivoting.html)
+
+-   [Pivotement avancé](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls08_advanced_pivoting.html)
+
+# Préparation pour l'exercice
+
+1.  **Téléchargez d'abord le dépôt sur votre ordinateur local.** Pour commencer, vous devez télécharger, décompresser et parcourir le dossier d'exercice.
+
+2.  **Ouvrez le** **projet RStudio** en cliquant sur le fichier *.Rproj* pertinent dans le dossier d'atelier décompressé. Assurez-vous d'avoir ouvert week_07_workshop.Rproj dans RStudio en regardant le nom de votre fenêtre RStudio, ou dans le coin supérieur droit de votre écran.
+
+3.  **Ouvrez le fichier Rmd de l'exercice.** Accédez à l'onglet Fichiers dans RStudio et ouvrez le dossier "rmd". Vous travaillerez dans le fichier appelé "week_07_exercise.Rmd". Cet Rmd contient à la fois les instructions et l'exercice de l'atelier dans un seul fichier.
+
+4.  **Complétez l'exercice.** Parcourez les étapes dans "week_07_exercise.Rmd". Remplacez chaque instance de `"ÉCRIVEZ_VOTRE_CODE_ICI"` par vos réponses. L'exercice doit être soumise individuellement, mais vous êtes encouragé à réfléchir en groupe. Bien que vous soyez autorisé à travailler avec d'autres membres du groupe, *il est important que tout le code que vous soumettez ait été tapé par vous-même*.
