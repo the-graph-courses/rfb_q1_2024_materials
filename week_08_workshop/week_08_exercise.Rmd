@@ -21,19 +21,19 @@ Cet atelier est une approche pratique de la visualisation de données et de la r
 
 Les notes de cours de cette semaine sont liées ci-dessous. Elles peuvent être très utiles pour accomplir l'exercice, n'hésitez donc pas à vous y référer pendant l'atelier !
 
-- [Introduction à ggplot2](https://the-graph-courses.github.io/data_on_display_wp/lessons/fr_ls01_gg_intro.html)
+-   [Introduction à ggplot2](https://the-graph-courses.github.io/data_on_display_wp/lessons/fr_ls01_gg_intro.html)
 
-- [Graphiques de dispersion et lissage](https://the-graph-courses.github.io/data_on_display_wp/lessons/fr_ls02_scatter.html)
+-   [Graphiques de dispersion et lissage](https://the-graph-courses.github.io/data_on_display_wp/lessons/fr_ls02_scatter.html)
 
 # Configuration pour l'exercice
 
-1. **Téléchargez d'abord le dépôt sur votre ordinateur local.** Pour commencer, téléchargez, décompressez et parcourez le dossier d'exercice.
+1.  **Téléchargez d'abord le dépôt sur votre ordinateur local.** Pour commencer, téléchargez, décompressez et parcourez le dossier d'exercice.
 
-2. **Ouvrez le projet RStudio** en cliquant sur le fichier *.Rproj* pertinent dans le dossier de l'atelier décompressé. Assurez-vous d'avoir ouvert week_08_workshop.Rproj dans RStudio en regardant le nom de votre fenêtre RStudio, ou dans le coin supérieur droit de votre écran.
+2.  **Ouvrez le projet RStudio** en cliquant sur le fichier *.Rproj* pertinent dans le dossier de l'atelier décompressé. Assurez-vous d'avoir ouvert week_08_workshop.Rproj dans RStudio en regardant le nom de votre fenêtre RStudio, ou dans le coin supérieur droit de votre écran.
 
-3. **Ouvrez le fichier Rmd de l'exercice.** Accédez à l'onglet Fichiers dans RStudio et ouvrez le dossier "rmd". Vous travaillerez dans le fichier appelé "week_08_exercise.Rmd". Cet Rmd contient à la fois les instructions et l'exercice de l'atelier dans un seul fichier.
+3.  **Ouvrez le fichier Rmd de l'exercice.** Accédez à l'onglet Fichiers dans RStudio et ouvrez le dossier "rmd". Vous travaillerez dans le fichier appelé "week_08_exercise.Rmd". Cet Rmd contient à la fois les instructions et l'exercice de l'atelier dans un seul fichier.
 
-4. **Complétez l'exercice.** Suivez les étapes dans "week_08_exercise.Rmd". Remplacez chaque instance de `"ÉCRIVEZ_VOTRE_CODE_ICI"` par vos réponses. L'exercice doit être soumis individuellement, mais vous êtes encouragé à réfléchir en groupe. Bien que vous soyez autorisé à travailler avec des membres du groupe, *il est important que tout le code que vous soumettez soit tapé par vous-même*.
+4.  **Complétez l'exercice.** Suivez les étapes dans "week_08_exercise.Rmd". Remplacez chaque instance de `"ÉCRIVEZ_VOTRE_CODE_ICI"` par vos réponses. L'exercice doit être soumis individuellement, mais vous êtes encouragé à réfléchir en groupe. Bien que vous soyez autorisé à travailler avec des membres du groupe, *il est important que tout le code que vous soumettez soit tapé par vous-même*.
 
 # Qu'est-ce que les Graphiques à Bulles?
 
@@ -111,9 +111,7 @@ Nous pouvons utiliser les fonctions {dplyr} pour manipuler l'ensemble de donnée
 gapminder07 <- gapminder %>%
   # FILTRER le data frame pour inclure uniquement les lignes de 2007
   "ÉCRIVEZ_VOTRE_CODE_ICI" %>%
-  # RETIRER
-
- la colonne year
+  # RETIRER la colonne year
   "ÉCRIVEZ_VOTRE_CODE_ICI" %>%
   # RENOMMER les colonnes pour les rendre plus compréhensibles
   rename(life_expectancy = lifeExp,
@@ -209,8 +207,7 @@ Ajoutez maintenant une variable supplémentaire, `population`, et mappez-la à l
 
 Ici, la population de chaque pays est représentée par la taille des points. La légende sera automatiquement construite par {ggplot2}, montrant comment la taille des points varie avec la taille de la population.
 
-Maintenant, colorons les bulles par continent.
-Ici, la population de chaque pays est représentée par la taille des points. La légende sera automatiquement construite par {ggplot2}, montrant comment la taille des points varie avec la taille de la population.
+Maintenant, colorons les bulles par continent. Ici, la population de chaque pays est représentée par la taille des points. La légende sera automatiquement construite par {ggplot2}, montrant comment la taille des points varie avec la taille de la population.
 
 Maintenant, colorons les bulles par continent.
 
@@ -227,7 +224,7 @@ Cependant, beaucoup de points se chevauchent encore, nous pouvons donc réduire 
 "ÉCRIVEZ_VOTRE_CODE_ICI"
 ```
 
-Stockez le dernier graphique en tant qu'objet. 
+Stockez le dernier graphique en tant qu'objet.
 
 ```{r}
 # Enregistrer le graphique en tant qu'objet nommé
@@ -277,6 +274,7 @@ Les fonctions d'échelle seront couvertes en détail dans la prochaine leçon de
 Vous remarquerez peut-être que les guides d'échelle pour la couleur du continent et la taille de la population sur le côté gauche du graphique sont assez grands. Nous pouvons supprimer ces guides pour un look plus propre. Cela enlève certaines informations, mais nous trouverons une solution à cela dans l'étape suivante.
 
 Exécutez le code ci-dessous pour supprimer les guides d'échelle :
+
 ```{r}
 gap_bubble04 <- gap_bubble03 +
   guides(size = "none", color = "none")
@@ -285,7 +283,7 @@ gap_bubble04
 
 ## Ajout d'interactivité avec {plotly}
 
-Notre graphique à bulles actuel ne nous montre pas de quel pays chaque bulle provient, ni quelles sont la population et le PIB exacts du pays. 
+Notre graphique à bulles actuel ne nous montre pas de quel pays chaque bulle provient, ni quelles sont la population et le PIB exacts du pays.
 
 Une façon de communiquer cette information sans encombrer le graphique est de le rendre interactif. La fonction `ggplotly()` du package {plotly} peut convertir votre graphique en un graphique interactif ! Regardez "gap_bubble_interactive.html" dans le dossier "images" pour voir un exemple de graphique interactif qui peut être créé par `ggplotly()`.
 
@@ -298,7 +296,7 @@ Votre tâche pour cette section est de découvrir comment utiliser cette fonctio
 
 Nous ne pouvons pas enregistrer ce graphique interactif avec `ggsave()`. Pour cela, nous aurons besoin de la fonction `saveWidget()` du package {htmlwidgets}.
 
-Recherchez sur le web comment utiliser cette fonction et enregistrez votre graphique interactif sous forme de fichier HTML dans le dossier "images". 
+Recherchez sur le web comment utiliser cette fonction et enregistrez votre graphique interactif sous forme de fichier HTML dans le dossier "images".
 
 ```{r}
 # Enregistrer le graphique plotly
