@@ -1,12 +1,12 @@
 ---
-title: "Atelier 8 : Graphiques à bulles, échelles, thèmes et {plotly}"
+title: "Workshop 8: Bubble plots, scales, themes, and {plotly}"
 output:
   prettydoc::html_pretty:
     theme: architect
     toc: true
     number_sections: false
-author: "VOTRE NOM ICI"
-date: "2024-03-06"
+author: "YOUR NAME HERE"
+date: "2024-02-27"
 editor_options: 
   chunk_output_type: inline
   markdown: 
@@ -15,148 +15,148 @@ editor_options:
 
 # Introduction
 
-Bienvenue !
+Welcome!
 
-Cet atelier est une approche pratique de la visualisation de données et de la révision de certaines fonctions {dplyr} avec lesquelles vous êtes déjà familier.
+This workshop is a hands-on approach to data visualization and reviewing some the {dplyr} functions you're already familiar with.
 
-Les notes de cours de cette semaine sont liées ci-dessous. Elles peuvent être très utiles pour accomplir l'exercice, n'hésitez donc pas à vous y référer pendant l'atelier !
+This week's lesson notes have been linked below. They can be very helpful for completing the exercise, so feel free to refer to them during the workshop!
 
--   [Introduction à ggplot2](https://the-graph-courses.github.io/data_on_display_wp/lessons/fr_ls01_gg_intro.html)
+-   [Intro to ggplot2](https://the-graph-courses.github.io/data_on_display_wp/lessons/ls01_gg_intro_filled.html)
 
--   [Graphiques de dispersion et lissage](https://the-graph-courses.github.io/data_on_display_wp/lessons/fr_ls02_scatter.html)
+-   [Scatter plots and smoothing](https://the-graph-courses.github.io/data_on_display_wp/lessons/ls02_scatter.html)
 
-# Configuration pour l'exercice
+# Set up for the exercise
 
-1.  **Téléchargez d'abord le dépôt sur votre ordinateur local.** Pour commencer, téléchargez, décompressez et parcourez le dossier d'exercice.
+1.  **First download the repo to your local computer.** To get started, you should download, unzip, and look through the assignment folder.
 
-2.  **Ouvrez le projet RStudio** en cliquant sur le fichier *.Rproj* pertinent dans le dossier de l'atelier décompressé. Assurez-vous d'avoir ouvert week_08_workshop.Rproj dans RStudio en regardant le nom de votre fenêtre RStudio, ou dans le coin supérieur droit de votre écran.
+2.  **Open the** **RStudio Project** by clicking on the relevant *.Rproj* file in the unzipped workshop folder. Make sure you have opened week_08_workshop.Rproj in RStudio by looking at the name of your RStudio window, or in the upper right corner of your screen.
 
-3.  **Ouvrez le fichier Rmd de l'exercice.** Accédez à l'onglet Fichiers dans RStudio et ouvrez le dossier "rmd". Vous travaillerez dans le fichier appelé "week_08_exercise.Rmd". Cet Rmd contient à la fois les instructions et l'exercice de l'atelier dans un seul fichier.
+3.  **Open the assignment Rmd.** Navigate to the Files tab in RStudio and open the "rmd" folder. You will be working in the file called "week_08_exercise.Rmd". This Rmd contains both the instructions and the workshop assignment in one file.
 
-4.  **Complétez l'exercice.** Suivez les étapes dans "week_08_exercise.Rmd". Remplacez chaque instance de `"ÉCRIVEZ_VOTRE_CODE_ICI"` par vos réponses. L'exercice doit être soumis individuellement, mais vous êtes encouragé à réfléchir en groupe. Bien que vous soyez autorisé à travailler avec des membres du groupe, *il est important que tout le code que vous soumettez soit tapé par vous-même*.
+4.  **Complete the assignment.** Work through the steps in "week_08_exercise.Rmd". Replace every instance of `"WRITE_YOUR_CODE_HERE"` with your answers. The assignment should be submitted individually, but you are encouraged to brainstorm with partners. Though you are allowed to work with group members, *it is important that all the code you submit has been typed yourself*.
 
-# Qu'est-ce que les Graphiques à Bulles?
+# What are Bubble Plots?
 
-Un **graphique à bulles** est un type de graphique de dispersion où une troisième dimension est ajoutée : une variable numérique supplémentaire est représentée par la **taille** des points.
+A **bubble plot** is a type of scatter plot where a third dimension is added: an additional numeric variable is represented by the **size** of points.
 
-En février 2006, un médecin suédois et défenseur des données nommé Hans Rosling a donné une célèbre conférence TED intitulée ["Les meilleures statistiques que vous ayez jamais vues"](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen) où il a présenté des données économiques, sanitaires et de développement mondiales compilées par la Fondation Gapminder.
+In February 2006, a Swedish physician and data advocate named Hans Rosling gave a famous TED talk titled ["The best stats you've ever seen"](https://www.ted.com/talks/hans_rosling_shows_the_best_stats_you_ve_ever_seen) where he presented global economic, health, and development data complied by the Gapminder Foundation.
 
-La conférence présentait un célèbre graphique à bulles similaire à celui-ci :
+The talk featured a famous bubble plot similar to this one:
 
 ![](https://blogs.sas.com/content/sastraining/files/2019/01/wealth_build4-3.png)
 
-Ici, les points affichent une relation entre deux variables numériques sur chaque axe, ainsi qu'une troisième variable numérique : la taille de la bulle représente la population.
+Here the points display a relationship between two numeric variables on each axis, as well as a third numeric variable: the size of the bubble represents population.
 
-Remarquez que l'axe des x utilise une échelle logarithmique, pas une échelle linéaire. Cela permet d'éviter d'encombrer les points. Dans cet exercice, nous allons transformer les axes de notre graphique afin de reproduire le graphique à bulles de Gapminder aussi fidèlement que possible.
+Notice that the x-axis is using a logarithmic scale, not a linear scale. This is to avoid crowding the points. In this exercise, we will be transforming the axes of our plot in order to replicate the Gapminder bubble plot as closely as we can.
 
 # Packages
 
-Pour commencer, **chargez les packages nécessaires** : {tidyverse}, {here}, {plotly} et {gapminder}.
+To get started, **load in the needed packages**: {tidyverse}, {here}, {plotly} and {gapminder}.
 
 ```{r}
-# Charger les packages
-"ÉCRIVEZ_VOTRE_CODE_ICI"
+# Load packages
+"WRITE_YOUR_CODE_HERE"
 ```
 
-# Données Gapminder
+# Gapminder data
 
-Le package R {gapminder}, que nous venons de charger, contient des données économiques, sanitaires et de développement mondiales compilées par la Fondation Gapminder.
+The R package {gapminder}, which we just loaded, contains global economic, health, and development data complied by the Gapminder Foundation.
 
-Exécutez le code suivant pour charger le cadre de données `gapminder` du package {gapminder} :
+Run the following code to load `gapminder` data frame from the {gapminder} package:
 
 ```{r message = FALSE}
-# Indiquez à R d'obtenir le cadre de données intégré du package
+# Tell R to get the inbuilt dataframe from the package
 data(gapminder, package="gapminder")
 
-# Afficher le cadre de données
+# Print dataframe
 gapminder
 ```
 
-Chaque ligne de ce tableau correspond à une combinaison pays-année. Pour chaque ligne, nous avons 6 colonnes :
+Each row in this table corresponds to a country-year combination. For each row, we have 6 columns:
 
-1)  **`country`**: Nom du pays
+1)  **`country`**: Country name
 
-2)  **`continent`**: Région géographique du monde
+2)  **`continent`**: Geographic region of the world
 
-3)  **`year`**: Année calendaire
+3)  **`year`**: Calendar year
 
-4)  **`lifeExp`**: Nombre moyen d'années qu'un enfant nouveau-né vivrait si les tendances de mortalité actuelles devaient rester les mêmes
+4)  **`lifeExp`**: Average number of years a newborn child would live if current mortality patterns were to stay the same
 
-5)  **`pop`**: Population totale
+5)  **`pop`**: Total population
 
-6)  **`gdpPercap`**: Produit intérieur brut par personne (en dollars américains ajustés selon l'inflation)
+6)  **`gdpPercap`**: Gross domestic product per person (inflation-adjusted US dollars)
 
-Les fonctions `glimpse()` et `summary()` peuvent nous en dire plus sur ces variables.
+The `glimpse()` and `summary()` functions can tell us more about these variables.
 
 ```{r}
-# Structure des données
+# Data structure
 glimpse(gapminder)
 ```
 
-Cette version de l'ensemble de données **`gapminder`** contient des informations pour **142 pays**, répartis en **5 continents** ou régions du monde.
+This version of the **`gapminder`** dataset contains information for **142 countries**, divided in to **5 continents** or world regions.
 
-Les données sont enregistrées tous les 5 ans de 1952 à 2007 (soit un total de 12 années).
+Data are recorded every 5 years from 1952 to 2007 (a total of 12 years).
 
 ```{r}
-# Résumé des données
+# Data summary
 summary(gapminder)
 ```
 
-Dans cette leçon, nous utiliserons le dataframe `gapminder` , mais seulement les données de 2007.
+In this lesson, we will be using the `gapminder` dataframe , but only the data from 2007.
 
-Nous pouvons utiliser les fonctions {dplyr} pour manipuler l'ensemble de données et le préparer pour le tracé. Lisez le code commenté ci-dessous et complétez les étapes de manipulation des données :
+We can use {dplyr} functions to manipulate the dataset and prepare it for plotting. Read through the commented code below and complete the data manipulation steps:
 
 ```{r}
-# Créer un nouveau data frame appelé gapminder07
+# Create new data frame called gapminder07
 gapminder07 <- gapminder %>%
-  # FILTRER le data frame pour inclure uniquement les lignes de 2007
-  "ÉCRIVEZ_VOTRE_CODE_ICI" %>%
-  # RETIRER la colonne year
-  "ÉCRIVEZ_VOTRE_CODE_ICI" %>%
-  # RENOMMER les colonnes pour les rendre plus compréhensibles
+  # FILTER data frame to only include rows from 2007
+  "WRITE_YOUR_CODE_HERE" %>%
+  # REMOVE the year column
+  "WRITE_YOUR_CODE_HERE" %>%
+  # RENAME columns to make them easier to understand
   rename(life_expectancy = lifeExp,
          population = pop,
          gdp_per_capita = gdpPercap) %>% 
-  # RÉORGANISER le jeu de données par taille DESCENDANTE de la population (ceci sera utile pour le tracé ultérieur)
-  "ÉCRIVEZ_VOTRE_CODE_ICI"
+  # REORDER dataset by DESCENDING population size (this will be useful for plotting later)
+  "WRITE_YOUR_CODE_HERE"
 
-# Afficher le nouveau sous-ensemble de données
+# View new data subset
 gapminder07
 ```
 
-Nous utiliserons ce nouveau dataframe `gapminder07` pour tracer le graphique à bulles.
+We will use this new `gapminder07` data frame for plotting the bubble plot.
 
-# Graphique de dispersion simple avec `geom_point()`
+# Simple Scatterplot with `geom_point()`
 
-Nous commencerons par un graphique de dispersion régulier montrant la relation entre deux variables numériques, puis le transformerons en un graphique à bulles à l'étape suivante.
+We will start with a regular scatter plot showing the relationship between two numerical variables, and then make it a bubble plot in the next step.
 
-Nous voulons visualiser la relation entre l'espérance de vie et le PIB par habitant.
+We want to view the relationship between life expectancy and GPD per capita.
 
-Créez un graphique de dispersion, avec le PIB sur l'axe des x et l'espérance de vie sur l'axe des y :
+Create a scatter plot, with GDP on the x axis and life expectancy on the y axis:
 
 ```{r}
-# Graphique de dispersion simple
-"ÉCRIVEZ_VOTRE_CODE_ICI"
+# Simple scatterplot
+"WRITE_YOUR_CODE_HERE"
 ```
 
-Examinons ce graphique à travers la grammaire des graphiques :
+Let's review this plot through the grammar of graphics:
 
-1.  Les objets `geom`étriques - marques visuelles représentant les données - sont des points.
-2.  La variable de données **gdp_per_capita** est mappée sur l'`aes`thétique de la position `x` des points.
-3.  La variable de données **life_expectancy** est mappée sur l'`aes`thétique de la position `y` des points.
+1.  The `geom`etric objects - visual marks that represent the data - are points.
+2.  The `data` variable **gdp_per_capita** gets mapped to the `x`-position `aes`thetic of the points.
+3.  The `data` variable **life_expectancy** gets mapped to the `y`-position `aes`thetic of the points.
 
-Ce que nous avons créé est un graphique de dispersion simple en ajoutant ensemble les composantes suivantes :
+What we have created is a simple scatterplot by adding together the following components:
 
 ![](images/ggplot_intro1.png){width="482"}
 
-# Petit détour : Graphiques en tant qu'objets
+# Quick detour: Plots as objects
 
-Un graphique {ggplot2} peut être enregistré en tant qu'objet R nommé (comme un cadre de données), manipulé davantage, puis imprimé ou enregistré.
+A {ggplot2} graph can be saved as a named R object (like a data frame), manipulated further, and then printed or saved.
 
-Nous utilisons l'opérateur d'exercice (`<-`) pour enregistrer le graphique en tant qu'objet, comme nous l'avons fait avec les cadres de données.
+We use the assignment operator (`<-`) to save the plot as an object, just as we have done with data frames.
 
 ```{r}
-# Enregistrer le graphique de dispersion simple en tant qu'objet nommé
+# Save the simple scatterplot as a named object
 gap_plot_base <- ggplot(
   data = gapminder07,
   mapping = aes(
@@ -165,85 +165,84 @@ gap_plot_base <- ggplot(
   geom_point() 
 ```
 
-Cela apparaîtra dans votre environnement, mais il ne sera **pas** imprimé.
+This will appear in your environment, but it will **not** be printed. Unlike
 
-Pour afficher le graphique, tapez simplement et exécutez le nom de l'objet :
+To view the plot, simply type and run the name of the object:
 
 ```{r}
-# Appeler le graphique
+# Call the plot
 gap_plot_base
 ```
 
-Maintenant que vous avez votre graphique en tant qu'objet R, vous pouvez lui ajouter de nouvelles couches sans retaper le code précédent.
+Now that you have your plot as an R object, you can add new layers to it without retyping the previous code.
 
-Par exemple, vous pouvez ajouter une ligne de meilleure ajustement à votre graphique de dispersion et l'enregistrer en tant que nouveau graphique, sans avoir à réécrire le vieux code :
+For example, you can add a line of best fit to your scatter plot and save it as a new plot, without having to write the old code again:
 
 ```{r}
-# Ajouter une nouvelle couche au graphique de dispersion simple
+# Add new layer to simple scatterplot
 gap_plot_base + 
   geom_smooth()
 
-# Enregistrer le nouveau graphique en tant qu'objet
-gap_plot_02 <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+# Save new plot as object
+gap_plot_02 <- "WRITE_YOUR_CODE_HERE"
 
-# Appeler le nouveau graphique
-"ÉCRIVEZ_VOTRE_CODE_ICI"
+# Call the new plot
+"WRITE_YOUR_CODE_HERE"
 ```
 
-Plus tard dans l'exercice, vous devrez créer et stocker des graphiques en tant qu'objets.
+Later in the assignment you will need to create and store plots as objects.
 
-# Convertir en Graphique à Bulles avec l'esthétique `size`
+# Convert to Bubble Plot with `size` aesthetic
 
-Avec {ggplot2}, les graphiques à bulles sont construits en utilisant la fonction `geom_point()`, tout comme les graphiques de dispersion. La distinction clé est qu'une troisième variable numérique doit être mappée à l'esthétique `size` et fournie à `aes()`.
+With {ggplot2}, bubble plots are built using the `geom_point()` function, just like scatterplot. The key distinction is that a third numeric variable must be mapped to the `size` aesthetic and provided to `aes()`.
 
 ![](images/ggplot_intro2.png){width="482"}
 
-Ajoutez maintenant une variable supplémentaire, `population`, et mappez-la à l'esthétique de la taille.
+Now add an additional variable, `population`, and map it to the size aesthetic.
 
 ```{r}
-# Créer un graphique à bulles
-"ÉCRIVEZ_VOTRE_CODE_ICI"
+# Create bubble plot
+"WRITE_YOUR_CODE_HERE"
 ```
 
-Ici, la population de chaque pays est représentée par la taille des points. La légende sera automatiquement construite par {ggplot2}, montrant comment la taille des points varie avec la taille de la population.
+Here, the population of each country is represented through point size. The legend will automatically be built by {ggplot2}, showing how point size scales with population size.
 
-Maintenant, colorons les bulles par continent. Ici, la population de chaque pays est représentée par la taille des points. La légende sera automatiquement construite par {ggplot2}, montrant comment la taille des points varie avec la taille de la population.
+Now, let's color the bubbles by continent.
+Here, the population of each country is represented through point size. The legend will automatically be built by {ggplot2}, showing how point size scales with population size.
 
-Maintenant, colorons les bulles par continent.
+Now, let's color the bubbles by continent.
 
 ```{r}
-# Ajouter de la couleur aux points
-"ÉCRIVEZ_VOTRE_CODE_ICI"
+# Add color to points
+"WRITE_YOUR_CODE_HERE"
 ```
 
-Rappelez-vous lorsque nous avons arrangé la variable de population de `gapminder07` par ordre décroissant (du plus grand au plus petit). C'est pour que les plus petits cercles/bulles soient tracés au-dessus des plus grands cercles/bulles. Si nous n'avions pas arrangé la variable `population`, les points plus petits auraient été couverts par les points plus grands.
+Remember when we arranged the population variable of `gapminder07` in descending order (largest to smallest). This is so that the smallest circles/bubbles are plotted on top of the larger circles/bubbles. If we had not arranged the `population` variable, smaller points would have been covered by the larger points.
 
-Cependant, beaucoup de points se chevauchent encore, nous pouvons donc réduire l'opacité des points. Changez l'opacité des points à 50%.
+However, many of the points are still overlapping, so we can decrease the opacity of the points. Change the opacity of the points to 50%.
 
 ```{r}
-"ÉCRIVEZ_VOTRE_CODE_ICI"
+"WRITE_YOUR_CODE_HERE"
 ```
 
-Stockez le dernier graphique en tant qu'objet.
-
+Store the last plot as an object. 
 ```{r}
-# Enregistrer le graphique en tant qu'objet nommé
-gap_bubble <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+# Save plot as a named object
+gap_bubble <- "WRITE_YOUR_CODE_HERE"
 ```
+Check that `gap_bubble` appears in your Environment pane.
 
-Vérifiez que `gap_bubble` apparaît dans votre volet Environnement.
+# Modifying scales
 
-# Modification des échelles
+One of the optional grammar of graphics layers that we haven't learned about yet is `scale_*()` functions.
 
-Une des couches facultatives de la grammaire des graphiques que nous n'avons pas encore apprise est les fonctions `scale_*()`.
+![Scales control how variables are mapped to the visual characteristics of the plot. Scale functions (which start with `scale_`) allow you to modify how mappings in `aes()` are displayed.](images/gg_min_build2.png)
 
-![Les échelles contrôlent la façon dont les variables sont mappées aux caractéristiques visuelles du graphique. Les fonctions d'échelle (qui commencent par `scale_`) vous permettent de modifier la façon dont les mappages dans `aes()` sont affichés.](images/gg_min_build2.png)
+In this section, you can simply run the code we've already written for you. We will use two new scale functions.
 
-Dans cette section, vous pouvez simplement exécuter le code que nous avons déjà écrit pour vous. Nous utiliserons deux nouvelles fonctions d'échelle.
+## Control point size with `scale_size()`
 
-## Contrôler la taille des points avec `scale_size()`
-
-La première chose que nous devons améliorer sur le précédent graphique à bulles est la plage de taille des bulles. `scale_size()` permet de définir la taille du point le plus petit et le plus grand en utilisant l'argument `range`.
+The first thing we need to improve on the previous bubble plot is the size range of the bubbles. `scale_size()` allows to set the size of the smallest and the biggest point using the `range` argument.
 
 ```{r}
 gap_bubble02 <- gap_bubble +
@@ -252,97 +251,99 @@ gap_bubble02 <- gap_bubble +
 gap_bubble02
 ```
 
-Étendre la plage de taille aide à mettre en évidence la variation de la taille de la population.
+Expanding the size range helps to highlight the variation in population size.
 
-## Transformation logarithmique des échelles
+## Log transform scales
 
-Le graphique à bulles Gapminder original que nous recréons a une échelle non linéaire sur l'axe des x. Cela aide en écartant les points qui sont regroupés du côté gauche du graphique.
+The original gapminder bubble plot we are recreating has a non-linear scale on the x-axis. This helps by spreading out the points that are clumped on the left side of the plot.
 
-Dans {ggplot2}, nous pouvons transformer l'axe des x en utilisant `scale_x_log10()`, qui échelonne de manière logarithmique l'axe des x (comme son nom l'indique). Nous ajouterons cette fonction en tant que nouvelle couche après un signe `+`, comme d'habitude :
+In {ggplot2}, we can transform the x-axis using `scale_x_log10()`, which log-scales the x-axis (as the name suggests). We will add this function as a new layer after a `+` sign, as usual:
 
 ```{r}
 gap_bubble03 <- gap_bubble02 +
-  "ÉCRIVEZ_VOTRE_CODE_ICI"
+  "WRITE_YOUR_CODE_HERE"
 
 gap_bubble03
 ```
 
-Les fonctions d'échelle seront couvertes en détail dans la prochaine leçon de préparation.
 
-## Supprimer les guides d'échelle
+Scale functions will be covered in more detail in the next prework lesson.
 
-Vous remarquerez peut-être que les guides d'échelle pour la couleur du continent et la taille de la population sur le côté gauche du graphique sont assez grands. Nous pouvons supprimer ces guides pour un look plus propre. Cela enlève certaines informations, mais nous trouverons une solution à cela dans l'étape suivante.
+## Remove scale guides
 
-Exécutez le code ci-dessous pour supprimer les guides d'échelle :
+You may notice that the scale guides for continent color and population size on the left side of the plot are quite large. We can remove these guides for a cleaner look. This takes away some information, but we will find a solution for this in the next step.
 
+Run the code below to remove the scale guides:
 ```{r}
 gap_bubble04 <- gap_bubble03 +
   guides(size = "none", color = "none")
 gap_bubble04
 ```
 
-## Ajout d'interactivité avec {plotly}
 
-Notre graphique à bulles actuel ne nous montre pas de quel pays chaque bulle provient, ni quelles sont la population et le PIB exacts du pays.
+## Adding interactivity with {plotly}
 
-Une façon de communiquer cette information sans encombrer le graphique est de le rendre interactif. La fonction `ggplotly()` du package {plotly} peut convertir votre graphique en un graphique interactif ! Regardez "gap_bubble_interactive.html" dans le dossier "images" pour voir un exemple de graphique interactif qui peut être créé par `ggplotly()`.
+Our current bubble plot doesn't show us which country each bubble is from, or what the exact population and GDP of the country is. 
 
-Votre tâche pour cette section est de découvrir comment utiliser cette fonction pour rendre votre graphique interactif, de sorte que vous puissiez survoler les points pour voir des informations supplémentaires.
+One way to communicate this information without crowding the graph is to make it interactive. The `ggplotly()` function from the {plotly} package can convert your plot to be interactive! Look at "gap_bubble_interactive.html" in the "images" folder to see an example of an interactive plot that can be made by `ggplotly()`.
 
-```{r}
-# Créer un graphique interactif
-"ÉCRIVEZ_VOTRE_CODE_ICI"
-```
-
-Nous ne pouvons pas enregistrer ce graphique interactif avec `ggsave()`. Pour cela, nous aurons besoin de la fonction `saveWidget()` du package {htmlwidgets}.
-
-Recherchez sur le web comment utiliser cette fonction et enregistrez votre graphique interactif sous forme de fichier HTML dans le dossier "images".
+Your task for this section is to find out how to use this function to make your plot interactive, so that you can hover over the points to see additional information.
 
 ```{r}
-# Enregistrer le graphique plotly
-"ÉCRIVEZ_VOTRE_CODE_ICI"
+# Create interactive plot
+"WRITE_YOUR_CODE_HERE"
 ```
 
-# Conclusion
 
-C'est tout pour cet exercice ! Nous choisirons 2 à 3 personnes pour présenter votre travail lors de l'atelier. Si vous souhaitez partager vos résultats avec la classe, veuillez en informer un instructeur.
+We can't save this interactive plot with `ggsave()`. For this we will need the `saveWidget()` function from the {htmlwidgets} package.
 
-Le représentant du groupe devrait être prêt à partager son écran et à faire une courte présentation (3-4 phrases).
-
-Choisissez et mettez en avant un aspect de l'atelier qui serait utile et intéressant pour la classe. Par exemple, vous pouvez choisir une question que votre groupe a trouvée particulièrement difficile, et expliquer comment vous avez trouvé la solution. Ou vous pouvez afficher l'un de vos graphiques et partager quelques astuces pour une personnalisation supplémentaire.
-
-# Soumission : Téléchargez le fichier Rmd
-
-Une fois que vous avez terminé les tâches ci-dessus, vous devez sauvegarder vos réponses et télécharger votre fichier Rmd d'exercice sur la page web de l'atelier. Vous devez télécharger un seul fichier Rmd avec vos réponses (ne téléchargez pas le HTML tricoté ou un dossier compressé). Assurez-vous d'inclure votre nom dans l'en-tête YAML en haut du script.
-
-La date limite pour l'exercice est le **vendredi 8 mars à 23h59 UTC**.
-
-## Défi (facultatif)
-
-Maintenant, c'est à votre tour de créer un graphique à bulles animé en utilisant le package {gganimate} ! Familiarisez-vous avec le package {gganimate} disponible ici : <https://gganimate.com/>. La page d'accueil du site Web contient en fait une grande partie du code dont vous aurez besoin pour ce graphique à bulles Gapminder.
+Search the web for how to use this function, and save your interactive plot as a HTML file in the "images" folder. 
 
 ```{r}
-"ÉCRIVEZ_VOTRE_CODE_ICI"
+# Save plotly plot
+"WRITE_YOUR_CODE_HERE"
 ```
 
-Voici les étapes de base :
+# Wrap up
 
-1.  Installer et charger le package {gganimate}.
+That's it for this assignment! We will choose 2-3 people to present your work during the workshop. If you would like to share your results with the class, please let an instructor know.
 
-2.  Créer un graphique à bulles de base similaire à celui que nous avons fait dans ce tutoriel, mais en utilisant toutes les données de gapminder, pas seulement 2007. Mappez la variable `gdpPercap` sur x, `lifeExp` sur y, et `pop` sur la taille.
+The group representative should prepare to screenshare and give a short (3-4 sentence) presentation.
 
-3.  Ajouter l'animation en incluant `transition_time(year)` après les couches du graphique de dispersion. Cela créera l'animation au fil du temps.
+Choose and highlight one aspect of the workshop that would be helpful and interesting to the class. For example, you can choose a question that your group found especially tricky, and explain how you found the solution. Or you can display one of your plots, and share some tips for additional customization.
 
-4.  Rendre l'animation et l'enregistrer sous forme de vidéo ou de GIF.
+# Submission: Upload Rmd file
 
-## Défi supplémentaire (facultatif)
+Once you have finished the tasks above, you should save your answers and upload your assignment Rmd on the workshop webpage. You should upload just one Rmd file with your answers (do not upload the knitted HTML or a zipped folder). Make sure to include your name in the YAML header at the top of the script.
 
-Personnalisez davantage l'animation pour essayer de refléter l'esthétique de la vidéo de Hans Rosling [ici](https://www.youtube.com/watch?v=jbkSRLYSojo).
+The due date for the assignment is **Friday, March 1st at 23:59 PM UTC.**
 
-1.  Ajoutez un gros indicateur pour l'année en bas à droite du graphique.
+## Challenge (optional)
 
-2.  Ajustez les marqueurs d'échelle du PIB et de l'espérance de vie pour qu'ils reflètent étroitement ceux de la vidéo (25, 50, 75 ans ; 400, 4000, 40000 USD).
+Now it's your turn to create an animated bubble chart using the {gganimate} package! Familiarize yourself with the {gganimate} package available here: <https://gganimate.com/>. The front page of the website actually contains much of the code you will need for this Gapminder bubble plot.
 
-3.  Ajoutez une coloration des continents qui reflète celle de la vidéo
+```{r}
+"WRITE_YOUR_CODE_HERE"
+```
 
-Nous n'avons pas couvert beaucoup de ces éléments, mais voyez si vous pouvez assembler les étapes en lisant la documentation pour {gganimate}, en demandant de l'aide à GPT-4, et en recherchant en ligne avec Bing.
+Here are the basic steps:
+
+1.  Install and load the {gganimate} package.
+
+2.  Create a basic bubble chart similar to the one we made in this tutorial, but using all the gapminder data, not just 2007. Map the `gdpPercap` variable to x, `lifeExp` to y, and `pop` to size.
+
+3.  Add the animation by including `transition_time(year)` after the scatterplot layers. This will create the animation over time.
+
+4.  Render the animation and save it as a video or GIF.
+
+## Further Challenge (optional)
+
+Customize the animation further to try to mirror the aesthetic in Hans Rosling's video [here](https://www.youtube.com/watch?v=jbkSRLYSojo).
+
+1.  Add a large indicator for the year at the bottom right of the plot.
+
+2.  Adjust the GDP and life expectancy scale markers to closely mirror those in the video (25, 50 75 years; 400 4000, 40000 USD).
+
+3.  Add continent coloring that mirrors those in the video
+
+We have not covered many of these , but see if you can piece together the steps by reading the documentation for {gganimate}, asking GPT-4 for help, and searching online with Bing.
