@@ -1,0 +1,254 @@
+---
+title: "Workshop 9: Histograms, line graphs, and scale functions"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+    number_sections: true
+author: "YOUR_NAME_HERE"
+date: "2023-08-28"
+editor_options: 
+  chunk_output_type: inline
+  markdown: 
+  wrap: none
+---
+
+# Load packages
+
+```{r}
+pacman::p_load(tidyverse, here, outbreaks)
+```
+
+# Data: Linelist of Ebola cases from West Africa
+
+Today we will use a data from from the {outbreaks} package. Run the code below to load in a data frame of simulated Ebola linelist for West Africa, 2014-1015.
+
+```{r paged.print=TRUE}
+# Load data from package
+ebola_wa <- outbreaks::ebola_sim_clean$linelist
+
+# Inspect dataframe
+#ebola_wa
+```
+
+**Checkpoint**: You should have 5,829 rows and 11 columns if you've loaded the data correctly! Make sure that you have the correct number of rows and columns when you inspect the data frame before proceeding.
+
+```{r}
+# Look at data classes of each variable
+glimpse(ebola_wa)
+```
+
+Key takeaway: We have several **date** variables that could be visualized on the continuous axis for histograms and line graphs.
+
+Use the `summary()` function to look at the date ranges in this dataset.
+
+```{r}
+# Look at 
+summary(ebola_wa)
+```
+
+You can see that cases are recorded from early 2014 to mid 2015. The variables `date_of_hospitalisation` and `date_of_onset` are the most complete (they have no NAs), so we will be using them for visualization in this exercise.
+
+# Histograms
+
+First, create a basic histogram with 12 bars, showing the distribution of the `date_of_hospitalisation` variable.
+
+-   Choose a custom fill color and outline color for the bars of your histogram (use any colors of your choice).
+
+```{r}
+ggplot(ebola_wa) +
+  geom_histogram(aes(date_of_hospitalisation),
+                 color = "white", fill = "darkred",
+                 bins = 24)
+```
+
+We can set the bin width for this histogram as usual. In this case, since the variable is a date, the bin width represents the **number of days**.
+
+-   Adjust your code to plot a histogram with weekly bins (every 7 days).
+
+```{r}
+ggplot(ebola_wa) +
+  geom_histogram(aes(date_of_hospitalisation),
+                 color = "white", fill = "darkred",
+                 binwidth = 7) +
+  labs(title = "Title",
+       x = "Date of Hospitalisation",
+      y = "Number of patients")
+```
+
+-   Now, build on the code from the previous chunk to add a relevant plot title and axis labels.
+
+```{r}
+ggplot(ebola_wa) +
+  geom_histogram(aes(date_of_hospitalisation),
+                 color = "white", fill = "darkred",
+                 binwidth = 7) +
+  labs(title = "Hospitalisations - 7-day bins",
+       x = "Date of Hospitalisation",
+      y = "Number of patients")
+```
+
+When you plot dates, sometimes the default axis labels may not be ideal. In this plot, `ggplot()` automatically labels the x-axis every 4 months, but we may want to modify this. In the pre-work lessons you learned how to customize scale breaks using `scale_x_continuous(breaks = ...)`, but for date variables we will use a slightly different method.
+
+## Customizing Date Axis with `scale_x_date()`
+
+*In this section, keep building on the code you created in the chunks above. This way, your histograms will have a similar appearance, but with more details added as you progress in the exercise!*
+
+You can customize the frequency of date axis labels using a function called `scale_x_date()` and specifying `date_breaks`.
+
+For example, let's say we want to label the axis every **two months**. To customize the labels, simply add this layer to your previous code:
+
+```{r}
+ggplot(ebola_wa) +
+  geom_histogram(aes(date_of_hospitalisation),
+                 color = "white", fill = "darkred",
+                 binwidth = 7) +
+  labs(title = "Hospitalisations - 7-day bins",
+       x = "Date of Hospitalisation",
+      y = "Number of patients") +
+  scale_x_date(date_breaks = "2 months")
+
+# GIVE STUDENTS SCAFFOLDING
+#"YOUR_HISTOGRAM_CODE" +
+#  scale_x_date(date_breaks = "2 months")
+```
+
+You might notice that the axis tick labels (AKA the date format) are now quite long. Let's change the format from `YYYY-MM-DD` to `Month-YY` instead.
+
+To customize the format of the dates, we can add `date_labels` inside `scale_x_date()` and set a specific date format, like so:
+
+```{r}
+ggplot(ebola_wa) +
+  geom_histogram(aes(date_of_hospitalisation),
+                 color = "white", fill = "darkred",
+                 binwidth = 7) +
+  labs(title = "Hospitalisations - 7-day bins",
+       x = "Date of Hospitalisation",
+      y = "Number of patients") +
+  scale_x_date(date_breaks = "2 months", 
+               date_labels = "%B %y") # see table below for explanation
+```
+
+When customizing date formats in {ggplot2}, we use specific letter codes to represent various components of a date. Here are some common codes that you can give to `date_labels`:
+
+![](images/date_codes_table.png)
+
+Now, modify the date format of the axis labels on the previous histogram one last time to display **ABBREVIATED MONTH NAMES** for each month.
+
+```{r}
+ggplot(ebola_wa) +
+  geom_histogram(aes(date_of_hospitalisation),
+                 color = "white", fill = "darkred",
+                 binwidth = 7) +
+  labs(title = "Hospitalisations - 7-day bins",
+       x = "Date of Hospitalisation",
+      y = "Number of patients") +
+  scale_x_date(date_breaks = "1 months", date_labels = "%b")
+
+```
+
+# Time series plot with `geom_line()`
+
+Let's create a line graph to look at Ebola incidence changed over the time period of this study, by date of symptom onset.
+
+## Summarize data for plotting
+
+First, create a summary data frame showing the number of cases for each **onset date**, split by **outcome** (i.e., calculate the total number of cases grouped by onset date and outcome). Omit NA values from your summary table with the `na.omit()` function.
+
+HINT: There are several ways to perform this data manipulation. For the most efficient method, review these [lesson notes](https://the-graph-courses.github.io/data_untangled_wp/lessons/ls05_groupby_summarize.html#92_dplyr::count()).
+
+
+```{r}
+ebola_wa_summary <- ebola_wa %>%
+  count(date_of_onset, outcome) %>% na.omit() # or groupby summarize ungroup
+
+ebola_wa_summary
+```
+
+**Checkpoint**: Your summary table should have 674 rows and 3 columns.
+
+## Basic time series line graph with summarized data
+
+Now, plot a line graph showing the number of cases per onset date, and color the lines by outcome.
+
+```{r}
+ggplot(ebola_wa_summary, aes(x = date_of_onset, 
+                             y = n,
+                             color = outcome)) +
+  geom_line()
+```
+**Checkpoint**: Your plot should now have two lines: one for deaths and one for recovered cases. 
+
+Next, make the following modifications:
+
+1)  Edit the line width and transparency of your lines.
+
+2)  Use `scale_x_date()` to specify date breaks and formatting of your choice.
+
+3)  Add a title, subtitle, and edit the axis names.
+
+4)  Change the legend title from "outcome" to "Outcome".
+
+```{r}
+ggplot(ebola_wa_summary, aes(x = date_of_onset, 
+                             y = n,
+                             color = outcome)) +
+  geom_line(linewidth = 1, 
+            alpha = 0.7) +
+  scale_x_date(date_breaks = "2 months", date_labels = "%B") +
+  labs(title = "Ebola cases in West Africa, 2014-2015",
+       subtitle = "Grouped by outcome",
+       x = "Date d'apparition",
+       y = "Incidence",
+       color = "Résultat")
+```
+
+
+# Bonus challenge: Color Scale functions
+
+Did you know that `scale_*_()` functions are also used to customize the color palettes of `{ggplot2} graphs?`
+
+Two functions: `scale_color_manual()` and `scale_color_brewer()` are some examples for adjusting colors in ggplot2 plots! Do some online research on how the functions work to complete the bonus challenge below.
+
+First, try customizing the colors of the line graph you previously created with `scale_color_manual()`. Start by understanding the colors you want to apply to your plot. You can define specific colors manually using hexadecimal codes or by referencing pre-defined color names.
+
+```{r}
+#Color adjustment using scale_color_manual() 
+ggplot(ebola_wa_summary, aes(x = date_of_onset, 
+                             y = n,
+                             color = outcome)) +
+  geom_line(linewidth = 1, 
+            alpha = 0.7) +
+  scale_x_date(date_breaks = "2 months", date_labels = "%B") +
+  labs(title = "Ebola cases in West Africa, 2014-2015",
+       subtitle = "Grouped by outcome",
+       x = "Date of Onset",
+       y = "Incidence",
+       color = "Outcome") +
+  scale_color_manual(values = c("Death" = "indianred3",
+                                "Recover" = "dodgerblue"))
+```
+
+While `scale_color_manual()` allows us to manually set colors, sometimes it's challenging to choose visually appealing colors to communicate your plots in a meaningful way.
+
+In most cases, `scale_color_brewer()` is a better option, providing pre-defined palettes for easy and aesthetically pleasing color choices! You can explore the available palettes [here](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html).
+
+(NOTE: `scale_color_brewer()` in a scale function from the `RColorBrewer package` whose functions are loaded with `ggplot2`! Feel free to explore other built-in `ggplot2` palettes on your own!)
+
+Customize the colors of your line graph using the `scale_color_brewer()` function instead! (HINT: You can use this [LINK](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html) to review the different palettes and the hexadecimal codes)
+
+```{r}
+ #Color adjustment using scale_color_brewer() 
+ggplot(ebola_wa_summary, aes(x = date_of_onset, 
+                             y = n,
+                             color = outcome)) +
+  geom_line(linewidth = 1, 
+            alpha = 0.7) +
+  scale_x_date(date_breaks = "2 months", date_labels = "%B") +
+  labs(title = "Ebola cases in West Africa, 2014-2015",
+       subtitle = "Grouped by outcome",
+       x = "Date of Onset",
+       y = "Incidence",
+       color = "Outcome") +
+  scale_color_brewer(palette = "Set2")
+```

@@ -1,0 +1,219 @@
+---
+title: "Atelier 9 : Histogrammes, graphiques linéaires et fonctions d'échelle"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+    number_sections: true
+author: "VOTRE_NOM_ICI"
+date: "2024-03-13"
+editor_options: 
+  chunk_output_type: inline
+  markdown: 
+  wrap: none
+---
+
+# Introduction
+
+Bienvenue !
+
+Cet atelier est une approche pratique de la visualisation des données et de la révision de certaines fonctions que vous connaissez déjà.
+
+Les notes de cours de cette semaine ont été liées ci-dessous. Elles peuvent être très utiles pour compléter l'exercice, alors n'hésitez pas à vous y référer pendant l'atelier !
+
+-   [Lignes, échelles et étiquettes](https://the-graph-courses.github.io/data_on_display_wp/lessons/fr_ls03_line_graphs.html)
+
+-   [Histogrammes avec {ggplot2}](https://the-graph-courses.github.io/data_on_display_wp/lessons/fr_ls04_histograms.html)
+
+# Configuration pour l'exercice
+
+1.  **Téléchargez d'abord le dépôt sur votre ordinateur local.** Pour commencer, vous devez télécharger, dézipper et parcourir le dossier de l'exercice.
+
+2.  **Ouvrez le projet RStudio** en cliquant sur le fichier *.Rproj* correspondant dans le dossier de l'atelier dézippé. Assurez-vous d'avoir ouvert week_09_workshop.Rproj dans RStudio en regardant le nom de votre fenêtre RStudio, ou dans le coin supérieur droit de votre écran.
+
+3.  **Ouvrez l'exercice Rmd.** Naviguez jusqu'à l'onglet Fichiers dans RStudio et ouvrez le dossier "rmd". Vous travaillerez dans le fichier appelé "week_09_exercise.Rmd". Ce Rmd contient à la fois les instructions et l'exercice de l'atelier dans un seul fichier.
+
+4.  **Complétez l'exercice.** Suivez les étapes dans "week_09_exercise.Rmd". Remplacez chaque instance de `"ÉCRIVEZ_VOTRE_CODE_ICI"` par vos réponses. L'exercice doit être soumise individuellement, mais vous êtes encouragés à réfléchir avec des partenaires. Bien que vous soyez autorisés à travailler avec des membres du groupe, *il est important que tout le code que vous soumettez ait été tapé par vous-même*.
+
+# Chargement des packages
+
+```{r}
+pacman::p_load(tidyverse, here, outbreaks)
+```
+
+# Données : Liste de cas d'Ebola en Afrique de l'Ouest
+
+Aujourd'hui, nous utiliserons des données du package {outbreaks}. Exécutez le code ci-dessous pour charger un dataframe de liste de cas simulés d'Ebola pour l'Afrique de l'Ouest, 2014-1015.
+
+*Notez que le jeu de données est en anglais!* 
+
+```{r}
+# Charger les données du package
+ebola_wa <- outbreaks::ebola_sim_clean$linelist
+
+# Inspecter le dataframe
+ebola_wa
+```
+
+**Point de contrôle** : Vous devriez avoir 5 829 lignes et 11 colonnes si vous avez chargé les données correctement ! Assurez-vous d'avoir le bon nombre de lignes et de colonnes lorsque vous inspectez le dataframe avant de continuer.
+
+```{r}
+# Examiner les classes de données de chaque variable
+glimpse(ebola_wa)
+```
+
+Point clé : Nous avons plusieurs variables **date** qui pourraient être visualisées sur l'axe continu pour les histogrammes et les graphiques linéaires.
+
+Utilisez la fonction `summary()` pour examiner les plages de dates dans cet ensemble de données.
+
+```{r}
+# Examiner les plages de variables
+"ÉCRIVEZ VOTRE CODE ICI"
+```
+
+Vous pouvez voir que les cas sont enregistrés du début de 2014 à la mi-2015. Les variables `date_of_hospitalisation` et `date_of_onset` sont les plus complètes (elles n'ont pas de NA), donc nous les utiliserons pour la visualisation dans cet exercice.
+
+# Histogrammes
+
+Premièrement, créez un histogramme de base avec 12 barres, montrant la distribution de la variable `date_of_hospitalisation`.
+
+-   Choisissez une couleur de remplissage personnalisée et une couleur de contour pour les barres de votre histogramme (utilisez les couleurs de votre choix).
+
+```{r}
+"ÉCRIVEZ VOTRE CODE ICI"
+```
+
+Nous pouvons définir la largeur des compartiments pour cet histogramme comme d'habitude. Dans ce cas, puisque la variable est une date, la largeur des compartiments représente le **nombre de jours**.
+
+-   Ajustez votre code pour tracer un histogramme avec des compartiments hebdomadaires (tous les 7 jours).
+
+```{r}
+"ÉCRIVEZ VOTRE CODE ICI"
+```
+
+-   Maintenant, élaborez le code du bloc précédent pour ajouter un titre de graphique pertinent et des étiquettes d'axe.
+
+```{r}
+"ÉCRIVEZ VOTRE CODE ICI"
+```
+
+Lorsque vous tracez des dates, parfois les étiquettes d'axe par défaut peuvent ne pas être idéales. Dans ce graphique, `ggplot()` étiquette automatiquement l'axe des x tous les 4 mois, mais nous pourrions vouloir modifier cela. Dans les leçons préparatoires, vous avez appris à personnaliser les ruptures d'échelle en utilisant `scale_x_continuous(breaks = ...)`, mais pour les variables de date, nous utiliserons une méthode légèrement différente.
+
+## Personnalisation de l'axe des dates avec `scale_x_date()`
+
+*Dans cette section, continuez à construire sur le code que vous avez créé dans les blocs ci-dessus. De cette façon, vos histogrammes auront une apparence similaire, mais avec plus de détails ajoutés au fur et à mesure que vous progressez dans l'exercice !*
+
+Vous pouvez personnaliser la fréquence des étiquettes de l'axe des dates en utilisant une fonction appelée `scale_x_date()` et en spécifiant `date_breaks`.
+
+Par exemple, disons que nous voulons étiqueter l'axe tous les **deux mois**. Pour personnaliser les étiquettes, ajoutez simplement cette couche à votre code précédent :
+
+```{r}
+"COLLEZ VOTRE CODE HISTOGRAMME ICI" +
+  scale_x_date(date_breaks = "2 months")
+```
+
+*Comme vous pouvez pouvez le constater, les spécifications valables de l'argument `date_breaks` en anglais et peuvent être 'sec', 'min', 'hour', 'day', 'week', 'month' ou 'year', éventuellement suivies de 's'.*
+
+Vous remarquerez peut-être que les étiquettes des graduations de l'axe (alias le format de date) sont maintenant assez longues. Changeons le format de `YYYY-MM-DD` à `Mois-AA` à la place.
+
+Pour personnaliser le format des dates, nous pouvons ajouter `date_labels` à l'intérieur de `scale_x_date()` et définir un format de date spécifique, comme ceci :
+
+```{r}
+"COLLEZ_VOTRE_CODE_ICI" +
+  scale_x_date(date_breaks = "2 months", 
+               date_labels = "%B %y") # voir le tableau ci-dessous pour explication
+```
+
+Lors de la personnalisation des formats de date dans {ggplot2}, nous utilisons des codes de lettres spécifiques pour représenter les différents composants d'une date. Voici quelques codes courants que vous pouvez donner à `date_labels` :
+
+![](images/fr_date_codes_table.png)
+
+Maintenant, modifiez le format de date des étiquettes de l'axe sur l'histogramme précédent une dernière fois pour afficher **LES NOMS DES MOIS ABRÉGÉS** pour chaque mois.
+
+```{r}
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+# Graphique de série temporelle avec `geom_line()`
+
+Créons un graphique linéaire pour examiner comment l'incidence d'Ebola a changé au cours de la période de cette étude, par date d'apparition des symptômes.
+
+## Résumé des données pour le traçage
+
+Tout d'abord, créez un dataframe résumé montrant le nombre de cas pour chaque **date d'apparition**, divisé par **résultat** (c'est-à-dire calculez le nombre total de cas regroupés par date d'apparition et résultat). Omettez les valeurs NA de votre tableau résumé avec la fonction `na.omit()`.
+
+INDICE : Il y a plusieurs façons d'effectuer cette manipulation de données. Pour la méthode la plus efficace, consultez ces [notes de cours](https://the-graph-courses.github.io/data_untangled_wp/lessons/fr_ls05_groupby_summarize.html#92_dplyr::count()).
+
+```{r}
+ebola_wa_summary <- "ÉCRIVEZ_VOTRE_CODE_ICI"
+
+ebola_wa_summary
+```
+
+**Point de contrôle** : Votre tableau résumé devrait avoir 674 lignes et 3 colonnes.
+
+## Graphique linéaire de série temporelle basique avec des données résumées
+
+Maintenant, tracez un graphique linéaire montrant le nombre de cas par date d'apparition, et colorez les lignes par résultat.
+
+```{r}
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+**Point de contrôle** : Votre graphique devrait maintenant avoir deux lignes : une pour les décès et une pour les cas rétablis.
+
+Ensuite, apportez les modifications suivantes :
+
+1)  Modifiez la largeur et la transparence de vos lignes.
+
+2)  Utilisez `scale_x_date()` pour spécifier les ruptures de date et le formatage de votre choix.
+
+3)  Ajoutez un titre, un sous-titre et modifiez les noms des axes.
+
+4)  Changez le titre de la légende de "outcome" à "Résultat".
+
+```{r}
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+# Conclusion
+
+C'est tout pour cet exercice ! Nous choisirons 2-3 personnes pour présenter votre travail pendant l'atelier. Si vous souhaitez partager vos résultats avec la classe, veuillez en informer un instructeur.
+
+Le représentant du groupe devrait se préparer à partager son écran et à donner une courte présentation (3-4 phrases).
+
+Choisissez et mettez en évidence un aspect de l'atelier qui serait utile et intéressant pour la classe. Par exemple, vous pouvez choisir une question que votre groupe a trouvée particulièrement délicate et expliquer comment vous avez trouvé la solution. Ou vous pouvez afficher l'un de vos graphiques et partager quelques astuces pour une personnalisation supplémentaire.
+
+# Soumission : Téléchargez le fichier Rmd
+
+Une fois que vous avez terminé les tâches ci-dessus, vous devriez enregistrer vos réponses et télécharger votre exercice Rmd sur la page web de l'atelier. Vous devriez télécharger un seul fichier Rmd avec vos réponses (ne téléchargez pas le HTML tricoté ou un dossier compressé). Assurez-vous d'inclure votre nom dans l'en-tête YAML en haut du script.
+
+La date limite pour l'exercice est le **vendredi 15 mars à 23h59 UTC**.
+
+# Défi bonus : Fonctions d'échelle de couleur
+
+Saviez-vous que les fonctions `scale_*_()` sont également utilisées pour personnaliser les palettes de couleurs des graphiques `{ggplot2}` ?
+
+Deux fonctions : `scale_color_manual()` et `scale_color_brewer()` sont des exemples pour ajuster les couleurs dans les tracés ggplot2 ! Faites des recherches en ligne sur le fonctionnement des fonctions pour compléter le défi bonus ci-dessous.
+
+Tout d'abord, essayez de personnaliser les couleurs du graphique linéaire que vous avez précédemment créé avec `scale_color_manual()`. Commencez par comprendre les couleurs que vous souhaitez appliquer à votre graphique. Vous pouvez définir des couleurs spécifiques manuellement en utilisant des codes hexadécimaux ou en faisant référence à des noms de couleurs prédéfinis.
+
+```{r}
+# Ajustement des couleurs en utilisant scale_color_manual() 
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+Alors que `scale_color_manual()` nous permet de définir manuellement les couleurs, il est parfois difficile de choisir des couleurs visuellement attrayantes pour communiquer vos graphiques de manière significative.
+
+Dans la plupart des cas, `scale_color_brewer()` est une meilleure option, fournissant des palettes prédéfinies pour des choix de couleurs faciles et esthétiquement agréables ! Vous pouvez explorer les palettes disponibles [ici](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html).
+
+(REMARQUE : `scale_color_brewer()` est une fonction d'échelle du package `RColorBrewer` dont les fonctions sont chargées avec `ggplot2` ! N'hésitez pas à explorer d'autres palettes intégrées à `ggplot2` par vous-même !)
+
+Personnalisez les couleurs de votre graphique linéaire en utilisant la fonction `scale_color_brewer()`
+
+ à la place ! (INDICE : Vous pouvez utiliser ce [LIEN](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html) pour revoir les différentes palettes et les codes hexadécimaux)
+
+```{r}
+ # Ajustement des couleurs en utilisant scale_color_brewer() 
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
