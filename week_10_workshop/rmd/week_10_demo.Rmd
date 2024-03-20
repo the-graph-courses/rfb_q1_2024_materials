@@ -1,0 +1,180 @@
+---
+title: "Démo atelier 10 : Exploration des données DHS avec {ggplot2}"
+subtitle: "Introduction au package {haven} et aux thèmes ggplot"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+author: "The GRAPH Courses"
+date: "2024-03-20"
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r echo = F}
+knitr::opts_chunk$set(warning = F, message = F)
+```
+
+# Données de l'Enquête démographique et de santé (EDS/DHS)
+
+Les Enquêtes démographiques et de santé (EDS/DHS) sont une série d'enquêtes standardisées menées périodiquement dans les pays en développement, collectant des données sur différents aspects de la population, de la santé et de la nutrition. Vous utiliserez des données de l'EDS pour le projet final de ce cours, donc c'est l'occasion de pratiquer le travail avec ce type de données.
+
+## Recodage Individuel des Femmes du Nigeria, 2018
+
+Plusieurs ensembles de données de l'EDS (appelés recodages) sont mis à disposition à partir de chaque enquête. L'ensemble de données ***recodage individuel (IR)*** contient des données au niveau individuel sur les femmes âgées de 15 à 49 ans dans les ménages enquêtés. Vous utiliserez un ensemble de données IR pour les femmes pour cet atelier et pour votre projet final individuel.
+
+Aujourd'hui, nous examinerons les données de recodage individuel (IR) des **femmes du Nigeria (2018)**. Les principales conclusions de ces données peuvent être trouvées dans ce [rapport](https://drive.google.com/file/d/10pp9O9EJZvideynYyANqJtBCsN_vNQjs/view).
+
+# Importation de données avec les fonctions `{haven}`
+
+Les données de l'EDS sont sous forme d'un fichier **.DTA** (format STATA). Pour importer l'ensemble de données de l'EDS à partir du format .DTA dans R, vous aurez besoin de la fonction `read_dta()` du package `{haven}`.
+
+Commençons par charger les packages nécessaires.
+
+```{r}
+# Charger les packages
+pacman::p_load(
+  janitor, # utilitaires d'analyse de données
+  here, # forcer les rmds à utiliser le dossier du projet comme répertoire de travail
+  haven, # pour lire les fichiers stata
+  tidyverse # pour tout!
+  )
+```
+
+Les fichiers de l'EDS peuvent être assez volumineux - les données originales du Nigeria en 2018 comportent plus de 40 000 lignes et 5 000 colonnes. Lorsque les ensembles de données sont aussi importants, vous devez éviter d'importer l'ensemble des données en une seule fois, car cela peut prendre un temps déraisonnablement long à exécuter et peut amener R à se figer.
+
+```{r}
+# Essayer de lire le fichier .dta original du Nigeria en 2018
+ir_brut_complet <- 
+  haven::read_dta(here("data/NGIR7BFL.DTA"))
+```
+
+Au lieu de cela, vous pouvez d'abord sélectionner les variables que vous souhaitez analyser, puis importer uniquement ces colonnes à partir du fichier .dta. Ce n'est pas ainsi que nous le faisons habituellement, mais dans ce cas, nous avons une bonne raison.
+
+## Importation uniquement des variables sélectionnées avec `col_select`
+
+Avant d'importer les données, nous devons sélectionner quelles colonnes inclure. Si vous regardez dans votre dossier "data" de cet atelier, vous verrez un fichier nommé NGIR7BFL_mini.DTA, qui contient les données IR que nous voulons utiliser. Consultez le dictionnaire des données (**NGIR7BFL_data_dictionary.pdf**) dans le dossier "data" pour choisir les variables en fonction de leurs descriptions.
+
+Ci-dessous, j'utilise l'argument **`col_select`** de **`read_dta()`** pour spécifier quelles colonnes importer. Pour cette démo, nous sélectionnerons des variables démographiques de base (âge, lieu, éducation, etc.) et quelques variables supplémentaires liées à la fécondité et au calendrier de reproduction des femmes au Nigeria.
+
+**IMPORTANT** : Le dictionnaire des données répertorie les noms de colonnes en majuscules, mais ils sont en minuscules dans le fichier réel. N'oubliez pas de changer les lettres en *minuscules*.
+
+```{r}
+# Lecture du fichier .dta
+ir_brut <- 
+  haven::read_dta(here("data/NGIR7BFL_mini.DTA"),
+                  col_select = c(
+                    # Informations de base
+                    v006, v007, v009, v010, v012, v013, 
+                    v024, v025, v106, v130, v190,   
+                    # Fécondité et calendrier de reproduction
+                    v201, v212, v213, v511, v531))
+```
+
+***Remarque** - pour cet atelier, nous avons créé une version "mini" de l'ensemble de données du Nigeria qui ne contient que les 1000 premières lignes, mais dans votre projet final réel, vous devrez travailler avec toutes les lignes du fichier DTA.*
+
+```{r}
+# Voir un aperçu du cadre de données brut
+head(ir_brut)
+```
+
+Puisque les noms des variables de l'EDS ne sont pas très descriptifs (comme v000 et v001), nous utiliserons `rename()` pour leur donner des titres courts et descriptifs.
+
+```{r}
+# Renommer les variables
+ir_renomme <- 
+  ir_brut %>% 
+  rename(mois_entrevue = v006,
+         annee_entrevue = v007,
+         mois_naissance = v009,
+         annee_naissance = v010,
+         age = v012,
+         groupe_age = v013,
+         region = v024,
+         urbain_rural = v025,
+         niveau_education = v106,
+         religion = v130,
+         indice_de_richesse = v190,
+         nb_enfants = v201,
+         age_premiere_naissance = v212,
+         enceinte_actuellement = v213,
+         age_premiere_coexistence = v511,
+         age_premier_rapport_sexuel = v531)
+```
+
+Maintenant, les noms des variables sont beaucoup plus utiles :
+
+```{r}
+# Voir un aperçu du cadre de données renommé
+head(ir_renomme)
+```
+
+Une autre note sur l'importation des données : la fonction `read_dta()` lit les données de type facteur comme un type de données spécial appelé **labelled**.
+
+```{r}
+# Notez la classe de données de chaque variable
+glimpse(ir_renomme)
+```
+
+Plusieurs variables sont de classe "**`dbl+lbl`**". Cela signifie que les colonnes affichent uniquement des nombres, et chaque nombre correspond à une réponse à l'enquête.
+
+Ceci est cryptique et peut poser problème pour une analyse ultérieure, donc nous recommandons de convertir cela en facteurs R réguliers en utilisant la fonction **`haven::as_factor()`**. Cela remplacera les nombres par l'étiquette de texte correspondante.
+
+```{r}
+# Convertir de données étiquetées en facteurs réguliers
+ir_propre <- 
+  ir_renomme %>% 
+  haven::as_factor()
+```
+
+**REMARQUE** : Il existe une autre fonction appelée `as_factor()` du package {forcats}, et une autre appelée `as.factor()` de R {base}. **N'oubliez pas d'ajouter "`haven::`" avant `as_factor()` pour vous assurer d'utiliser la fonction correcte pour les fichiers .dta.**
+
+Maintenant, vous pouvez voir que les variables qui étaient précédemment "`dbl+lbl`" sont maintenant "`fct`" (facteur) et les nombres sont remplacés par du texte descriptif.
+
+```{r}
+# Examiner les classes de données des variables nouvellement converties
+glimpse(ir_propre)
+```
+
+# Définition d'un thème `{ggplot2}` personnalisé
+
+Vous pouvez personnaliser les éléments non liés aux données de votre graphique avec les fonctions **`theme_*()`**. `{ggplot2}` inclut huit thèmes par défaut, comme le montre l'image ci-dessous. Vous pourriez en reconnaître certains de vos jours avec `{esquisse}`.
+
+![](images/visualization_themes.png){width="551"}
+
+Nous pouvons modifier l'apparence globale d'un graphique en ajoutant simplement une fonction `theme_*()` à la fin de votre code de traçage, comme ceci :
+
+```{r}
+ggplot(data = ir_propre,
+   mapping = aes(x = niveau_education, 
+                 y = age_premiere_naissance, 
+                 fill = urbain_rural)) +
+   geom_boxplot() 
+```
+
+En plus d'appliquer des thèmes à un seul graphique à la fois, vous pouvez changer le thème global par défaut avec `theme_set()`. Par exemple, si vous exécutez `theme_set(theme_bw())`, il utilisera un fond blanc avec des lignes de grille pour tous les graphiques.
+
+```{r}
+# Définir le thème ggplot global
+theme_set(theme_bw())
+```
+
+Maintenant, lorsque nous exécutons à nouveau le même code (sans une fonction `theme_*()`), il appliquera le thème que nous avons défini ci-dessus.
+
+```{r}
+ggplot(data = ir_propre,
+   mapping = aes(x = niveau_education, 
+                 y = age_premiere_naissance, 
+                 fill = urbain_rural)) +
+   geom_boxplot()
+```
+
+Tout nouveau graphique sera également affecté par `theme_set()`.
+
+```{r}
+ggplot(data = ir_propre,
+  mapping = aes(
+    x = niveau_education,
+    fill = urbain_rural)) +
+  geom_bar()
+```

@@ -1,0 +1,189 @@
+---
+title: "Atelier 10 : Exploration des données de l'EDS avec {ggplot2}"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+author: "VOTRE NOM ICI"
+date: "2024-03-20"
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r setup, echo = FALSE}
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+```
+
+# Introduction
+
+Bienvenue !
+
+L'atelier se poursuit avec une approche pratique de la visualisation des données et de la révision de certaines fonctions avec lesquelles vous êtes déjà familier.
+
+Les notes de cours de cette semaine sont liées ci-dessous. Elles peuvent être très utiles pour accomplir l'exercice, alors n'hésitez pas à vous y référer pendant l'atelier !
+
+-   [Boîtes à moustaches avec {ggplot2}](https://the-graph-courses.github.io/data_on_display_wp/lessons/fr_ls05_boxplots.html)
+
+-   [Visualisation de Comparaisons et Compositions](https://the-graph-courses.github.io/epi_reports/EPIREP_FR_parts_to_a_whole/EPIREP_FR_parts_to_a_whole.html)
+
+# Préparation de l'exercice
+
+1.  **Téléchargez d'abord le dépôt sur votre ordinateur local.** Pour commencer, vous devez télécharger, décompresser et parcourir le dossier de l'atelier.
+
+2.  **Ouvrez le** **Projet RStudio** en cliquant sur le fichier *.Rproj* correspondant dans le dossier de l'atelier décompressé. Assurez-vous d'avoir ouvert week_10_workshop.Rproj dans RStudio en regardant le nom de votre fenêtre RStudio, ou dans le coin supérieur droit de votre écran.
+
+3.  **Ouvrez le fichier Rmd de l'exercice.** Naviguez jusqu'à l'onglet Fichiers dans RStudio et ouvrez le dossier "rmd". Vous travaillerez dans le fichier appelé "week_10_exercise.Rmd". Cet Rmd contient à la fois les instructions et l'exercice de l'atelier dans un seul fichier.
+
+4.  **Complétez l'exercice.** Parcourez les étapes dans "week_10_exercise.Rmd". Remplacez chaque instance de `"ÉCRIVEZ_VOTRE_CODE_ICI"` par vos réponses. L'exercice doit être soumis individuellement, mais vous êtes encouragé à faire des remue-méninges avec vos partenaires. Bien que vous soyez autorisé à travailler avec des membres du groupe, *il est important que tout le code que vous soumettez soit tapé par vous-même*.
+
+# Chargement des packages nécessaires
+
+```{r}
+pacman::p_load(
+  janitor,    # pour les utilitaires d'analyse de données
+  here,       # pour définir le répertoire de travail
+  haven,      # pour lire les fichiers Stata
+  tidyverse   # pour la manipulation et la visualisation des données
+  )
+```
+
+*REMARQUE : Veuillez lire et exécuter le code dans l'Rmd de démonstration AVANT de commencer cet exercice.*
+
+# Importation et nettoyage des données
+
+## Étape 1 : Choisissez et importez des colonnes sélectionnées
+
+Le bloc de code ci-dessous importe les mêmes variables que présentées dans la démo. Cependant, nous voulons augmenter cela en ajoutant cinq variables liées aux connaissances sur le paludisme.
+
+Parcourez le fichier du dictionnaire de données et déterminez quelles cinq variables correspondent aux énoncés d'accord suivants :
+
+-   Le paludisme peut être complètement guéri par des médicaments
+-   Le paludisme peut entraîner la mort
+-   Pas de souci concernant le paludisme en raison d'un traitement facile
+-   Connaître des personnes malades du paludisme
+-   Seuls les enfants faibles peuvent mourir du paludisme
+
+Ensuite, incorporez ces variables dans le code d'importation des données ci-dessous.
+
+**INDICE :** Ces variables se trouvent aux pages 225-226 du fichier PDF du dictionnaire de données.
+
+**Remarque : assurez-vous que TOUTES les lettres dans les noms des variables sont en **minuscules**. Par exemple, si le dictionnaire de données dit "S1108BA", vous devez changer les 3 lettres en minuscules comme ceci : "s1108ba" lorsque vous l'entrez dans `col_select`.
+
+```{r}
+# Importer le fichier .dta et ajouter les 5 variables de connaissances sur le paludisme
+ir_brut <- 
+  __________________(here("data/NGIR7BFL_mini.DTA"),
+                  col_select = c(
+                    # Informations de base
+                    v006, v007, v009, v010, v012, v013, 
+                    v024, v025, v106, v130, v190,                     
+                    # Littératie et médias
+                    v155, v156, v157, v158, v159, 
+                    
+                    # Fécondité et calendrier de reproduction
+                    v201, v212, v213, v511, v531, 
+                    
+                    # Ajouter les variables de connaissances sur le paludisme identifiées ci-dessous
+                    "ÉCRIVEZ_VOTRE_CODE_ICI" 
+                    
+                    ))
+```
+
+## Étape 2 : Attribuez des noms de variables
+
+Attribuez des noms descriptifs aux variables nouvellement importées, puis exécutez le code ci-dessous.
+
+```{r}
+# Renommer les variables
+ir_renomme <- 
+  ir_brut %>% 
+  rename(mois_entrevue = v006,
+         annee_entrevue = v007,
+         mois_naissance = v009,
+         annee_naissance = v010,
+         age = v012,
+         groupe_age = v013,
+         region = v024,
+         urbain_rural = v025,
+         niveau_education = v106,
+         religion = v130,
+         indice_richesse = v190,
+         nb_enfants = v201,
+         age_premiere_naissance = v212,
+         enceinte_actuellement = v213,
+         age_premiere_coexistence = v511,
+         age_premier_rapport_sexuel = v531, 
+         
+         # Renommer les variables de connaissances sur le paludisme
+         "ÉCRIVEZ_VOTRE_CODE_ICI" 
+         )
+```
+
+## Étape 3 : Révéler les valeurs codées
+
+Avec la fonction appropriée du package `{haven}`, transformez toutes les variables en facteurs R réguliers.
+
+```{r}
+# Ajouter la fonction pour convertir de données étiquetées en facteurs réguliers
+ir_propre <- 
+  ir_renomme %>% 
+  "ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+**POINT DE CONTRÔLE** : Vous devriez maintenant avoir 3 data frames dans votre Environnement : `ir_brut`, `ir_renomme`, et `ir_propre`. Explorez l'ensemble de données `ir_propre` et assurez-vous que les modifications des étapes 1 à 3 ont été mises en œuvre avec succès. Les types de valeurs doivent être convertis en facteurs et les colonnes doivent avoir des noms significatifs. À partir de là, l'ensemble de données `ir_propre` est maintenant prêt à être utilisé et prêt pour le traçage !
+
+# Visualisation des données
+
+## Définir un thème global
+
+Choisissez votre thème `{ggplot2}` préféré et écrivez le code pour l'appliquer automatiquement à tous vos graphiques.
+
+```{r}
+# Changer le thème par défaut
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+## Histogrammes et boîtes à moustaches pour les distributions continues
+
+a. Choisissez l'une des variables continues de l'ensemble de données, telles que `age` ou `age_premiere_naissance`. Ensuite, générez un histogramme simple de cette variable. Assurez-vous de fournir le titre, les étiquettes, etc. nécessaires pour mieux communiquer les informations au public.
+
+```{r}
+# Histogramme simple
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+b. Maintenant, créez une boîte à moustaches pour montrer la distribution de la variable continue que vous avez choisie précédemment. La distribution doit être regroupée par l'une des variables liées aux connaissances sur le paludisme. Incorporez l'esthétique `fill` pour colorer les boîtes. Ajustez également les couleurs, les étiquettes, les titres, etc. comme bon vous semble.
+
+```{r}
+# Boîte à moustaches comparant les groupes
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+## Diagrammes à barres pour les distributions discrètes
+
+a. Sélectionnez l'une des variables catégorielles de l'ensemble de données. Poursuivez en générant un simple diagramme à barres pour afficher la distribution de cette variable.
+
+```{r}
+# Diagramme à barres simple
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+b. Ensuite, adaptez votre graphique ci-dessus pour créer un diagramme à barres empilées en pourcentage. Pour ce faire, ajoutez l'esthétique `fill` et définissez-la sur une variable de connaissances sur le paludisme de votre choix ; par exemple : `aes(fill = VAR_PALUDISME)`. N'oubliez pas d'ajouter l'argument `position` approprié. Le graphique final devrait comparer comment les réponses à la question de l'enquête sur les connaissances sur le paludisme varient entre les groupes.
+
+```{r}
+# Diagramme à barres empilées en pourcentage
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+c. Enfin, créez un diagramme à barres GROUPÉ avec deux variables catégorielles de votre choix. Ajustez les couleurs, les étiquettes, les titres, etc. comme bon vous semble.
+
+```{r}
+# Diagramme à barres groupé
+"ÉCRIVEZ_VOTRE_CODE_ICI"
+```
+
+# Défi bonus : Diagrammes en donut
+
+Représentez les données de votre diagramme à barres groupé sous forme de séries de diagrammes en donut.
+
+INDICE : La fonction `facet_wrap()` de `{ggplot2}` sera utile.
