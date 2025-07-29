@@ -1,5 +1,5 @@
 ---
-title: "Atelier 7 : Regroupement et Pivotement"
+title: "Atelier 7 : Regroupement et Pivot"
 output:
   prettydoc::html_pretty:
     theme: architect
